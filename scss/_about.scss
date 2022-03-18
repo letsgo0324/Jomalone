@@ -1,0 +1,610 @@
+@charset "UTF-8";
+
+/* about ----------------------------------------------------------- */
+.about{
+    width: 100%;
+
+    .sub_visualTop{
+        width: 100%;
+        height: 200px;
+        background: url(../img/about_bg_1.png) no-repeat center/cover fixed;
+        margin-bottom: 100px;
+
+        .inner{
+            width: 1180px;
+            margin: 0 auto;
+
+            h1{
+                @include fontRaleway($fSize:24px, $lineHt:200px);
+                font-weight: normal;
+                text-align: center;
+            }
+        }
+    }
+    .sub_content{
+        width: 100%;
+        margin-bottom: 100px;
+
+        .inner{
+            width: 1180px;
+            height: auto;
+            margin: 0 auto;
+
+            h2{
+                @include fontYseva($fSize:30px, $color:#444, $mb:50px);
+                text-align: center;
+                letter-spacing: 2px;
+            }
+            h3{
+                @include fontMerri($fSize:24px, $lineHt:1.5, $color:rgb(223, 159, 140), $mb:30px);
+                text-align: center;
+                font-weight: normal;
+
+                &::after{
+                    content: '';
+                    display: block;
+                    width: 2px;
+                    height: 100px;
+                    margin: 30px auto;
+                    background: rgb(223, 159, 140);
+                }
+            }
+            p{
+                @include fontMerri($lineHt:1.5);
+                text-align: center;
+                padding: 50px;
+            }
+        }
+    }
+    #sub_about_visualNumber{
+        width: 100%;
+        background: url(../img/about_bg_2.png) no-repeat center/cover fixed;
+        padding: 100px 0;
+
+        .inner{
+            width: 1180px;
+            margin: 0 auto;
+            position: relative;
+
+            .wrap{
+                article{
+                    width: 380px;
+                    margin-right: 20px;
+                    float: left;    
+                    text-align: center;
+                    border-right: 1px solid rgba(68, 68, 68, 0.3); 
+                    
+                    &:nth-of-type(3){
+                        margin-right: 0;
+                        border-right: 0;
+                    }
+                    h1{
+                        @include fontYseva($fSize:50px, $color:#444, $mb:20px);
+                        transition: all 0.5s;
+                    }
+                    &:hover{
+                        h1{
+                            transform: scale(1.2);
+                            color: rgb(163, 75, 75);
+                        }
+                    }
+                    p{
+                        @include fontMerri($lineHt:1.5);
+                        word-break: keep-all;
+                        word-wrap: break-word;
+                    }
+                }
+            }
+        }
+    }
+    #sub_about_leadership{
+        width: 100%;
+        background-color: #000;
+
+        .inner{
+            width: 1180px;
+            margin: 0 auto;
+
+            .wrap{
+                article{
+                    &:nth-of-type(1){
+                        width: 380px;
+                        margin-right: 20px;
+                        float: left;
+
+                        .pic{
+                            width: 100%;
+                            height: 380px;
+                            overflow: hidden;
+
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                object-position: top center;
+                            }
+                        }
+                    }
+                    &:nth-of-type(2){
+                        width: 780px;
+                        margin-right: 0;
+                        float: left;
+                        padding: 80px 50px;
+
+                        h2{
+                            @include fontYseva($fSize:30px, $color:#eee, $mb:20px);
+                            letter-spacing: 2px;
+                        }
+                        h3{
+                            @include fontRaleway($fSize:24px, $lineHt:1, $color:rgb(163, 75, 75), $mb:30px);
+
+                            span{
+                                @include fontRaleway($fSize:13px, $lineHt:1, $color:rgb(163, 75, 75));
+
+                                &::before{
+                                    content: '/';
+                                    margin-left: 10px;
+                                    margin-right: 10px;
+                                }
+                            }
+                        }
+                        p{  
+                            @include fontRaleway($fSize:18px, $lineHt:1.5, $color:#bbb);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #sub_about_members{
+        width: 100%;
+        margin-bottom: 100px;
+        padding: 100px 0;
+        background-color: #ddd;        
+
+        .inner{
+            width: 1180px;
+            margin: 0 auto;
+            
+            h2{
+                @include fontYseva($fSize:30px, $color:#444, $mb:50px);
+                text-align: center;
+                letter-spacing: 2px;
+            }
+
+            .wrap{
+                article{                    
+                    position: relative;
+                    width: 380px;
+                    height: 350px;
+                    margin-right: 20px;                    
+                    margin-bottom: 20px;
+                    display: block;
+                    float: left;
+                    overflow: hidden;
+
+                    &:nth-of-type(3), &:nth-of-type(6){
+                        margin-right: 0;
+                    }
+
+                    .sub_about_members_pic{
+                        width: 100%;
+                        height: 250px;
+                        position: relative;
+
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                        .sub_about_members_txt_more{
+                            position: absolute;
+                            bottom: -250px;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            padding: 30px;
+                            background: rgba(0, 0, 0, 0.8);
+                            opacity: 0;
+                            transition: all 0.5s; 
+
+                            p{
+                                font: normal 14px/1.5 'Raleway';
+                                color: #eee;
+                            }                                                
+                        }
+                    }
+                    .sub_about_members_txt{
+                        padding: 30px;
+                        background: #000;
+                        height: 100px;
+                        position: relative;
+
+                        h3{
+                            font: bold 18px/1 'Raleway';
+                            color: #eee;
+                            margin-bottom: 10px;
+                        }
+                        h4{
+                            font: normal 14px/1 'Raleway';
+                            color: #bbb;
+                        }
+                        
+                        a{
+                            position: absolute;
+                            top: 20px;
+                            right: 20px;
+                            width: 30px;
+                            height: 30px;
+                            font-size: 25px;
+                            line-height: 30px;
+                            text-align: center;
+                            color: #888;
+                            transition: all 0.2s;
+
+                            &:hover{
+                                color: #eee;
+                            }
+                        }                        
+                    }                    
+
+                    &:hover .sub_about_members_txt_more{
+                        opacity: 1;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    #sub_about_department{
+        width: 100%;
+        margin-bottom: 100px;
+        
+        .inner{
+            width: 1180px;
+            margin: 0 auto;
+
+            h2{
+                @include fontYseva($fSize:30px, $color:#444, $mb:50px);
+                text-align: center;
+                letter-spacing: 2px;
+            }
+            
+            .division{
+                width: 100%;
+                height: 800px;
+                background: url(../img/department.jpg) no-repeat center/contain;     
+
+                .div_tree{
+                    position: absolute;
+                    top: -9999px;
+                    opacity: 0;
+
+                    span{
+                        display: block;
+                        width: 100px;
+                        height: 100px;
+                        background: #d47457;
+                        border-radius: 50%;  
+                        color: #fff;
+                        text-align: center;
+                        margin-bottom: 10px;
+
+                        strong{
+                            font: bold 24px/100px 'Raleway';
+                        }
+                        
+                        &::after{
+                            content: '';
+                            display: block;
+                            width: 1px;
+                            height: calc((60px * 5) + (50px * 23) - 25px);
+                            background: #f6dcd4;
+                            position: absolute;
+                            top: 100px;
+                            left: 50px;
+                        }
+                    }
+                    ul{      
+                        li{
+                            span{  
+                                width: 50%;
+                                min-width: 150px;       
+                                height: 50px;          
+                                border-radius: 25px;
+                                background: #df9f8c;
+                                font: bold 14px/50px 'Raleway';
+                                letter-spacing: 2px;
+                                transform: translateX(70px);
+
+                                &::before{
+                                    content: '';
+                                    display: block;
+                                    width: 20px;
+                                    height: 1px;
+                                    background: #f6dcd4;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: -20px;
+                                }
+                            }
+                            &:nth-of-type(1) span:after{
+                                height: calc((40px + 10px) * 4 - 20px);
+                                top: 50px;
+                                left: 30px;
+                            }
+                            &:nth-of-type(2) span:after{
+                                height: calc((40px + 10px) * 11 - 20px);
+                                top: 50px;
+                                left: 30px;
+                            }
+                            &:nth-of-type(3) span:after{
+                                height: calc((40px + 10px) * 6 - 20px);
+                                top: 50px;
+                                left: 30px;
+                            }
+                            &:nth-of-type(4) span:after{
+                                height: calc((40px + 10px) * 2 - 20px);
+                                top: 50px;
+                                left: 30px;
+                            }
+                            &:nth-of-type(5) span:after{
+                                height: calc((40px + 10px) * 3 - 20px);
+                                top: 50px;
+                                left: 30px;
+                            }
+
+                            ul{
+                                li{
+                                    span{
+                                        width: 50%;          
+                                        min-width: 140px; 
+                                        height: 40px;
+                                        background: #f6dcd4;
+                                        font: 11px/40px 'Raleway';
+                                        color: #444;
+                                        letter-spacing: 0;
+                                        transform: translateX(120px);
+
+                                        &::after{
+                                            display: none;
+                                        }
+                                    }                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+
+//미디어쿼리
+@media screen and (max-width:$tablet){
+    /* about ----------------------------------------------------------- */
+    .about{
+        width: 100%;
+
+        .sub_visualTop{
+            .inner{
+                width: 100%;
+            }
+        }
+        .sub_content{
+            width: 100%;
+            margin-bottom: 100px;
+
+            .inner{
+                width: 100%;
+                padding: 30px;
+
+                h3{
+                    font-size: 20px;
+                }
+                p{
+                    padding: 0;
+                }
+            }
+        }
+        #sub_about_visualNumber{
+            padding: 30px;
+
+            .inner{
+                width: 100%;
+
+                .wrap{
+
+                    article{
+                        width: 32%;
+                        margin-right: 1%;
+                        padding: 40px 20px;
+                        height: 220px;
+    
+                        &:nth-of-type(3){
+                            margin-right: 0;
+                        }
+                        h1{
+                            font-size: 40px;
+                        }
+                    }
+                }
+                
+            }
+        }
+        #sub_about_leadership{
+
+            .inner{
+                width: 100%;
+                padding: 80px 30px;
+                
+                .wrap{
+                    article{
+                        &:nth-of-type(1){
+                            width: 100%;
+                            margin-right: 0;
+
+                            .pic{
+                                max-width: 380px;
+                                max-height: 380px;
+                                margin: 0 auto;
+                            }
+                        }
+                        &:nth-of-type(2){
+                            width: 100%;
+                            padding: 80px 30px 0px;
+
+                            h3{
+                                span{
+                                    display: block;
+                                    margin-top: 10px;
+
+                                    &::before{
+                                        content: '/';
+                                        margin-left: 0px;
+                                    }
+                                }                                
+                            }
+                            p{
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #sub_about_members{
+            padding: 80px 30px;
+    
+            .inner{
+                width: 100%;
+    
+                .wrap{
+                    article{
+                        width: 49%;
+                        margin-right: 2%;
+    
+                        &:nth-of-type(3){
+                            margin-right: 2%;
+                        }
+                        &:nth-of-type(even){
+                            margin-right: 0;
+                        }
+    
+                        .sub_about_members_pic{
+    
+                            .sub_about_members_txt_more{
+                                padding: 20px;                        
+                                p{
+                                    font: normal 13px/1.5 'Raleway';
+                                }                       
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #sub_about_department{
+            padding: 30px;
+
+            .inner{
+                width: 100%;
+                
+                .division{
+                    height: 80vw;
+                }
+            }
+        } 
+    }
+}
+@media screen and (max-width:$mobile){
+    /* about ----------------------------------------------------------- */
+    .about{
+        .sub_visualTop{
+            margin-bottom: 50px;
+        }
+        .sub_content{
+            margin-bottom: 50px;
+
+            .inner{
+                h3{
+                    line-height: 1.4;
+                    &:after{
+                        height: 50px;
+                    }
+                }
+            }
+        }
+        #sub_about_visualNumber{
+            padding: 0 30px;
+            .inner{
+                .wrap{
+                    article{
+                        width: 100%;
+                        margin-right: 0;
+                        padding: 30px 20px;
+                        height: auto;
+                        border-bottom: 1px solid rgba(68, 68, 68, 0.3);
+                        border-right: 0;
+                        float: left;
+
+                        &:nth-of-type(3){
+                            margin-bottom: 0;
+                            border-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+        #sub_about_leadership{
+            .inner{
+                .wrap{
+                    article{
+                        &:nth-of-type(2){
+                            padding: 30px 0px 0px;
+
+                            p{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #sub_about_members{
+            margin-bottom: 50px;
+
+            .inner{
+    
+                .wrap{
+                    article{
+                        width: 100%;
+                        margin-right: 0;
+    
+                        &:nth-of-type(3){
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+        #sub_about_department{
+
+            .inner{
+                .division{
+                    height: auto;
+                    background: none;
+
+                    .div_tree{
+                        position: relative;
+                        top: 0;
+                        opacity: 1;
+                    }
+                }
+                
+            }
+        }         
+    }
+}

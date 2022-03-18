@@ -1,0 +1,357 @@
+
+.join{
+    width: 100%;
+
+    .sub_visualTop{
+        width: 100%;
+        height: 200px;
+        background: url(../img/join_bg.jpg) no-repeat center/cover fixed;
+        margin-bottom: 100px;
+
+        .inner{
+            width: 1180px;
+            margin: 0 auto;
+
+            h1{
+                @include fontRaleway($fSize:24px, $lineHt:200px);
+                font-weight: normal;
+                text-align: center;
+            }
+        }
+    }
+    .sub_content{
+        width: 100%;
+        margin-bottom: 100px;
+
+        .inner{
+            width: 1180px;
+            height: auto;
+            margin: 0 auto;            
+
+            h2{
+                @include fontYseva($fSize:30px, $color:#444, $mb:50px, $lineHt:1.2);
+                text-align: center;
+                letter-spacing: 2px;
+            }
+
+            .wrap{
+                .pic{
+                    width: 220px;
+                    margin-right: 20px;
+                    height: 1244px;
+                    background: #ffeee9;
+                    float: left;
+                    position: relative;
+
+                    h3{
+                        font: normal 30px/1.3 'Merriweather';
+                        color: #fffcfb;
+                        writing-mode: vertical-rl;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        margin: 30px;
+
+                    }
+                    p{
+                        font: 12px/1.5 'Merriweather';
+                        color: #fffcfb;
+                        writing-mode: vertical-rl;
+                        position: absolute;
+                        top: 0;
+                        right: 60px;
+                        height: 50%;
+                        margin: 30px;
+                    }
+                    
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: left top;
+                        opacity: 0.1;
+                    }
+                }
+                fieldset{
+                    width: 940px;
+                    background: #fff7f4;
+                    padding: 50px;
+                    float: left;
+
+                    h3{
+                        font: bold 24px/1 'Merriweather';
+                        color: #444;
+                        margin-bottom: 20px;
+                    }
+                    #terms{
+                        width: 100%;
+                        height: 200px;
+                        padding: 10px;
+                        font: 12px/1.5 'Raleway';
+                        color: #444;                        
+                        background: #ffeee9;
+                        border: 1px solid #f6dcd4;
+                        resize: none;        
+                    }
+                    .agreement{
+                        margin-bottom: 30px;
+                        text-align: right;
+                        font: bold 16px/1 'Raleway';
+                        color: #444;
+                        margin-top: 10px;
+
+                        input[type=checkbox]{
+                            margin-right: 5px;
+                            position: relative;
+                            top: 0.5px;
+                        }
+                    }
+                    table{
+                        width: 100%;
+                        color: #444;
+
+                        tr{       
+                            height: 70px;
+
+                            &:nth-of-type(1), &:nth-of-type(7){
+                                height: 45px;
+
+                                th{
+                                    text-align: center;
+                                    font: bold 16px/1 'Raleway';
+                                    letter-spacing: 3px;
+                                    background: #f6dcd4;
+                                    color: #444;
+                                }     
+                            }
+                            &:nth-of-type(10){ 
+
+                                th{
+                                    padding-bottom: 30px;
+                                }
+                                td{
+                                    padding: 10px 0 30px;
+                                }
+                            }
+                            &:last-child th{
+                                text-align: center;
+                                padding: 30px 0 0;
+                                border-top: 2px solid #f6dcd4;
+
+                                input[type=reset], input[type=submit]{
+                                    display: block;
+                                    float: left;
+                                    width: 49%;
+                                    height: 40px;
+                                    margin-right: 2%;
+                                    border: none;
+                                    background: #f6dcd4;
+                                    font: bold 14px/1 'Raleway';
+                                    color: #444;
+                                    letter-spacing: 2px;
+                                    text-align: center;
+                                }
+                                input[type=submit]{
+                                    margin-right: 0;
+                                }
+                            }
+
+                            th{
+                                text-align: left;
+                                padding: 10px;
+                                width: 20%;
+                                font: bold 14px/1 'Raleway';  
+                            }
+                            td{
+                                width: 80%;
+                                
+                                input[type=text], input[type=password], select{
+                                    padding: 10px;
+                                    width: 100%;
+                                    height: 40px;
+                                    background: #ffeee9;
+                                    border: 1px solid #f6dcd4;
+                                    font: 12px/1 'Raleway';
+                                }
+                                input[type=radio], input[type=checkbox]{
+                                    margin-right: 5px;
+                                    
+                                    //라디오, 체크박스 높이 살짝 올라온거 내리기
+                                    position: relative;
+                                    top: 2px; 
+                                }
+                                label{
+                                    margin-right: 10px;
+                                    font: 12px/1 'Raleway';
+                                }
+                                textarea#comments{
+                                    padding: 10px;
+                                    width: 100%;
+                                    height: 100px;
+                                    background: #ffeee9;
+                                    border: 1px solid #f6dcd4;
+                                    font: 12px/1.5 'Raleway';
+                                    resize: none;
+                                }
+                            }
+                        }
+                    }  
+                }
+            }  
+        }
+    }    
+}
+
+//미디어쿼리
+@media screen and (max-width:$tablet){
+    /* join ----------------------------------------------------------- */
+    .join{
+        width: 100%;
+
+        .sub_visualTop{
+            .inner{
+                width: 100%;
+            }
+        }
+        .sub_content{    
+            .inner{
+                width: 100%;
+                padding: 30px;
+    
+                .wrap{
+                    .pic{
+                        display: none;
+                    }
+                    fieldset{
+                        width: 100%;
+                        padding: 30px 20px;
+
+                        table{
+    
+                            tr{       
+                                height: 60px;
+
+                                &:nth-of-type(8){
+                                    height: 100px;
+
+                                    td{
+                                        width: 100%;
+                                        padding: 10px 0;
+
+                                        label{
+                                            width: 49%;
+                                            display: block;
+                                            float: left;
+                                            margin-right: 2%;
+                                            margin-bottom: 5px;
+    
+                                            &:nth-of-type(even){
+                                                margin-right: 0;
+                                            }
+                                        }
+                                    }      
+                                }
+    
+                                th{
+                                    line-height: 1.5;
+                                }
+                            }
+                        }  
+                    }
+                }  
+            }
+        }      
+    }
+}
+
+@media screen and (max-width:$mobile){
+    /* join ----------------------------------------------------------- */
+    .join{
+        .sub_visualTop{
+            margin-bottom: 50px;
+        }     
+        .sub_content{    
+            .inner{    
+                .wrap{
+                    .pic{
+                        display: none;
+                    }
+                    fieldset{
+                        padding: 20px;
+
+                        h3{
+                            font-size: 16px;
+                            margin-bottom: 10px;
+                        }
+                        #terms{
+                            font-size: 10px;
+                        }
+                        .agreement{
+                            font-size: 12px;
+
+                            input[type=checkbox]{
+                                top: 2px;
+                            }
+                        }
+                        table{
+    
+                            tr{       
+                                
+                                &::after{
+                                    content: '';
+                                    display: block;
+                                    clear: both;
+                                }
+
+                                &:nth-of-type(1), &:nth-of-type(7){
+                                    height: auto;
+
+                                    th{
+                                        font-size: 13px;
+                                        letter-spacing: 1px;
+                                        padding: 10px;
+                                    }
+                                }
+
+                                &:nth-of-type(8){
+                                    height: auto;
+
+                                }
+                                &:nth-of-type(10){ 
+
+                                    th{
+                                        padding-bottom: 5px;
+                                    }
+                                    td{
+                                        padding: 0 0 10px;
+                                    }
+                                }
+                                &:last-child th{
+                                    padding: 20px 0 0;
+                                }
+
+                                th{
+                                    width: 100%;
+                                    display: block;
+                                    float: left;
+                                    font-size: 10px;
+                                    padding: 10px 0 5px 0;
+                                }
+                                td{
+                                    width: 100%;
+                                    display: block;
+                                    float: left;
+
+                                    input[type=text], input[type=password], select{
+                                        padding: 5px 10px;
+                                        height: 30px;
+                                    }
+                                }
+                            }
+                        }  
+                    }
+                }  
+            }
+        }     
+    }
+}
