@@ -13,7 +13,8 @@
             margin: 0 auto;
 
             h1{
-                @include fontRaleway($fSize:24px, $lineHt:200px);
+                font: bold 30px/200px 'Rajdhani';
+                color: #444;
                 font-weight: normal;
                 text-align: center;
             }
@@ -29,7 +30,9 @@
             margin: 0 auto;            
 
             h2{
-                @include fontYseva($fSize:30px, $color:#444, $mb:50px, $lineHt:1.2);
+                font: 30px/1 'Yeseva One';
+                color: #444;
+                margin-bottom: 50px;
                 text-align: center;
                 letter-spacing: 2px;
             }
@@ -57,6 +60,7 @@
                         font: 12px/1.5 'Merriweather';
                         color: #fffcfb;
                         writing-mode: vertical-rl;
+                        text-align: left;
                         position: absolute;
                         top: 0;
                         right: 60px;
@@ -87,8 +91,8 @@
                         width: 100%;
                         height: 200px;
                         padding: 10px;
-                        font: 12px/1.5 'Raleway';
-                        color: #444;                        
+                        font: 13px/1.3 'Rajdhani';
+                        color: #999;                        
                         background: #ffeee9;
                         border: 1px solid #f6dcd4;
                         resize: none;        
@@ -96,7 +100,7 @@
                     .agreement{
                         margin-bottom: 30px;
                         text-align: right;
-                        font: bold 16px/1 'Raleway';
+                        font: bold 16px/1 'Rajdhani';
                         color: #444;
                         margin-top: 10px;
 
@@ -118,8 +122,8 @@
 
                                 th{
                                     text-align: center;
-                                    font: bold 16px/1 'Raleway';
-                                    letter-spacing: 3px;
+                                    font: bold 22px/1 'Rajdhani';
+                                    letter-spacing: 2px;
                                     background: #f6dcd4;
                                     color: #444;
                                 }     
@@ -146,10 +150,11 @@
                                     margin-right: 2%;
                                     border: none;
                                     background: #f6dcd4;
-                                    font: bold 14px/1 'Raleway';
+                                    font: bold 16px/1 'Rajdhani';
                                     color: #444;
                                     letter-spacing: 2px;
                                     text-align: center;
+                                    cursor: pointer;
                                 }
                                 input[type=submit]{
                                     margin-right: 0;
@@ -160,7 +165,7 @@
                                 text-align: left;
                                 padding: 10px;
                                 width: 20%;
-                                font: bold 14px/1 'Raleway';  
+                                font: bold 16px/1 'Rajdhani';  
                             }
                             td{
                                 width: 80%;
@@ -171,7 +176,8 @@
                                     height: 40px;
                                     background: #ffeee9;
                                     border: 1px solid #f6dcd4;
-                                    font: 12px/1 'Raleway';
+                                    font: 14px/1 'Rajdhani';
+                                    color: #444;
                                 }
                                 input[type=radio], input[type=checkbox]{
                                     margin-right: 5px;
@@ -182,7 +188,8 @@
                                 }
                                 label{
                                     margin-right: 10px;
-                                    font: 12px/1 'Raleway';
+                                    font: 14px/1 'Rajdhani';
+                                    color: #444;
                                 }
                                 textarea#comments{
                                     padding: 10px;
@@ -190,7 +197,8 @@
                                     height: 100px;
                                     background: #ffeee9;
                                     border: 1px solid #f6dcd4;
-                                    font: 12px/1.5 'Raleway';
+                                    font: 14px/1.5 'Rajdhani';
+                                    color: #444;
                                     resize: none;
                                 }
                             }
@@ -209,8 +217,15 @@
         width: 100%;
 
         .sub_visualTop{
+            height: 150px;
+            margin-bottom: 50px;
+
             .inner{
                 width: 100%;
+                
+                h1{
+                    line-height: 150px;
+                }
             }
         }
         .sub_content{    
@@ -230,6 +245,13 @@
     
                             tr{       
                                 height: 60px;
+
+                                &:nth-of-type(1), &:nth-of-type(7){
+    
+                                    th{
+                                        font-size: 18px;
+                                    }     
+                                }
 
                                 &:nth-of-type(8){
                                     height: 100px;
@@ -251,6 +273,12 @@
                                         }
                                     }      
                                 }
+                                &:last-child th{
+    
+                                    input[type=reset], input[type=submit]{
+                                        font-size: 14px;
+                                    }
+                                }
     
                                 th{
                                     line-height: 1.5;
@@ -271,7 +299,10 @@
             margin-bottom: 50px;
         }     
         .sub_content{    
-            .inner{    
+            .inner{
+                h2{
+                    line-height: 1.2;
+                } 
                 .wrap{
                     .pic{
                         display: none;
@@ -283,20 +314,15 @@
                             font-size: 16px;
                             margin-bottom: 10px;
                         }
-                        #terms{
-                            font-size: 10px;
-                        }
                         .agreement{
-                            font-size: 12px;
+                            font-size: 14px;
 
                             input[type=checkbox]{
                                 top: 2px;
                             }
                         }
-                        table{
-    
+                        table{    
                             tr{       
-                                
                                 &::after{
                                     content: '';
                                     display: block;
@@ -334,7 +360,7 @@
                                     width: 100%;
                                     display: block;
                                     float: left;
-                                    font-size: 10px;
+                                    font-size: 12px;
                                     padding: 10px 0 5px 0;
                                 }
                                 td{

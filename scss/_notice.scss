@@ -14,11 +14,12 @@
 			width: 1180px;
 			margin: 0 auto;
 
-			h1 {
-				@include fontRaleway($fSize:24px, $lineHt:200px, $color:#fff);
+			h1{
+                font: bold 30px/200px 'Rajdhani';
+                color: #eee;
                 font-weight: normal;
-				text-align: center;
-			}
+                text-align: center;
+            }
 		}
 	}
 	.sub_content {
@@ -31,7 +32,9 @@
 			margin: 0 auto;
 
 			h2 {
-				@include fontYseva($fSize:30px, $color:#444, $mb:50px);
+				font: 30px/1 'Yeseva One';
+                color: #444;
+                margin-bottom: 50px;
                 text-align: center;
                 letter-spacing: 2px;
 			}
@@ -52,9 +55,8 @@
 					float: left;
 					top: 50%;
 					transform: translateY(-50%);
-					font-weight: bold;
-
-					@include fontRaleway($fSize:14px, $lineHt:1);
+					font: bold 18px/1 'Rajdhani';
+					color: #444;
 
 					span {
 						color: #a34b4b;
@@ -72,9 +74,9 @@
 						select {
 							padding: 5px;
 							border: 1px solid transparent;
-							font-weight: bold;
-							
-							@include fontRaleway($fSize:14px, $lineHt:1);
+
+							font: bold 16px/1 'Rajdhani';
+							color: #444;
 						}
 					}
 					.input_box {
@@ -86,7 +88,8 @@
 							padding: 5px;
 							border: 1px solid transparent;
 
-							@include fontRaleway($lineHt:1);
+							font: bold 16px/1 'Rajdhani';
+							color: #444;
 						}
 						button {
 							background: #fff;
@@ -112,7 +115,8 @@
                         padding: 15px 0;
                         border-bottom: 2px solid #444;
 						
-						@include fontRaleway($fSize:16px, $lineHt:1);
+						font: bold 20px/1 'Rajdhani';
+						color: #444;
 
                         &:nth-of-type(1){
                             width: 10%;
@@ -126,30 +130,35 @@
                         border-bottom: 1px solid #eee;
                         
                         &:nth-of-type(1){
-							@include fontRaleway($fSize:14px, $lineHt:1);
+							font: 18px/1 'Rajdhani';
+							color: #222;
                             text-align: center;
                             
                         }
                         &:nth-of-type(2){
-							@include fontRaleway($lineHt:1, $color:#222);
+							font: 18px/1 'Rajdhani';
+							color: #222;
 							text-align: center;
 
                             span{
                                 display: block;
                                 width: 100%;
                                 margin-top: 5px;
-								font-weight: bold;
-
-								@include fontRaleway($fSize:46px, $lineHt:1, $color:#222);
+								font: bold 46px/1 'Rajdhani';
+								color: #222;
                             }
                         }
                         &:nth-of-type(3){
                             a{
                                 h3{
-									@include fontRaleway($fSize:30px, $lineHt:1, $color:#222, $mb:20px);
+									font: bold 34px/1 'Rajdhani';
+									color: #222;
+									margin-bottom: 20px;
                                 }
                                 p{
-									@include fontRaleway($fSize:14px, $lineHt:1.4, $color:#888);
+									font: 16px/1.2 'Rajdhani';
+									color: #888;
+									text-align: left;
                                     overflow: hidden;
                                     text-overflow: ellipsis;
                                     display: -webkit-box;
@@ -179,7 +188,6 @@
                     width: 50px;
                     height: 50px;
                     font-size: 25px;
-                    font-family: 'Railway';
                     line-height: 50px;
                     color: #bbb;
                     border: 1px solid #eee;
@@ -197,7 +205,6 @@
                     width: 50px;
                     height: 50px;
                     font-size: 25px; 
-                    font-family: 'Railway';
                     line-height: 50px;
                     color: #bbb;
                     border: 1px solid #eee;
@@ -219,8 +226,8 @@
                         height: 50px;
                         margin: 0 2px;
                         transition: all 0.5s;
-						
-						@include fontRaleway($fSize:14px, $lineHt:50px, $color:#888);
+						font: 18px/50px 'Rajdhani';
+						color: #888;
 
                         &:hover{
                             color: #222;
@@ -242,8 +249,15 @@
         width: 100%;
 
         .sub_visualTop{
+            height: 150px;
+            margin-bottom: 50px;
+
             .inner{
                 width: 100%;
+                
+                h1{
+                    line-height: 150px;
+                }
             }
         }
         .sub_content{
@@ -254,9 +268,9 @@
 				table {
 	
 					tr {
-						th {
-							font-size: 14px;
-	
+						th {	
+							font-size: 16px;
+
 							&:nth-of-type(1){
 								width: 5%;
 							}
@@ -270,10 +284,12 @@
 						}
 						td {
 							padding: 24px 0;
+
 							&:nth-of-type(1){
-								font-size: 12px;
+								font-size: 14px;
 							}
 							&:nth-of-type(2){
+								font-size: 14px;
 
 								span{
 									font-size: 30px;
@@ -286,10 +302,10 @@
 									h3{
 										margin-bottom: 10px;
 										line-height: 1.2;
-										font-size: 20px;
+										font-size: 22px;
 									}
 									p{
-										font-size: 12px;							-webkit-line-clamp: 1;
+										font-size: 14px;							-webkit-line-clamp: 1;
 									}
 								}
 							}
@@ -321,7 +337,9 @@
 		}
 		.sub_content{
             .inner{
-
+				h2{
+                    line-height: 1.2;
+                } 
 				.notice_top {
 					padding: 10px 0;
 	
@@ -343,7 +361,7 @@
 							height: 30px;
 	
 							input {
-								font-size: 10px;
+								font-size: 12px;
 							}
 							button {
 								background: #fff;
@@ -371,7 +389,7 @@
 						td {
 							padding: 24px 0;
 							&:nth-of-type(1){
-								font-size: 10px;
+								font-size: 12px;
 							}
 							&:nth-of-type(2){  
 								display: none;
@@ -403,7 +421,6 @@
 						
 						a{	
 							height: 30px;
-							font-size: 12px;
 							line-height: 30px;
 
 							@for $i from 4 through 5{

@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GALLERY</title>
     <script src="https://kit.fontawesome.com/b9f8ab812c.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/main.js"></script>
+    <script defer src="js/gallery.js"></script>
 
 </head>
 <body>
@@ -91,7 +93,7 @@
         </div>
     </header>
 
-    <section class="content">
+    <section class="content gallery">
         <div class="sub_visualTop">
             <div class="inner">
                 <h1>GALLERY</h1>
@@ -100,9 +102,228 @@
 
         <div class="sub_content">
             <div class="inner">                
-                <h2>SUB TITLE</h2>
-                <p>Lorem ipsum dolor sit amet.</p>
+                <h2>OUR GALLERY</h2>    
+                <div class="wrap">
+                    <ul class="sortBtn">
+                        <li class="on"><a href="*">All</a></li>
+                        <li><a href=".odd">2021</a></li>
+                        <li><a href=".even">2022</a></li>
+                    </ul>
+                    <section>
+                        <h1 class="hidden">GALLERY</h1>
+                        <article class="odd">
+                            <div>
+                                <img src="img/g1.jpg" alt="gallery image1">
+                                <h2>Candlelit conversations</h2>
+                                <p>Take a moment for you amongst candlelight, like our friend @lukearthurwells. #JoMaloneLondon #ScentsOfHome</p>
+                            </div>
+                        </article>
+                        <article class="even">
+                            <div>
+                                <img src="img/g2.jpg" alt="gallery image2">
+                                <h2>Back With A Bang</h2>
+                                <p>The Advent Calendar Returns. The only way to count down to Christmas. Filled with 24 gleaming gifts including exclusive products, festive favourites and a 30ml Cologne.​</p>
+                            </div>
+                        </article>
+                        <article class="odd">
+                            <div>
+                                <img src="img/g3.jpg" alt="gallery image3">
+                                <h2>The Perfect Present</h2>
+                                <p>From the crisp of the tissue paper to the last loop of the bow, it has to be just right. Whether it’s a token of appreciation or the grandest of gestures, each gift is presented in an iconic box as famous as our fragrance. #PerfectPresent</p>
+                            </div>
+                        </article>
+                        <article class="even">
+                            <div>
+                                <img src="img/g4.jpg" alt="gallery image4">
+                                <h2>No Receipt Needed​</h2>
+                                <p>Gifts For The Discerning Man​. For your dad, brother, significant other. Presents he’ll be over the moon to receive.​</p>
+                            </div>
+                        </article>
+                        <article class="odd">
+                            <div>
+                                <img src="img/g5.jpg" alt="gallery image5">
+                                <h2>Scent Your Space</h2>
+                                <p>Add a sense of enchantment to any space with our Myrrh & Tonka Scent Surround Diffuser. Thank you @lukearthurwells. #ScentsOfHome</p>
+                            </div>
+                        </article>
+                        <article class="even">
+                            <div>
+                                <img src="img/g6.jpg" alt="gallery image6">
+                                <h2>That Friday Feeling</h2>
+                                <p>A Gift To Welcome The Weekend Spend over [xxx] and pick a trio of miniatures. Enter FRIDAYFEELING1 or FRIDAYFEELING2 at checkout to redeem.</p>
+                            </div>
+                        </article>
+                        <article class="odd">
+                            <div>
+                                <img src="img/g7.jpg" alt="gallery image7">
+                                <h2>A New Purpose</h2>
+                                <p>Continue the scented journey long after the last burn à la @catesthill. #ANewPurpose #ScentsOfHome</p>
+                            </div>
+                        </article>
+                        <article class="even">
+                            <div>
+                                <img src="img/g8.jpg" alt="gallery image8">
+                                <h2>No Receipt Needed</h2>
+                                <p>Gifts For The Discerning Man​. For your dad, brother, significant other. Presents he’ll be over the moon to receive.​</p>
+                            </div>
+                        </article>
+                        <article class="odd">
+                            <div>
+                                <img src="img/g9.jpg" alt="gallery image9">
+                                <h2>Festive Fireplace</h2>
+                                <p>One for me, one for you? Get cosy by the festive fireside this Christmas and escape for a moment with our Townhouse collection. Bringing the outside in, Wild Berry & Bramble evokes the fresh aroma of red berries, while Green Tomato Vine provides a rich, garden scent. The hand-finished ceramic vessel makes this a wonderfully luxurious gift. Image courtesy of @catesthill. #JoMaloneLondon #ScentsofHome</p>
+                            </div>
+                        </article>
+                        <article class="even">
+                            <div>
+                                <img src="img/g10.jpg" alt="gallery image10">
+                                <h2>Starlit Mandarin & Honey</h2>
+                                <p>A Stellar Scent For The Season.​ In the darkest skies shine the brightest stars. Vibrant mandarin sweetened with honey and wrapped in the powdery warmth of coumarin. ​</p>
+                            </div>
+                        </article>
+                        <article class="odd">
+                            <div>
+                                <img src="img/g11.jpg" alt="gallery image11">
+                                <h2>Continue the love affair</h2>
+                                <p>Make like @lukearthurwells and continue the love affair by repurposing your candle glasses. #ScentsOfHome #ANewPurpose</p>
+                            </div>
+                        </article>
+                        <article class="even">
+                            <div>
+                                <img src="img/g12.jpg" alt="gallery image12">
+                                <h2>A Stellar Selection</h2>
+                                <p>Coveted Cologne Collections.​ Filled with five miniature favourites, these sets are the gift of choice. Introduce them to Jo Malone London with the Cologne Collection or take their senses on an adventure with the Cologne Intense Collection.</p>
+                            </div>
+                        </article>
+                        <article class="odd">
+                            <div>
+                                <img src="img/g13.jpg" alt="gallery image13">
+                                <h2>A Moment For You</h2>
+                                <p>The indulgences that you love the most. Explore the worlds favourites in Bath & Body. #TimeForMe​</p>
+                            </div>
+                        </article>
+                        <article class="even">
+                            <div>
+                                <img src="img/g14.jpg" alt="gallery image14">
+                                <h2>Rose Magnolia Cologne</h2>
+                            </div>
+                        </article>
+                        <article class="odd">
+                            <div>
+                                <img src="img/g15.jpg" alt="gallery image15">
+                                <h2>Strike Up Candlelit Conversations</h2>
+                                <p>Our fireplace of dreams, decorated with our favourite foliage and flickering candlelight. Inspiration from @lukearthurwells. #JoMaloneLondon #ScentsOfHome</p>
+                            </div>
+                        </article>
+                        <article class="even">
+                            <div>
+                                <img src="img/g16.jpg" alt="gallery image16">
+                                <h2>Add Some Extra Sparkle</h2>
+                                <p>Gifts That Won’t Stay Unopened. Show how much you care with a present every bit as sparkling as she is.​</p>
+                            </div>
+                        </article>
+                        <article class="odd">
+                            <div>
+                                <img src="img/g17.jpg" alt="gallery image17">
+                                <h2>Perfectly Placed</h2>
+                                <p>Show loved ones how much you appreciate them this year with a little table favour at each place setting – surprise guests with mini Jo Malone London Travel Candles, set amongst a scene of fresh greenery and pine cones. Image courtesy of @catesthill. #JoMaloneLondon #ScentsofHome</p>
+                            </div>
+                        </article>
+                        <article class="even">
+                            <div>
+                                <img src="img/g18.jpg" alt="gallery image18">
+                                <h2>MPP | Diffusers | Diffuser Bestsellers</h2>
+                                <p>Explore the most desired Jo Malone London's Diffusers to add an enveloping and continuous scent to any space.</p>
+                            </div>
+                        </article>
+                        <article class="odd">
+                            <div>
+                                <img src="img/g19.jpg" alt="gallery image19">
+                                <h2>A New Purpose</h2>
+                                <p>Make like @lukearthurwells and continue the love affair by repurposing your candle glasses. #ScentsOfHome #ANewPurpose</p>
+                            </div>
+                        </article>
+                        <article class="even">
+                            <div>
+                                <img src="img/g20.jpg" alt="gallery image20">
+                                <h2>Spring Blossoms | Jo Malone London</h2>
+                                <p>Discover new scents and old favourites. Escape to the Mediterranean with two new floral perfumes, diffusers and beloved Blossom perfume favourites.</p>
+                            </div>
+                        </article>
+                        <article class="odd">
+                            <div>
+                                <img src="img/g21.jpg" alt="gallery image21">
+                                <h2>Perfectly Placed</h2>
+                                <p>Home scenting with @lukearthurwells. #ScentOfHome</p>
+                            </div>
+                        </article>
+                        <article class="even">
+                            <div>
+                                <img src="img/g22.jpg" alt="gallery image22">
+                                <h2>Spring Blossoms | Jo Malone London</h2>
+                                <p>Discover new scents and old favourites. Escape to the Mediterranean with two new floral perfumes, diffusers and beloved Blossom perfume favourites.</p>
+                            </div>
+                        </article>
+                        <article class="odd">
+                            <div>
+                                <img src="img/g23.jpg" alt="gallery image23">
+                                <h2>Upcycling our Townhouse Collection</h2>
+                                <p>As @catesthill knows 'The Townhouse Collection ceramic vessels are too good to throw away. Instead upcycle them as vases for simple posies.' #ANewPurpose #ScentsOfHome</p>
+                            </div>
+                        </article>
+                        <article class="even">
+                            <div>
+                                <img src="img/g24.jpg" alt="gallery image24">
+                                <h2>Spring Blossoms | Jo Malone London</h2>
+                                <p>Discover new scents and old favourites. Escape to the Mediterranean with two new floral perfumes, diffusers and beloved Blossom perfume favourites.</p>
+                            </div>
+                        </article>
+                        <article class="odd">
+                            <div>
+                                <img src="img/g25.jpg" alt="gallery image25">
+                                <h2>Captivating Candlelight</h2>
+                                <p>Wild Berry & Bramble. A home scent to make them twit twoo. Inspiration courtesy of @lukearthurwells. #JoMaloneLondon #ScentsOfHome</p>
+                            </div>
+                        </article>
+                        <article class="even">
+                            <div>
+                                <img src="img/g26.jpg" alt="gallery image26">
+                                <h2>Spring Blossoms | Jo Malone London</h2>
+                                <p>Discover new scents and old favourites. Escape to the Mediterranean with two new floral perfumes, diffusers and beloved Blossom perfume favourites.</p>
+                            </div>
+                        </article>
+                        <article class="odd">
+                            <div>
+                                <img src="img/g27.jpg" alt="gallery image27">
+                                <h2>Be Inspired</h2>
+                                <p>Be inspired by @catesthill and give your candles glasses a new purpose. #ANewPurpose #ScentsOfHome</p>
+                            </div>
+                        </article>
+                        <article class="even">
+                            <div>
+                                <img src="img/g28.jpg" alt="gallery image28">
+                                <h2>Spring Blossoms | Jo Malone London</h2>
+                                <p>Discover new scents and old favourites. Escape to the Mediterranean with two new floral perfumes, diffusers and beloved Blossom perfume favourites.</p>
+                            </div>
+                        </article>
+                        <article class="odd">
+                            <div>
+                                <img src="img/g29.jpg" alt="gallery image29">
+                                <h2>The Gang’s All Here</h2>
+                                <p>Create scented stories tailored to any and every space. Fragrances that set the mood and inspire scented memories. Let our house inspire your home. #ScentsOfHome</p>
+                            </div>
+                        </article>
+                        <article class="even">
+                            <div>
+                                <img src="img/g30.jpg" alt="gallery image30">
+                                <h2>Spring Blossoms | Jo Malone London</h2>
+                                <p>Discover new scents and old favourites. Escape to the Mediterranean with two new floral perfumes, diffusers and beloved Blossom perfume favourites.</p>
+                            </div>
+                        </article>
+                    </section>
+                </div>            
             </div> 
+            
         </div>
     </section>
 

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Merriweather&family=Raleway&family=Yeseva+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Noto+Serif+Display&family=Rajdhani&family=Yeseva+One&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -71,11 +71,8 @@ fieldset {
   padding: 0 10px;
 }
 #header_sub > .inner .menuWeb #gnb_1 li a {
-  font-size: 12px;
-  line-height: 1;
-  font-family: "Merriweather";
+  font: 12px/1 "Merriweather";
   color: #444;
-  margin-bottom: 0;
   padding-bottom: 5px;
   border-bottom: 2px solid transparent;
   letter-spacing: 1.5px;
@@ -96,11 +93,8 @@ fieldset {
   padding: 0 10px;
 }
 #header_sub > .inner .menuWeb #gnb_2 li a {
-  font-size: 12px;
-  line-height: 1;
-  font-family: "Merriweather";
+  font: 12px/1 "Merriweather";
   color: #444;
-  margin-bottom: 0;
   padding-bottom: 5px;
   border-bottom: 2px solid transparent;
   letter-spacing: 1.5px;
@@ -186,7 +180,7 @@ fieldset {
 }
 #header_sub > .inner .menuMo h1 a {
   display: block;
-  font: bold 26px/1 "Raleway";
+  font: bold 26px/1 "Rajdhani";
   color: #fff;
 }
 #header_sub > .inner .menuMo #gnbMo {
@@ -204,11 +198,8 @@ fieldset {
   display: block;
   width: 100%;
   padding: 20px 0;
-  font-size: 14px;
-  line-height: 1;
-  font-family: "Merriweather";
+  font: 14px/1 "Merriweather";
   color: #444;
-  margin-bottom: 0;
   letter-spacing: 1.5px;
   transition: all 0.4s;
 }
@@ -216,7 +207,7 @@ fieldset {
   color: #df9f8c;
 }
 #header_sub .top {
-  background: #da9a9a;
+  background: #df9f8c;
   width: 100%;
   top: 0;
   height: 30px;
@@ -244,7 +235,8 @@ fieldset {
   margin-right: 0;
 }
 #header_sub .top .inner .util li:nth-of-type(4) input {
-  font-family: "Raleway";
+  font-family: "Rajdhani";
+  font-size: 12px;
   color: #444;
   padding: 2px 5px;
   border: 1px solid #f6dcd4;
@@ -257,13 +249,14 @@ fieldset {
   width: 20px;
   height: 20px;
   font-size: 12px;
-  color: #da9a9a;
+  color: #df9f8c;
   text-align: center;
   line-height: 20px;
   background: #f6dcd4;
   display: block;
   float: left;
   border: 0;
+  cursor: pointer;
 }
 #header_sub .top .inner .util li:nth-of-type(1), #header_sub .top .inner .util li:nth-of-type(2), #header_sub .top .inner .util li:nth-of-type(3) {
   float: left;
@@ -277,7 +270,7 @@ fieldset {
   line-height: 20px;
 }
 #header_sub .top .inner .util li:nth-of-type(1) a:hover, #header_sub .top .inner .util li:nth-of-type(2) a:hover, #header_sub .top .inner .util li:nth-of-type(3) a:hover {
-  color: #a34b4b;
+  color: #fff6ef;
 }
 
 /* content ----------------------------------------------------------- */
@@ -295,11 +288,8 @@ fieldset {
   margin: 0 auto;
 }
 .content .sub_visualTop .inner h1 {
-  font-size: 24px;
-  line-height: 200px;
-  font-family: "Raleway";
+  font: bold 30px/200px "Rajdhani";
   color: #444;
-  margin-bottom: 0;
   font-weight: normal;
   text-align: center;
 }
@@ -313,21 +303,16 @@ fieldset {
   margin: 0 auto;
 }
 .content .sub_content .inner h2 {
-  font-weight: normal;
-  font-size: 30px;
-  line-height: 1;
-  font-family: "Yeseva One";
+  font: 30px/1 "Yeseva One";
   color: #444;
   margin-bottom: 50px;
   text-align: center;
   letter-spacing: 2px;
 }
 .content .sub_content .inner p {
-  font-size: 14px;
-  line-height: 1.5;
-  font-family: "Merriweather";
+  font: 14px/1.5 "Merriweather";
   color: #444;
-  margin-bottom: 0;
+  text-align: center;
 }
 
 /* footer_sub ----------------------------------------------------------- */
@@ -376,24 +361,18 @@ fieldset {
   height: 220px;
 }
 #footer_sub .inner .wrap article:nth-of-type(2) h2 {
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 1;
-  font-family: "Yeseva One";
+  font: bold 20px/1 "Yeseva One";
   color: #222;
   margin-bottom: 30px;
-  font-weight: bold;
   letter-spacing: 2px;
 }
 #footer_sub .inner .wrap article:nth-of-type(2) address {
-  font: 12px/1.5 "Raleway";
+  font: 14px/1.2 "Rajdhani";
   margin-bottom: 10px;
   color: #222;
 }
 #footer_sub .inner .wrap article:nth-of-type(2) p {
-  font-size: 12px;
-  line-height: 1;
-  font-family: "Raleway";
+  font: normal 14px/1 "Rajdhani";
   color: #222;
   margin-bottom: 10px;
 }
@@ -402,13 +381,9 @@ fieldset {
   height: 220px;
 }
 #footer_sub .inner .wrap article:nth-of-type(3) h2 {
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 1;
-  font-family: "Yeseva One";
+  font: bold 20px/1 "Yeseva One";
   color: #222;
   margin-bottom: 30px;
-  font-weight: bold;
   letter-spacing: 2px;
 }
 #footer_sub .inner .wrap article:nth-of-type(3) ul {
@@ -418,9 +393,7 @@ fieldset {
   margin-bottom: 5px;
 }
 #footer_sub .inner .wrap article:nth-of-type(3) ul li a {
-  font-size: 12px;
-  line-height: 1;
-  font-family: "Raleway";
+  font: 14px/1 "Rajdhani";
   color: #222;
   margin-bottom: 10px;
 }
@@ -433,13 +406,9 @@ fieldset {
   margin-right: 0;
 }
 #footer_sub .inner .wrap article:nth-of-type(4) h2 {
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 1;
-  font-family: "Yeseva One";
+  font: bold 20px/1 "Yeseva One";
   color: #222;
   margin-bottom: 30px;
-  font-weight: bold;
   letter-spacing: 2px;
 }
 #footer_sub .inner .wrap article:nth-of-type(4) ul {
@@ -449,9 +418,7 @@ fieldset {
   margin-bottom: 5px;
 }
 #footer_sub .inner .wrap article:nth-of-type(4) ul li a {
-  font-size: 12px;
-  line-height: 1;
-  font-family: "Raleway";
+  font: 14px/1 "Rajdhani";
   color: #222;
   margin-bottom: 10px;
 }
@@ -462,11 +429,8 @@ fieldset {
   width: 100%;
   text-align: center;
   padding-top: 20px;
-  font-size: 12px;
-  line-height: 1;
-  font-family: "Raleway";
+  font: 14px/1 "Rajdhani";
   color: #222;
-  margin-bottom: 0;
   border-top: 1px solid rgba(34, 34, 34, 0.2);
 }
 
@@ -499,8 +463,15 @@ fieldset {
   .content {
     width: 100%;
   }
+  .content .sub_visualTop {
+    height: 150px;
+    margin-bottom: 50px;
+  }
   .content .sub_visualTop .inner {
     width: 100%;
+  }
+  .content .sub_visualTop .inner h1 {
+    line-height: 150px;
   }
   .content .sub_content .inner {
     width: 100%;
@@ -558,6 +529,9 @@ fieldset {
   .content .sub_visualTop {
     margin-bottom: 50px;
   }
+  .content .sub_content .inner h2 {
+    line-height: 1.2;
+  }
 
   /* footer_sub ----------------------------------------------------------- */
   #footer_sub .inner .wrap article:nth-of-type(1) {
@@ -588,11 +562,8 @@ fieldset {
   margin: 0 auto;
 }
 .about .sub_visualTop .inner h1 {
-  font-size: 24px;
-  line-height: 200px;
-  font-family: "Raleway";
+  font: bold 30px/200px "Rajdhani";
   color: #444;
-  margin-bottom: 0;
   font-weight: normal;
   text-align: center;
 }
@@ -606,23 +577,17 @@ fieldset {
   margin: 0 auto;
 }
 .about .sub_content .inner h2 {
-  font-weight: normal;
-  font-size: 30px;
-  line-height: 1;
-  font-family: "Yeseva One";
+  font: 30px/1 "Yeseva One";
   color: #444;
   margin-bottom: 50px;
   text-align: center;
   letter-spacing: 2px;
 }
 .about .sub_content .inner h3 {
-  font-size: 24px;
-  line-height: 1.5;
-  font-family: "Merriweather";
+  font: normal 24px/1.5 "Merriweather";
   color: #df9f8c;
   margin-bottom: 30px;
   text-align: center;
-  font-weight: normal;
 }
 .about .sub_content .inner h3::after {
   content: "";
@@ -633,11 +598,8 @@ fieldset {
   background: #df9f8c;
 }
 .about .sub_content .inner p {
-  font-size: 14px;
-  line-height: 1.5;
-  font-family: "Merriweather";
+  font: 14px/1.5 "Merriweather";
   color: #444;
-  margin-bottom: 0;
   text-align: center;
   padding: 50px;
 }
@@ -663,10 +625,7 @@ fieldset {
   border-right: 0;
 }
 .about #sub_about_visualNumber .inner .wrap article h1 {
-  font-weight: normal;
-  font-size: 50px;
-  line-height: 1;
-  font-family: "Yeseva One";
+  font: 50px/1 "Yeseva One";
   color: #444;
   margin-bottom: 20px;
   transition: all 0.5s;
@@ -676,11 +635,8 @@ fieldset {
   color: #a34b4b;
 }
 .about #sub_about_visualNumber .inner .wrap article p {
-  font-size: 14px;
-  line-height: 1.5;
-  font-family: "Merriweather";
+  font: 14px/1.3 "Merriweather";
   color: #444;
-  margin-bottom: 0;
   word-break: keep-all;
   word-wrap: break-word;
 }
@@ -715,27 +671,19 @@ fieldset {
   padding: 80px 50px;
 }
 .about #sub_about_leadership .inner .wrap article:nth-of-type(2) h2 {
-  font-weight: normal;
-  font-size: 30px;
-  line-height: 1;
-  font-family: "Yeseva One";
+  font: 30px/1 "Yeseva One";
   color: #eee;
   margin-bottom: 20px;
   letter-spacing: 2px;
 }
 .about #sub_about_leadership .inner .wrap article:nth-of-type(2) h3 {
-  font-size: 24px;
-  line-height: 1;
-  font-family: "Raleway";
+  font: bold 28px/1 "Rajdhani";
   color: #a34b4b;
   margin-bottom: 30px;
 }
 .about #sub_about_leadership .inner .wrap article:nth-of-type(2) h3 span {
-  font-size: 13px;
-  line-height: 1;
-  font-family: "Raleway";
+  font: bold 18px/1 "Rajdhani";
   color: #a34b4b;
-  margin-bottom: 0;
 }
 .about #sub_about_leadership .inner .wrap article:nth-of-type(2) h3 span::before {
   content: "/";
@@ -743,11 +691,8 @@ fieldset {
   margin-right: 10px;
 }
 .about #sub_about_leadership .inner .wrap article:nth-of-type(2) p {
-  font-size: 18px;
-  line-height: 1.5;
-  font-family: "Raleway";
+  font: 20px/1.2 "Rajdhani";
   color: #bbb;
-  margin-bottom: 0;
 }
 .about #sub_about_members {
   width: 100%;
@@ -760,10 +705,7 @@ fieldset {
   margin: 0 auto;
 }
 .about #sub_about_members .inner h2 {
-  font-weight: normal;
-  font-size: 30px;
-  line-height: 1;
-  font-family: "Yeseva One";
+  font: 30px/1 "Yeseva One";
   color: #444;
   margin-bottom: 50px;
   text-align: center;
@@ -804,7 +746,7 @@ fieldset {
   transition: all 0.5s;
 }
 .about #sub_about_members .inner .wrap article .sub_about_members_pic .sub_about_members_txt_more p {
-  font: normal 14px/1.5 "Raleway";
+  font: normal 16px/1.2 "Rajdhani";
   color: #eee;
 }
 .about #sub_about_members .inner .wrap article .sub_about_members_txt {
@@ -814,12 +756,13 @@ fieldset {
   position: relative;
 }
 .about #sub_about_members .inner .wrap article .sub_about_members_txt h3 {
-  font: bold 18px/1 "Raleway";
+  font: bold 22px/1 "Rajdhani";
   color: #eee;
   margin-bottom: 10px;
+  letter-spacing: 2px;
 }
 .about #sub_about_members .inner .wrap article .sub_about_members_txt h4 {
-  font: normal 14px/1 "Raleway";
+  font: normal 16px/1 "Rajdhani";
   color: #bbb;
 }
 .about #sub_about_members .inner .wrap article .sub_about_members_txt a {
@@ -850,10 +793,7 @@ fieldset {
   margin: 0 auto;
 }
 .about #sub_about_department .inner h2 {
-  font-weight: normal;
-  font-size: 30px;
-  line-height: 1;
-  font-family: "Yeseva One";
+  font: 30px/1 "Yeseva One";
   color: #444;
   margin-bottom: 50px;
   text-align: center;
@@ -880,7 +820,7 @@ fieldset {
   margin-bottom: 10px;
 }
 .about #sub_about_department .inner .division .div_tree span strong {
-  font: bold 24px/100px "Raleway";
+  font: bold 28px/100px "Rajdhani";
 }
 .about #sub_about_department .inner .division .div_tree span::after {
   content: "";
@@ -898,7 +838,7 @@ fieldset {
   height: 50px;
   border-radius: 25px;
   background: #df9f8c;
-  font: bold 14px/50px "Raleway";
+  font: bold 18px/50px "Rajdhani";
   letter-spacing: 2px;
   transform: translateX(70px);
 }
@@ -942,7 +882,7 @@ fieldset {
   min-width: 140px;
   height: 40px;
   background: #f6dcd4;
-  font: 11px/40px "Raleway";
+  font: 13px/40px "Rajdhani";
   color: #444;
   letter-spacing: 0;
   transform: translateX(120px);
@@ -956,8 +896,15 @@ fieldset {
   .about {
     width: 100%;
   }
+  .about .sub_visualTop {
+    height: 150px;
+    margin-bottom: 50px;
+  }
   .about .sub_visualTop .inner {
     width: 100%;
+  }
+  .about .sub_visualTop .inner h1 {
+    line-height: 150px;
   }
   .about .sub_content {
     width: 100%;
@@ -1059,6 +1006,9 @@ fieldset {
   .about .sub_content {
     margin-bottom: 50px;
   }
+  .about .sub_content .inner h2 {
+    line-height: 1.2;
+  }
   .about .sub_content .inner h3 {
     line-height: 1.4;
   }
@@ -1083,9 +1033,6 @@ fieldset {
   }
   .about #sub_about_leadership .inner .wrap article:nth-of-type(2) {
     padding: 30px 0px 0px;
-  }
-  .about #sub_about_leadership .inner .wrap article:nth-of-type(2) p {
-    font-size: 14px;
   }
   .about #sub_about_members {
     margin-bottom: 50px;
@@ -1122,11 +1069,8 @@ fieldset {
   margin: 0 auto;
 }
 .notice .sub_visualTop .inner h1 {
-  font-size: 24px;
-  line-height: 200px;
-  font-family: "Raleway";
-  color: #fff;
-  margin-bottom: 0;
+  font: bold 30px/200px "Rajdhani";
+  color: #eee;
   font-weight: normal;
   text-align: center;
 }
@@ -1140,10 +1084,7 @@ fieldset {
   margin: 0 auto;
 }
 .notice .sub_content .inner h2 {
-  font-weight: normal;
-  font-size: 30px;
-  line-height: 1;
-  font-family: "Yeseva One";
+  font: 30px/1 "Yeseva One";
   color: #444;
   margin-bottom: 50px;
   text-align: center;
@@ -1166,12 +1107,8 @@ fieldset {
   float: left;
   top: 50%;
   transform: translateY(-50%);
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1;
-  font-family: "Raleway";
+  font: bold 18px/1 "Rajdhani";
   color: #444;
-  margin-bottom: 0;
 }
 .notice .sub_content .inner .notice_top p span {
   color: #a34b4b;
@@ -1188,12 +1125,8 @@ fieldset {
 .notice .sub_content .inner .notice_top fieldset .select_box select {
   padding: 5px;
   border: 1px solid transparent;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1;
-  font-family: "Raleway";
+  font: bold 16px/1 "Rajdhani";
   color: #444;
-  margin-bottom: 0;
 }
 .notice .sub_content .inner .notice_top fieldset .input_box {
   display: inline-block;
@@ -1203,11 +1136,8 @@ fieldset {
 .notice .sub_content .inner .notice_top fieldset .input_box input {
   padding: 5px;
   border: 1px solid transparent;
-  font-size: 12px;
-  line-height: 1;
-  font-family: "Raleway";
+  font: bold 16px/1 "Rajdhani";
   color: #444;
-  margin-bottom: 0;
 }
 .notice .sub_content .inner .notice_top fieldset .input_box button {
   background: #fff;
@@ -1227,11 +1157,8 @@ fieldset {
 .notice .sub_content .inner table tr th {
   padding: 15px 0;
   border-bottom: 2px solid #444;
-  font-size: 16px;
-  line-height: 1;
-  font-family: "Raleway";
+  font: bold 20px/1 "Rajdhani";
   color: #444;
-  margin-bottom: 0;
 }
 .notice .sub_content .inner table tr th:nth-of-type(1) {
   width: 10%;
@@ -1244,45 +1171,31 @@ fieldset {
   border-bottom: 1px solid #eee;
 }
 .notice .sub_content .inner table tr td:nth-of-type(1) {
-  font-size: 14px;
-  line-height: 1;
-  font-family: "Raleway";
-  color: #444;
-  margin-bottom: 0;
+  font: 18px/1 "Rajdhani";
+  color: #222;
   text-align: center;
 }
 .notice .sub_content .inner table tr td:nth-of-type(2) {
-  font-size: 12px;
-  line-height: 1;
-  font-family: "Raleway";
+  font: 18px/1 "Rajdhani";
   color: #222;
-  margin-bottom: 0;
   text-align: center;
 }
 .notice .sub_content .inner table tr td:nth-of-type(2) span {
   display: block;
   width: 100%;
   margin-top: 5px;
-  font-weight: bold;
-  font-size: 46px;
-  line-height: 1;
-  font-family: "Raleway";
+  font: bold 46px/1 "Rajdhani";
   color: #222;
-  margin-bottom: 0;
 }
 .notice .sub_content .inner table tr td:nth-of-type(3) a h3 {
-  font-size: 30px;
-  line-height: 1;
-  font-family: "Raleway";
+  font: bold 34px/1 "Rajdhani";
   color: #222;
   margin-bottom: 20px;
 }
 .notice .sub_content .inner table tr td:nth-of-type(3) a p {
-  font-size: 14px;
-  line-height: 1.4;
-  font-family: "Raleway";
+  font: 16px/1.2 "Rajdhani";
   color: #888;
-  margin-bottom: 0;
+  text-align: left;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -1307,7 +1220,6 @@ fieldset {
   width: 50px;
   height: 50px;
   font-size: 25px;
-  font-family: "Railway";
   line-height: 50px;
   color: #bbb;
   border: 1px solid #eee;
@@ -1324,7 +1236,6 @@ fieldset {
   width: 50px;
   height: 50px;
   font-size: 25px;
-  font-family: "Railway";
   line-height: 50px;
   color: #bbb;
   border: 1px solid #eee;
@@ -1345,11 +1256,8 @@ fieldset {
   height: 50px;
   margin: 0 2px;
   transition: all 0.5s;
-  font-size: 14px;
-  line-height: 50px;
-  font-family: "Raleway";
+  font: 18px/50px "Rajdhani";
   color: #888;
-  margin-bottom: 0;
 }
 .notice .sub_content .inner .pagenation .numbers a:hover {
   color: #222;
@@ -1363,15 +1271,22 @@ fieldset {
   .notice {
     width: 100%;
   }
+  .notice .sub_visualTop {
+    height: 150px;
+    margin-bottom: 50px;
+  }
   .notice .sub_visualTop .inner {
     width: 100%;
+  }
+  .notice .sub_visualTop .inner h1 {
+    line-height: 150px;
   }
   .notice .sub_content .inner {
     width: 100%;
     padding: 30px;
   }
   .notice .sub_content .inner table tr th {
-    font-size: 14px;
+    font-size: 16px;
   }
   .notice .sub_content .inner table tr th:nth-of-type(1) {
     width: 5%;
@@ -1387,7 +1302,10 @@ fieldset {
     padding: 24px 0;
   }
   .notice .sub_content .inner table tr td:nth-of-type(1) {
-    font-size: 12px;
+    font-size: 14px;
+  }
+  .notice .sub_content .inner table tr td:nth-of-type(2) {
+    font-size: 14px;
   }
   .notice .sub_content .inner table tr td:nth-of-type(2) span {
     font-size: 30px;
@@ -1399,10 +1317,10 @@ fieldset {
   .notice .sub_content .inner table tr td:nth-of-type(3) a h3 {
     margin-bottom: 10px;
     line-height: 1.2;
-    font-size: 20px;
+    font-size: 22px;
   }
   .notice .sub_content .inner table tr td:nth-of-type(3) a p {
-    font-size: 12px;
+    font-size: 14px;
     -webkit-line-clamp: 1;
   }
   .notice .sub_content .inner .pagenation .numbers a:nth-of-type(6) {
@@ -1426,6 +1344,9 @@ fieldset {
   .notice .sub_visualTop {
     margin-bottom: 50px;
   }
+  .notice .sub_content .inner h2 {
+    line-height: 1.2;
+  }
   .notice .sub_content .inner .notice_top {
     padding: 10px 0;
   }
@@ -1446,7 +1367,7 @@ fieldset {
     height: 30px;
   }
   .notice .sub_content .inner .notice_top fieldset .input_box input {
-    font-size: 10px;
+    font-size: 12px;
   }
   .notice .sub_content .inner .notice_top fieldset .input_box button {
     background: #fff;
@@ -1468,7 +1389,7 @@ fieldset {
     padding: 24px 0;
   }
   .notice .sub_content .inner table tr td:nth-of-type(1) {
-    font-size: 10px;
+    font-size: 12px;
   }
   .notice .sub_content .inner table tr td:nth-of-type(2) {
     display: none;
@@ -1491,7 +1412,6 @@ fieldset {
   }
   .notice .sub_content .inner .pagenation .numbers a {
     height: 30px;
-    font-size: 12px;
     line-height: 30px;
   }
   .notice .sub_content .inner .pagenation .numbers a:nth-of-type(4) {
@@ -1521,11 +1441,8 @@ fieldset {
   margin: 0 auto;
 }
 .join .sub_visualTop .inner h1 {
-  font-size: 24px;
-  line-height: 200px;
-  font-family: "Raleway";
+  font: bold 30px/200px "Rajdhani";
   color: #444;
-  margin-bottom: 0;
   font-weight: normal;
   text-align: center;
 }
@@ -1539,10 +1456,7 @@ fieldset {
   margin: 0 auto;
 }
 .join .sub_content .inner h2 {
-  font-weight: normal;
-  font-size: 30px;
-  line-height: 1.2;
-  font-family: "Yeseva One";
+  font: 30px/1 "Yeseva One";
   color: #444;
   margin-bottom: 50px;
   text-align: center;
@@ -1569,6 +1483,7 @@ fieldset {
   font: 12px/1.5 "Merriweather";
   color: #fffcfb;
   writing-mode: vertical-rl;
+  text-align: left;
   position: absolute;
   top: 0;
   right: 60px;
@@ -1597,8 +1512,8 @@ fieldset {
   width: 100%;
   height: 200px;
   padding: 10px;
-  font: 12px/1.5 "Raleway";
-  color: #444;
+  font: 13px/1.3 "Rajdhani";
+  color: #999;
   background: #ffeee9;
   border: 1px solid #f6dcd4;
   resize: none;
@@ -1606,7 +1521,7 @@ fieldset {
 .join .sub_content .inner .wrap fieldset .agreement {
   margin-bottom: 30px;
   text-align: right;
-  font: bold 16px/1 "Raleway";
+  font: bold 16px/1 "Rajdhani";
   color: #444;
   margin-top: 10px;
 }
@@ -1627,8 +1542,8 @@ fieldset {
 }
 .join .sub_content .inner .wrap fieldset table tr:nth-of-type(1) th, .join .sub_content .inner .wrap fieldset table tr:nth-of-type(7) th {
   text-align: center;
-  font: bold 16px/1 "Raleway";
-  letter-spacing: 3px;
+  font: bold 22px/1 "Rajdhani";
+  letter-spacing: 2px;
   background: #f6dcd4;
   color: #444;
 }
@@ -1651,10 +1566,11 @@ fieldset {
   margin-right: 2%;
   border: none;
   background: #f6dcd4;
-  font: bold 14px/1 "Raleway";
+  font: bold 16px/1 "Rajdhani";
   color: #444;
   letter-spacing: 2px;
   text-align: center;
+  cursor: pointer;
 }
 .join .sub_content .inner .wrap fieldset table tr:last-child th input[type=submit] {
   margin-right: 0;
@@ -1663,7 +1579,7 @@ fieldset {
   text-align: left;
   padding: 10px;
   width: 20%;
-  font: bold 14px/1 "Raleway";
+  font: bold 16px/1 "Rajdhani";
 }
 .join .sub_content .inner .wrap fieldset table tr td {
   width: 80%;
@@ -1674,7 +1590,8 @@ fieldset {
   height: 40px;
   background: #ffeee9;
   border: 1px solid #f6dcd4;
-  font: 12px/1 "Raleway";
+  font: 14px/1 "Rajdhani";
+  color: #444;
 }
 .join .sub_content .inner .wrap fieldset table tr td input[type=radio], .join .sub_content .inner .wrap fieldset table tr td input[type=checkbox] {
   margin-right: 5px;
@@ -1683,7 +1600,8 @@ fieldset {
 }
 .join .sub_content .inner .wrap fieldset table tr td label {
   margin-right: 10px;
-  font: 12px/1 "Raleway";
+  font: 14px/1 "Rajdhani";
+  color: #444;
 }
 .join .sub_content .inner .wrap fieldset table tr td textarea#comments {
   padding: 10px;
@@ -1691,7 +1609,8 @@ fieldset {
   height: 100px;
   background: #ffeee9;
   border: 1px solid #f6dcd4;
-  font: 12px/1.5 "Raleway";
+  font: 14px/1.5 "Rajdhani";
+  color: #444;
   resize: none;
 }
 
@@ -1700,8 +1619,15 @@ fieldset {
   .join {
     width: 100%;
   }
+  .join .sub_visualTop {
+    height: 150px;
+    margin-bottom: 50px;
+  }
   .join .sub_visualTop .inner {
     width: 100%;
+  }
+  .join .sub_visualTop .inner h1 {
+    line-height: 150px;
   }
   .join .sub_content .inner {
     width: 100%;
@@ -1716,6 +1642,9 @@ fieldset {
   }
   .join .sub_content .inner .wrap fieldset table tr {
     height: 60px;
+  }
+  .join .sub_content .inner .wrap fieldset table tr:nth-of-type(1) th, .join .sub_content .inner .wrap fieldset table tr:nth-of-type(7) th {
+    font-size: 18px;
   }
   .join .sub_content .inner .wrap fieldset table tr:nth-of-type(8) {
     height: 100px;
@@ -1734,6 +1663,9 @@ fieldset {
   .join .sub_content .inner .wrap fieldset table tr:nth-of-type(8) td label:nth-of-type(even) {
     margin-right: 0;
   }
+  .join .sub_content .inner .wrap fieldset table tr:last-child th input[type=reset], .join .sub_content .inner .wrap fieldset table tr:last-child th input[type=submit] {
+    font-size: 14px;
+  }
   .join .sub_content .inner .wrap fieldset table tr th {
     line-height: 1.5;
   }
@@ -1742,6 +1674,9 @@ fieldset {
   /* join ----------------------------------------------------------- */
   .join .sub_visualTop {
     margin-bottom: 50px;
+  }
+  .join .sub_content .inner h2 {
+    line-height: 1.2;
   }
   .join .sub_content .inner .wrap .pic {
     display: none;
@@ -1753,11 +1688,8 @@ fieldset {
     font-size: 16px;
     margin-bottom: 10px;
   }
-  .join .sub_content .inner .wrap fieldset #terms {
-    font-size: 10px;
-  }
   .join .sub_content .inner .wrap fieldset .agreement {
-    font-size: 12px;
+    font-size: 14px;
   }
   .join .sub_content .inner .wrap fieldset .agreement input[type=checkbox] {
     top: 2px;
@@ -1791,7 +1723,7 @@ fieldset {
     width: 100%;
     display: block;
     float: left;
-    font-size: 10px;
+    font-size: 12px;
     padding: 10px 0 5px 0;
   }
   .join .sub_content .inner .wrap fieldset table tr td {
@@ -1802,6 +1734,151 @@ fieldset {
   .join .sub_content .inner .wrap fieldset table tr td input[type=text], .join .sub_content .inner .wrap fieldset table tr td input[type=password], .join .sub_content .inner .wrap fieldset table tr td select {
     padding: 5px 10px;
     height: 30px;
+  }
+}
+/* content ----------------------------------------------------------- */
+.gallery {
+  width: 100%;
+  position: relative;
+}
+.gallery .sub_visualTop {
+  width: 100%;
+  height: 200px;
+  background: url(../img/gallery_bg.jpg) no-repeat center/cover fixed;
+  margin-bottom: 100px;
+}
+.gallery .sub_visualTop .inner {
+  width: 1180px;
+  margin: 0 auto;
+}
+.gallery .sub_visualTop .inner h1 {
+  font: bold 30px/200px "Rajdhani";
+  color: #444;
+  font-weight: normal;
+  text-align: center;
+}
+.gallery .sub_content {
+  width: 100%;
+  margin-bottom: 100px;
+  position: relative;
+}
+.gallery .sub_content .inner {
+  width: 1180px;
+  min-height: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+.gallery .sub_content .inner > h2 {
+  font: 30px/1 "Yeseva One";
+  color: #444;
+  margin-bottom: 50px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.gallery .sub_content .inner .wrap {
+  position: relative;
+}
+.gallery .sub_content .inner .wrap .sortBtn {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  margin-bottom: 40px;
+}
+.gallery .sub_content .inner .wrap .sortBtn li {
+  display: inline-block;
+  width: 30%;
+  height: 40px;
+}
+.gallery .sub_content .inner .wrap .sortBtn li a {
+  width: 100%;
+  height: 100%;
+  font: 22px/40px "Merriweather";
+  color: #ddd;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.gallery .sub_content .inner .wrap .sortBtn li.on a {
+  color: #444;
+}
+.gallery .sub_content .inner .wrap section {
+  width: 100%;
+  float: left;
+  position: relative;
+}
+.gallery .sub_content .inner .wrap section article {
+  float: left;
+  width: 20%;
+  padding: 10px;
+}
+.gallery .sub_content .inner .wrap section article div {
+  width: 100%;
+  background: #fff;
+}
+.gallery .sub_content .inner .wrap section article div img {
+  width: 100%;
+}
+.gallery .sub_content .inner .wrap section article div h2 {
+  font: bold 16px/1.2 "Rajdhani";
+  color: #444;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+.gallery .sub_content .inner .wrap section article div p {
+  font: 12px/1.4 "Merriweather";
+  color: #666;
+  padding: 0 10px 20px;
+}
+
+@media screen and (max-width: 1179px) {
+  /* content ----------------------------------------------------------- */
+  .gallery {
+    width: 100%;
+  }
+  .gallery .sub_visualTop {
+    height: 150px;
+    margin-bottom: 50px;
+  }
+  .gallery .sub_visualTop .inner {
+    width: 100%;
+  }
+  .gallery .sub_visualTop .inner h1 {
+    line-height: 150px;
+  }
+  .gallery .sub_content .inner {
+    width: 100%;
+    padding: 20px;
+  }
+  .gallery .sub_content .inner .wrap section article {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 1025px) {
+  .gallery .sub_content .inner .wrap section article {
+    width: 33%;
+  }
+}
+@media screen and (max-width: 769px) {
+  .gallery .sub_content .inner .wrap section article {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 539px) {
+  /* content ----------------------------------------------------------- */
+  .gallery .sub_visualTop {
+    margin-bottom: 50px;
+  }
+  .gallery .sub_content .inner {
+    padding: 0;
+  }
+  .gallery .sub_content .inner > h2 {
+    line-height: 1.2;
+  }
+  .gallery .sub_content .inner .wrap ul {
+    margin-bottom: 20px;
+  }
+  .gallery .sub_content .inner .wrap section article {
+    width: 100%;
   }
 }
 /* content ----------------------------------------------------------- */
@@ -1819,12 +1896,120 @@ fieldset {
   margin: 0 auto;
 }
 .shopping .sub_visualTop .inner h1 {
-  font-size: 24px;
-  line-height: 200px;
-  font-family: "Raleway";
-  color: #fff;
-  margin-bottom: 0;
+  font: bold 30px/200px "Rajdhani";
+  color: #eee;
   font-weight: normal;
+  text-align: center;
+}
+.shopping #sub_bestSellers {
+  width: 100%;
+  margin-bottom: 100px;
+}
+.shopping #sub_bestSellers .inner {
+  width: 1180px;
+  margin: 0 auto;
+}
+.shopping #sub_bestSellers .inner h2 {
+  font: 30px/1 "Yeseva One";
+  color: #444;
+  margin-bottom: 50px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.shopping #sub_bestSellers .inner .wrap article {
+  width: 380px;
+  margin-right: 20px;
+  float: left;
+  position: relative;
+  text-align: center;
+  border: 1px solid #eee;
+}
+.shopping #sub_bestSellers .inner .wrap article:nth-of-type(3) {
+  margin-right: 0;
+}
+.shopping #sub_bestSellers .inner .wrap article .pic {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  background: #fef0ec;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.shopping #sub_bestSellers .inner .wrap article .pic .pic_text {
+  position: relative;
+  margin: 0 auto;
+}
+.shopping #sub_bestSellers .inner .wrap article .pic .pic_text h4 {
+  font: 20px/400px "Merriweather";
+  color: #444;
+  text-align: center;
+  width: 100%;
+  display: none;
+  position: absolute;
+}
+.shopping #sub_bestSellers .inner .wrap article .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s;
+  background: #fff;
+}
+.shopping #sub_bestSellers .inner .wrap article .pic:hover img {
+  transform: scale(0.95);
+  opacity: 0.1;
+}
+.shopping #sub_bestSellers .inner .wrap article .pic:hover .pic_text h4 {
+  display: block;
+}
+.shopping #sub_bestSellers .inner .wrap article .sub_bestSellers_txt {
+  width: 100%;
+  position: relative;
+  background: #fbfbfb;
+  padding: 30px;
+  height: 300px;
+}
+.shopping #sub_bestSellers .inner .wrap article .sub_bestSellers_txt h3 {
+  font: bold 24px/1.4 "Noto Serif Display";
+  color: #444;
+  margin-bottom: 30px;
+}
+.shopping #sub_bestSellers .inner .wrap article .sub_bestSellers_txt p {
+  font: 12px/1.5 "Merriweather";
+  color: #444;
+  margin-bottom: 30px;
+}
+.shopping #sub_bestSellers .inner .wrap article .sub_bestSellers_txt a {
+  display: block;
+  width: 100px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0);
+  color: #444;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 0px;
+  font-family: "Rajdhani";
+  line-height: 30px;
+  border: 1px solid #444;
+  text-align: center;
+  transition: all 0.2s;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.shopping #sub_bestSellers .inner .wrap article .sub_bestSellers_txt a:hover {
+  display: block;
+  width: 100px;
+  height: 30px;
+  background: #fef0ec;
+  color: #444;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 0px;
+  font-family: "Rajdhani";
+  line-height: 30px;
+  border: 1px solid #fef0ec;
   text-align: center;
 }
 .shopping .sub_content {
@@ -1837,141 +2022,15 @@ fieldset {
   margin: 0 auto;
 }
 .shopping .sub_content .inner h2 {
-  font-weight: normal;
-  font-size: 30px;
-  line-height: 1;
-  font-family: "Yeseva One";
+  font: 30px/1 "Yeseva One";
   color: #444;
   margin-bottom: 50px;
   text-align: center;
   letter-spacing: 2px;
 }
 .shopping .sub_content .inner p {
-  font-size: 14px;
-  line-height: 1.5;
-  font-family: "Merriweather";
+  font: 14px/1.5 "Merriweather";
   color: #444;
-  margin-bottom: 0;
-}
-.shopping #sub_bestSellers {
-  width: 100%;
-  margin-bottom: 100px;
-}
-.shopping #sub_bestSellers .inner {
-  width: 1180px;
-  margin: 0 auto;
-}
-.shopping #sub_bestSellers .inner h2 {
-  font-weight: normal;
-  font-size: 30px;
-  line-height: 1;
-  font-family: "Yeseva One";
-  color: #444;
-  margin-bottom: 50px;
-  text-align: center;
-  letter-spacing: 2px;
-}
-.shopping #sub_bestSellers .inner .wrap article {
-  width: 380px;
-  height: 670px;
-  margin-right: 20px;
-  float: left;
-  position: relative;
-}
-.shopping #sub_bestSellers .inner .wrap article:nth-of-type(3) {
-  margin-right: 0;
-}
-.shopping #sub_bestSellers .inner .wrap article .pic {
-  width: 100%;
-  height: 400px;
-  overflow: hidden;
-  background: #fef0ec;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.shopping #sub_bestSellers .inner .wrap article .pic .pic_text {
-  position: relative;
-  margin: 0 auto;
-}
-.shopping #sub_bestSellers .inner .wrap article .pic .pic_text h4 {
-  font-size: 20px;
-  line-height: 400px;
-  font-family: "Merriweather";
-  color: #444;
-  margin-bottom: 0;
-  text-align: center;
-  width: 100%;
-  display: none;
-  position: absolute;
-}
-.shopping #sub_bestSellers .inner .wrap article .pic img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  transition: all 0.5s;
-}
-.shopping #sub_bestSellers .inner .wrap article .pic:hover img {
-  transform: scale(0.95);
-  opacity: 0.1;
-}
-.shopping #sub_bestSellers .inner .wrap article .pic:hover .pic_text h4 {
-  display: block;
-}
-.shopping #sub_bestSellers .inner .wrap article .sub_bestSellers_txt {
-  width: 340px;
-  height: 300px;
-  background: #fff;
-  right: 0;
-  bottom: 30px;
-  padding: 30px;
-  position: absolute;
-}
-.shopping #sub_bestSellers .inner .wrap article .sub_bestSellers_txt h3 {
-  font-size: 24px;
-  line-height: 1.4;
-  font-family: "Berkshire Swash";
-  color: #444;
-  margin-bottom: 30px;
-  font-weight: normal;
-}
-.shopping #sub_bestSellers .inner .wrap article .sub_bestSellers_txt p {
-  font-size: 12px;
-  line-height: 1.5;
-  font-family: "Merriweather";
-  color: #444;
-  margin-bottom: 30px;
-}
-.shopping #sub_bestSellers .inner .wrap article .sub_bestSellers_txt a {
-  display: block;
-  width: 100px;
-  height: 30px;
-  background: rgba(255, 255, 255, 0);
-  color: #444;
-  font-size: 10px;
-  font-weight: bold;
-  border-radius: 0px;
-  font-family: "Raleway";
-  line-height: 30px;
-  border: 1px solid #444;
-  text-align: center;
-  transition: all 0.2s;
-  bottom: 30px;
-  position: absolute;
-}
-.shopping #sub_bestSellers .inner .wrap article .sub_bestSellers_txt a:hover {
-  display: block;
-  width: 100px;
-  height: 30px;
-  background: #a34b4b;
-  color: #fff;
-  font-size: 10px;
-  font-weight: bold;
-  border-radius: 0px;
-  font-family: "Raleway";
-  line-height: 30px;
-  border: 1px solid #a34b4b;
   text-align: center;
 }
 
@@ -1979,12 +2038,15 @@ fieldset {
   .shopping {
     width: 100%;
   }
+  .shopping .sub_visualTop {
+    height: 150px;
+    margin-bottom: 50px;
+  }
   .shopping .sub_visualTop .inner {
     width: 100%;
   }
-  .shopping .sub_content .inner {
-    width: 100%;
-    padding: 30px;
+  .shopping .sub_visualTop .inner h1 {
+    line-height: 150px;
   }
   .shopping #sub_bestSellers .inner {
     width: 100%;
@@ -1992,36 +2054,25 @@ fieldset {
   }
   .shopping #sub_bestSellers .inner .wrap article {
     width: 100%;
-    height: auto;
     margin-right: 0;
     margin-bottom: 20px;
   }
   .shopping #sub_bestSellers .inner .wrap article .pic {
-    width: 49%;
-    margin-right: 1%;
-    height: 300px;
+    width: 50%;
     position: relative;
     float: left;
   }
-  .shopping #sub_bestSellers .inner .wrap article .pic .pic_text h4 {
-    line-height: 300px;
-  }
   .shopping #sub_bestSellers .inner .wrap article .sub_bestSellers_txt {
-    width: 49%;
+    width: 50%;
+    height: 400px;
     position: relative;
     float: left;
     margin-right: 0;
-    bottom: 0;
-    padding: 20px 0 0 20px;
+    padding: 20px;
   }
-  .shopping #sub_bestSellers .inner .wrap article .sub_bestSellers_txt h3 {
-    margin-bottom: 10px;
-  }
-  .shopping #sub_bestSellers .inner .wrap article .sub_bestSellers_txt p {
-    margin-bottom: 20px;
-  }
-  .shopping #sub_bestSellers .inner .wrap article .sub_bestSellers_txt a {
-    bottom: 20px;
+  .shopping .sub_content .inner {
+    width: 100%;
+    padding: 30px;
   }
 }
 @media screen and (max-width: 539px) {
@@ -2030,16 +2081,25 @@ fieldset {
   }
   .shopping #sub_bestSellers .inner .wrap article .pic {
     width: 100%;
+    height: 300px;
     margin-right: 0;
+  }
+  .shopping #sub_bestSellers .inner .wrap article .pic .pic_text h4 {
+    line-height: 300px;
   }
   .shopping #sub_bestSellers .inner .wrap article .sub_bestSellers_txt {
     width: 100%;
     height: auto;
-    padding: 20px 0;
+  }
+  .shopping #sub_bestSellers .inner .wrap article .sub_bestSellers_txt h3 {
+    margin-bottom: 15px;
   }
   .shopping #sub_bestSellers .inner .wrap article .sub_bestSellers_txt a {
     position: relative;
     bottom: 0;
+  }
+  .shopping .sub_content .inner h2 {
+    line-height: 1.2;
   }
 }
 /* header ----------------------------------------------------------- */
@@ -2080,11 +2140,8 @@ fieldset {
   padding: 0 10px;
 }
 #header > .inner .menuWeb #gnb_1 li a {
-  font-size: 12px;
-  line-height: 1;
-  font-family: "Merriweather";
+  font: 12px/1 "Merriweather";
   color: #444;
-  margin-bottom: 0;
   padding-bottom: 5px;
   border-bottom: 2px solid transparent;
   letter-spacing: 1.5px;
@@ -2105,11 +2162,8 @@ fieldset {
   padding: 0 10px;
 }
 #header > .inner .menuWeb #gnb_2 li a {
-  font-size: 12px;
-  line-height: 1;
-  font-family: "Merriweather";
+  font: 12px/1 "Merriweather";
   color: #444;
-  margin-bottom: 0;
   padding-bottom: 5px;
   border-bottom: 2px solid transparent;
   letter-spacing: 1.5px;
@@ -2195,7 +2249,7 @@ fieldset {
 }
 #header > .inner .menuMo h1 a {
   display: block;
-  font: bold 26px/1 "Raleway";
+  font: bold 26px/1 "Rajdhani";
   color: #fff;
 }
 #header > .inner .menuMo #gnbMo {
@@ -2213,11 +2267,8 @@ fieldset {
   display: block;
   width: 100%;
   padding: 20px 0;
-  font-size: 14px;
-  line-height: 1;
-  font-family: "Merriweather";
+  font: 14px/1 "Merriweather";
   color: #444;
-  margin-bottom: 0;
   letter-spacing: 1.5px;
   transition: all 0.4s;
 }
@@ -2225,7 +2276,7 @@ fieldset {
   color: #df9f8c;
 }
 #header .top {
-  background: #da9a9a;
+  background: #df9f8c;
   width: 100%;
   top: 0;
   height: 30px;
@@ -2253,7 +2304,8 @@ fieldset {
   margin-right: 0;
 }
 #header .top .inner .util li:nth-of-type(4) input {
-  font-family: "Raleway";
+  font-family: "Rajdhani";
+  font-size: 12px;
   color: #444;
   padding: 2px 5px;
   border: 1px solid #f6dcd4;
@@ -2266,13 +2318,14 @@ fieldset {
   width: 20px;
   height: 20px;
   font-size: 12px;
-  color: #da9a9a;
+  color: #df9f8c;
   text-align: center;
   line-height: 20px;
   background: #f6dcd4;
   display: block;
   float: left;
   border: 0;
+  cursor: pointer;
 }
 #header .top .inner .util li:nth-of-type(1), #header .top .inner .util li:nth-of-type(2), #header .top .inner .util li:nth-of-type(3) {
   float: left;
@@ -2286,7 +2339,7 @@ fieldset {
   line-height: 20px;
 }
 #header .top .inner .util li:nth-of-type(1) a:hover, #header .top .inner .util li:nth-of-type(2) a:hover, #header .top .inner .util li:nth-of-type(3) a:hover {
-  color: #a34b4b;
+  color: #fff6ef;
 }
 
 /* visual ----------------------------------------------------------- */
@@ -2295,7 +2348,7 @@ fieldset {
   height: calc(100vh - 120px);
   position: relative;
   overflow: hidden;
-  background-color: #ffede7;
+  background-color: #fff6ef;
 }
 #visual .visual_img {
   width: 50%;
@@ -2303,7 +2356,7 @@ fieldset {
   position: absolute;
   top: 0;
   right: 0;
-  background: url(../img/visual_img1.jpeg) no-repeat center/cover;
+  background: url(../img/visual_img1.jpg) no-repeat center/cover;
 }
 #visual .inner {
   width: 1180px;
@@ -2327,45 +2380,35 @@ fieldset {
   transform: translateY(-50%);
 }
 #visual .inner .wrap .visual_txt h1 {
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 1;
-  font-family: "Yeseva One";
-  color: #da9a9a;
+  font: bold 22px/1 "Rajdhani";
+  color: #df9f8c;
   margin-bottom: 12vh;
 }
 #visual .inner .wrap .visual_txt h2 {
-  font-size: 80px;
-  line-height: 1;
-  font-family: "Berkshire Swash";
-  color: #da9a9a;
+  font: bold 70px/1.2 "Noto Serif Display";
+  color: #df9f8c;
   margin-bottom: 6vh;
   font-weight: bold;
   position: relative;
 }
 #visual .inner .wrap .visual_txt h3 {
-  font-size: 20px;
-  line-height: 1.3;
-  font-family: "Merriweather";
-  color: #444;
+  font: normal 20px/1.5 "Merriweather";
   margin-bottom: 2vh;
-  font-weight: normal;
+  color: #444;
 }
 #visual .inner .wrap .visual_txt p {
-  font-size: 14px;
-  line-height: 1.5;
-  font-family: "Merriweather";
-  color: #444;
+  font: normal 14px/1.5 "Merriweather";
   margin-bottom: 10vh;
+  color: #444;
 }
 #visual .inner .wrap .visual_txt > a {
-  font: bold 14px/1 "Raleway";
+  font: bold 16px/1 "Rajdhani";
   color: #444;
   margin-bottom: 50px;
   transition: all 0.2s;
 }
 #visual .inner .wrap .visual_txt > a:hover {
-  color: #a34b4b;
+  color: #df9f8c;
 }
 #visual .inner .wrap .visual_txt .pagenation_main {
   width: 100%;
@@ -2384,7 +2427,7 @@ fieldset {
   display: inline-block;
   width: 40px;
   height: 40px;
-  font: bold 15px/35px "Raleway";
+  font: bold 15px/40px "Rajdhani";
   text-align: center;
   border: 2px solid transparent;
   border-radius: 50%;
@@ -2395,10 +2438,10 @@ fieldset {
   color: #444;
 }
 #visual .inner .wrap .visual_txt .pagenation_main .btnCircle li:hover {
-  border: 2px solid #a34b4b;
+  border: 2px solid #df9f8c;
 }
 #visual .inner .wrap .visual_txt .pagenation_main .btnCircle li:hover a {
-  color: #a34b4b;
+  color: #df9f8c;
 }
 
 /* main_search ----------------------------------------------------------- */
@@ -2431,8 +2474,9 @@ fieldset {
 #main_search .inner .wrap strong {
   width: 240px;
   height: 40px;
-  font: bold 18px/40px "Raleway";
+  font: bold 18px/40px "Rajdhani";
   color: #fff;
+  letter-spacing: 1px;
   margin-right: 20px;
   display: block;
   float: left;
@@ -2446,7 +2490,7 @@ fieldset {
   float: left;
   border: 0;
   background: #fff;
-  font-family: "Raleway";
+  font-family: "Rajdhani";
   color: #444;
 }
 #main_search .inner .wrap button {
@@ -2457,8 +2501,9 @@ fieldset {
   background: #f6ceac;
   border: 1px solid #fff;
   color: #fff;
-  font: 12px/40px "Raleway";
+  font: 16px/40px "Rajdhani";
   letter-spacing: 2px;
+  cursor: pointer;
 }
 #main_search .inner .wrap button:hover {
   background: #ce8a6c;
@@ -2488,24 +2533,17 @@ fieldset {
   float: left;
 }
 #content .inner .wrap .con_article:first-child article:nth-of-type(1) h1 {
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 1;
-  font-family: "Yeseva One";
+  font: bold 20px/1 "Rajdhani";
   color: #a34b4b;
   margin-bottom: 20px;
 }
 #content .inner .wrap .con_article:first-child article:nth-of-type(1) h2 {
-  font-size: 24px;
-  line-height: 1;
-  font-family: "Berkshire Swash";
+  font: bold 26px/1 "Noto Serif Display";
   color: #444;
   margin-bottom: 20px;
 }
 #content .inner .wrap .con_article:first-child article:nth-of-type(1) p {
-  font-size: 14px;
-  line-height: 1.3;
-  font-family: "Merriweather";
+  font: 14px/1.3 "Merriweather";
   color: #444;
   margin-bottom: 30px;
 }
@@ -2515,10 +2553,10 @@ fieldset {
   height: 30px;
   background: rgba(255, 255, 255, 0);
   color: #444;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
   border-radius: 0px;
-  font-family: "Raleway";
+  font-family: "Rajdhani";
   line-height: 30px;
   border: 1px solid #444;
   text-align: center;
@@ -2530,10 +2568,10 @@ fieldset {
   height: 30px;
   background: #a34b4b;
   color: #fff;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
   border-radius: 0px;
-  font-family: "Raleway";
+  font-family: "Rajdhani";
   line-height: 30px;
   border: 1px solid #a34b4b;
   text-align: center;
@@ -2558,12 +2596,8 @@ fieldset {
   transform: scale(1.2) rotate(-10deg);
 }
 #content .inner .wrap .con_article:first-child article:nth-of-type(2) h1 {
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 1;
-  font-family: "Yeseva One";
+  font: bold 20px/1 "Noto Serif Display";
   color: #a34b4b;
-  margin-bottom: 0;
   margin-top: 20px;
   text-align: right;
   width: 100%;
@@ -2592,12 +2626,8 @@ fieldset {
   transform: scale(1.2) rotate(10deg);
 }
 #content .inner .wrap .con_article:last-child article:nth-of-type(1) h1 {
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 1;
-  font-family: "Yeseva One";
+  font: bold 20px/1 "Noto Serif Display";
   color: #a34b4b;
-  margin-bottom: 0;
   margin-top: 20px;
   text-align: right;
   width: 100%;
@@ -2609,24 +2639,17 @@ fieldset {
   float: left;
 }
 #content .inner .wrap .con_article:last-child article:nth-of-type(2) h1 {
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 1;
-  font-family: "Yeseva One";
+  font: bold 20px/1 "Rajdhani";
   color: #a34b4b;
   margin-bottom: 20px;
 }
 #content .inner .wrap .con_article:last-child article:nth-of-type(2) h2 {
-  font-size: 24px;
-  line-height: 1;
-  font-family: "Berkshire Swash";
+  font: bold 26px/1 "Noto Serif Display";
   color: #444;
   margin-bottom: 20px;
 }
 #content .inner .wrap .con_article:last-child article:nth-of-type(2) p {
-  font-size: 14px;
-  line-height: 1.3;
-  font-family: "Merriweather";
+  font: 14px/1.3 "Merriweather";
   color: #444;
   margin-bottom: 30px;
 }
@@ -2636,10 +2659,10 @@ fieldset {
   height: 30px;
   background: rgba(255, 255, 255, 0);
   color: #444;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
   border-radius: 0px;
-  font-family: "Raleway";
+  font-family: "Rajdhani";
   line-height: 30px;
   border: 1px solid #444;
   text-align: center;
@@ -2651,10 +2674,10 @@ fieldset {
   height: 30px;
   background: #a34b4b;
   color: #fff;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
   border-radius: 0px;
-  font-family: "Raleway";
+  font-family: "Rajdhani";
   line-height: 30px;
   border: 1px solid #a34b4b;
   text-align: center;
@@ -2671,24 +2694,17 @@ fieldset {
   margin: 0 auto;
 }
 #banner .inner h1 {
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 1;
-  font-family: "Yeseva One";
+  font: bold 20px/1 "Rajdhani";
   color: #a34b4b;
   margin-bottom: 20px;
 }
 #banner .inner h2 {
-  font-size: 24px;
-  line-height: 1;
-  font-family: "Berkshire Swash";
+  font: bold 26px/1 "Noto Serif Display";
   color: #222;
   margin-bottom: 20px;
 }
 #banner .inner p {
-  font-size: 14px;
-  line-height: 1.3;
-  font-family: "Merriweather";
+  font: 14px/1.3 "Merriweather";
   color: #222;
   margin-bottom: 40px;
 }
@@ -2698,10 +2714,10 @@ fieldset {
   height: 30px;
   background: rgba(255, 255, 255, 0);
   color: #222;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
   border-radius: 0px;
-  font-family: "Raleway";
+  font-family: "Rajdhani";
   line-height: 30px;
   border: 1px solid #222;
   text-align: center;
@@ -2713,10 +2729,10 @@ fieldset {
   height: 30px;
   background: #a34b4b;
   color: #fff;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
   border-radius: 0px;
-  font-family: "Raleway";
+  font-family: "Rajdhani";
   line-height: 30px;
   border: 1px solid #a34b4b;
   text-align: center;
@@ -2750,24 +2766,17 @@ fieldset {
   padding: 100px;
 }
 #brand .inner .wrap article:nth-of-type(1) h1 {
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 1;
-  font-family: "Yeseva One";
+  font: bold 20px/1 "Rajdhani";
   color: #a34b4b;
   margin-bottom: 30px;
 }
 #brand .inner .wrap article:nth-of-type(1) h2 {
-  font-size: 24px;
-  line-height: 1.4;
-  font-family: "Berkshire Swash";
+  font: bold 26px/1.4 "Noto Serif Display";
   color: #444;
   margin-bottom: 20px;
 }
 #brand .inner .wrap article:nth-of-type(1) p {
-  font-size: 14px;
-  line-height: 1.3;
-  font-family: "Merriweather";
+  font: 14px/1.3 "Merriweather";
   color: #444;
   margin-bottom: 40px;
 }
@@ -2777,10 +2786,10 @@ fieldset {
   height: 30px;
   background: rgba(255, 255, 255, 0);
   color: #444;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
   border-radius: 0px;
-  font-family: "Raleway";
+  font-family: "Rajdhani";
   line-height: 30px;
   border: 1px solid #444;
   text-align: center;
@@ -2792,10 +2801,10 @@ fieldset {
   height: 30px;
   background: #a34b4b;
   color: #fff;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
   border-radius: 0px;
-  font-family: "Raleway";
+  font-family: "Rajdhani";
   line-height: 30px;
   border: 1px solid #a34b4b;
   text-align: center;
@@ -2816,10 +2825,7 @@ fieldset {
   margin: 0 auto;
 }
 #insta .inner h1 {
-  font-size: 24px;
-  line-height: 1;
-  font-family: "Berkshire Swash";
-  color: #444;
+  font: bold 26px/1 "Noto Serif Display";
   margin-bottom: 30px;
 }
 #insta .inner .wrap article {
@@ -2897,24 +2903,18 @@ fieldset {
   height: 220px;
 }
 #footer .inner .wrap article:nth-of-type(2) h2 {
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 1;
-  font-family: "Yeseva One";
+  font: bold 20px/1 "Yeseva One";
   color: #222;
   margin-bottom: 30px;
-  font-weight: bold;
   letter-spacing: 2px;
 }
 #footer .inner .wrap article:nth-of-type(2) address {
-  font: 12px/1.5 "Raleway";
+  font: 14px/1.2 "Rajdhani";
   margin-bottom: 10px;
   color: #222;
 }
 #footer .inner .wrap article:nth-of-type(2) p {
-  font-size: 12px;
-  line-height: 1;
-  font-family: "Raleway";
+  font: normal 14px/1 "Rajdhani";
   color: #222;
   margin-bottom: 10px;
 }
@@ -2923,13 +2923,9 @@ fieldset {
   height: 220px;
 }
 #footer .inner .wrap article:nth-of-type(3) h2 {
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 1;
-  font-family: "Yeseva One";
+  font: bold 20px/1 "Yeseva One";
   color: #222;
   margin-bottom: 30px;
-  font-weight: bold;
   letter-spacing: 2px;
 }
 #footer .inner .wrap article:nth-of-type(3) ul {
@@ -2939,9 +2935,7 @@ fieldset {
   margin-bottom: 5px;
 }
 #footer .inner .wrap article:nth-of-type(3) ul li a {
-  font-size: 12px;
-  line-height: 1;
-  font-family: "Raleway";
+  font: 14px/1 "Rajdhani";
   color: #222;
   margin-bottom: 10px;
 }
@@ -2954,13 +2948,9 @@ fieldset {
   margin-right: 0;
 }
 #footer .inner .wrap article:nth-of-type(4) h2 {
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 1;
-  font-family: "Yeseva One";
+  font: bold 20px/1 "Yeseva One";
   color: #222;
   margin-bottom: 30px;
-  font-weight: bold;
   letter-spacing: 2px;
 }
 #footer .inner .wrap article:nth-of-type(4) ul {
@@ -2970,9 +2960,7 @@ fieldset {
   margin-bottom: 5px;
 }
 #footer .inner .wrap article:nth-of-type(4) ul li a {
-  font-size: 12px;
-  line-height: 1;
-  font-family: "Raleway";
+  font: 14px/1 "Rajdhani";
   color: #222;
   margin-bottom: 10px;
 }
@@ -2983,11 +2971,8 @@ fieldset {
   width: 100%;
   text-align: center;
   padding-top: 20px;
-  font-size: 12px;
-  line-height: 1;
-  font-family: "Raleway";
+  font: 14px/1 "Rajdhani";
   color: #222;
-  margin-bottom: 0;
   border-top: 1px solid rgba(34, 34, 34, 0.2);
 }
 
@@ -3040,18 +3025,19 @@ fieldset {
     background: rgba(255, 255, 255, 0.7);
   }
   #visual .inner .wrap .visual_txt h1 {
-    font-size: 20px;
     margin-bottom: 10vh;
   }
   #visual .inner .wrap .visual_txt h2 {
-    font-size: 40px;
+    font-size: 60px;
+    line-height: 1.2;
+  }
+  #visual .inner .wrap .visual_txt h3 {
+    font-size: 18px;
   }
   #visual .inner .wrap .visual_txt p {
-    font-size: 14px;
     margin-bottom: 5vh;
   }
   #visual .inner .wrap .visual_txt a {
-    font-size: 12px;
     margin: 0 auto;
   }
 
@@ -3213,23 +3199,24 @@ fieldset {
     height: 80%;
   }
   #visual .inner .wrap .visual_txt h1 {
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 5vh;
   }
   #visual .inner .wrap .visual_txt h2 {
     font-size: 36px;
+    margin-bottom: 5vh;
   }
   #visual .inner .wrap .visual_txt h3 {
     font-size: 16px;
   }
   #visual .inner .wrap .visual_txt p {
-    font-size: 10px;
+    font-size: 12px;
     margin-bottom: 2vh;
   }
   #visual .inner .wrap .visual_txt .pagenation_main .btnCircle li {
     width: 30px;
     height: 30px;
-    font: bold 15px/25px "Raleway";
+    font: bold 13px/25px "Rajdhani";
   }
 
   /* main_search ----------------------------------------------------------- */
@@ -3259,6 +3246,7 @@ fieldset {
   }
   #content .inner .wrap .con_article:first-child article:nth-of-type(2) h1 {
     height: auto;
+    font-size: 16px;
     line-height: 1.2;
   }
   #content .inner .wrap .con_article:last-child article:nth-of-type(1) {
@@ -3269,6 +3257,7 @@ fieldset {
   }
   #content .inner .wrap .con_article:last-child article:nth-of-type(1) h1 {
     height: auto;
+    font-size: 16px;
     line-height: 1.2;
   }
 
