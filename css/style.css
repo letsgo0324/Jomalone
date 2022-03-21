@@ -1916,18 +1916,34 @@ fieldset {
   text-align: center;
   letter-spacing: 2px;
 }
-.shopping #sub_bestSellers .inner .wrap article {
+.shopping #sub_bestSellers .inner .wrap .shopSwiper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 0 30px 50px;
+  position: relative;
+}
+.shopping #sub_bestSellers .inner .wrap .shopSwiper .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.shopping #sub_bestSellers .inner .wrap .shopSwiper .swiper-wrapper .swiper-slide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shopping #sub_bestSellers .inner .wrap .shopSwiper .swiper-wrapper .swiper-slide article {
   width: 380px;
-  margin-right: 20px;
   float: left;
   position: relative;
   text-align: center;
   border: 1px solid #eee;
 }
-.shopping #sub_bestSellers .inner .wrap article:nth-of-type(3) {
+.shopping #sub_bestSellers .inner .wrap .shopSwiper .swiper-wrapper .swiper-slide article:nth-of-type(3) {
   margin-right: 0;
 }
-.shopping #sub_bestSellers .inner .wrap article .pic {
+.shopping #sub_bestSellers .inner .wrap .shopSwiper .swiper-wrapper .swiper-slide article .pic {
   width: 100%;
   height: 400px;
   overflow: hidden;
@@ -1936,11 +1952,11 @@ fieldset {
   top: 0;
   left: 0;
 }
-.shopping #sub_bestSellers .inner .wrap article .pic .pic_text {
+.shopping #sub_bestSellers .inner .wrap .shopSwiper .swiper-wrapper .swiper-slide article .pic .pic_text {
   position: relative;
   margin: 0 auto;
 }
-.shopping #sub_bestSellers .inner .wrap article .pic .pic_text h4 {
+.shopping #sub_bestSellers .inner .wrap .shopSwiper .swiper-wrapper .swiper-slide article .pic .pic_text h4 {
   font: 20px/400px "Merriweather";
   color: #444;
   text-align: center;
@@ -1948,38 +1964,41 @@ fieldset {
   display: none;
   position: absolute;
 }
-.shopping #sub_bestSellers .inner .wrap article .pic img {
+.shopping #sub_bestSellers .inner .wrap .shopSwiper .swiper-wrapper .swiper-slide article .pic img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: all 0.5s;
   background: #fff;
 }
-.shopping #sub_bestSellers .inner .wrap article .pic:hover img {
+.shopping #sub_bestSellers .inner .wrap .shopSwiper .swiper-wrapper .swiper-slide article .pic:hover img {
   transform: scale(0.95);
   opacity: 0.1;
 }
-.shopping #sub_bestSellers .inner .wrap article .pic:hover .pic_text h4 {
+.shopping #sub_bestSellers .inner .wrap .shopSwiper .swiper-wrapper .swiper-slide article .pic:hover .pic_text h4 {
   display: block;
 }
-.shopping #sub_bestSellers .inner .wrap article .sub_bestSellers_txt {
+.shopping #sub_bestSellers .inner .wrap .shopSwiper .swiper-wrapper .swiper-slide article .sub_bestSellers_txt {
   width: 100%;
   position: relative;
   background: #fbfbfb;
   padding: 30px;
   height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-.shopping #sub_bestSellers .inner .wrap article .sub_bestSellers_txt h3 {
+.shopping #sub_bestSellers .inner .wrap .shopSwiper .swiper-wrapper .swiper-slide article .sub_bestSellers_txt h3 {
+  width: 100%;
   font: bold 24px/1.4 "Noto Serif Display";
   color: #444;
-  margin-bottom: 30px;
 }
-.shopping #sub_bestSellers .inner .wrap article .sub_bestSellers_txt p {
+.shopping #sub_bestSellers .inner .wrap .shopSwiper .swiper-wrapper .swiper-slide article .sub_bestSellers_txt p {
   font: 12px/1.5 "Merriweather";
   color: #444;
-  margin-bottom: 30px;
 }
-.shopping #sub_bestSellers .inner .wrap article .sub_bestSellers_txt a {
+.shopping #sub_bestSellers .inner .wrap .shopSwiper .swiper-wrapper .swiper-slide article .sub_bestSellers_txt a {
   display: block;
   width: 100px;
   height: 30px;
@@ -1993,12 +2012,9 @@ fieldset {
   border: 1px solid #444;
   text-align: center;
   transition: all 0.2s;
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translate(-50%);
+  margin: 0 auto;
 }
-.shopping #sub_bestSellers .inner .wrap article .sub_bestSellers_txt a:hover {
+.shopping #sub_bestSellers .inner .wrap .shopSwiper .swiper-wrapper .swiper-slide article .sub_bestSellers_txt a:hover {
   display: block;
   width: 100px;
   height: 30px;
@@ -2011,6 +2027,19 @@ fieldset {
   line-height: 30px;
   border: 1px solid #fef0ec;
   text-align: center;
+}
+.shopping #sub_bestSellers .inner .wrap .shopSwiper .swiper-pagination .swiper-pagination-bullet {
+  background: #444;
+}
+.shopping #sub_bestSellers .inner .wrap .shopSwiper .swiper-button-next {
+  right: -5px;
+  color: #444;
+  transform: scale(0.6);
+}
+.shopping #sub_bestSellers .inner .wrap .shopSwiper .swiper-button-prev {
+  left: -5px;
+  color: #444;
+  transform: scale(0.6);
 }
 .shopping .sub_content {
   width: 100%;
@@ -2028,10 +2057,97 @@ fieldset {
   text-align: center;
   letter-spacing: 2px;
 }
-.shopping .sub_content .inner p {
-  font: 14px/1.5 "Merriweather";
-  color: #444;
+.shopping .sub_content .inner .wrap {
+  position: relative;
+}
+.shopping .sub_content .inner .wrap .sortBtn {
+  width: 100%;
   text-align: center;
+  position: relative;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #444;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.shopping .sub_content .inner .wrap .sortBtn li {
+  display: inline-block;
+  width: 25%;
+  height: 40px;
+  border-top: 1px solid #444;
+  border-left: 1px solid #444;
+  cursor: pointer;
+}
+.shopping .sub_content .inner .wrap .sortBtn li:last-child {
+  border-right: 1px solid #444;
+}
+.shopping .sub_content .inner .wrap .sortBtn li a {
+  width: 100%;
+  height: 100%;
+  font: bold 16px/40px "Rajdhani";
+  color: #444;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.shopping .sub_content .inner .wrap .sortBtn li.on {
+  background: #444;
+}
+.shopping .sub_content .inner .wrap .sortBtn li.on a {
+  color: #fff;
+}
+.shopping .sub_content .inner .wrap section {
+  width: 100%;
+  float: left;
+  position: relative;
+}
+.shopping .sub_content .inner .wrap section article {
+  float: left;
+  width: 33.3%;
+  padding: 30px;
+  cursor: pointer;
+}
+.shopping .sub_content .inner .wrap section article:hover {
+  background: #eee;
+}
+.shopping .sub_content .inner .wrap section article div {
+  width: 100%;
+}
+.shopping .sub_content .inner .wrap section article div img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+}
+.shopping .sub_content .inner .wrap section article div h4 {
+  font: bold 18px/1.2 "Rajdhani";
+  color: #444;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  text-align: center;
+}
+.shopping .sub_content .inner .wrap section article div p {
+  font: 14px/1 "Merriweather";
+  color: #444;
+  margin-bottom: 30px;
+}
+.shopping .sub_content .inner .wrap section article div a {
+  display: block;
+  width: 100px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0);
+  color: #444;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 0px;
+  font-family: "Rajdhani";
+  line-height: 30px;
+  border: 1px solid #444;
+  text-align: center;
+  margin: 0 auto;
+}
+.shopping .sub_content .inner .wrap section article div a:hover {
+  background: #444;
+  color: #fff;
 }
 
 @media screen and (max-width: 1179px) {
@@ -2052,54 +2168,79 @@ fieldset {
     width: 100%;
     padding: 0 30px;
   }
-  .shopping #sub_bestSellers .inner .wrap article {
+  .shopping #sub_bestSellers .inner .wrap .shopSwiper {
+    padding: 0 20px 40px;
+  }
+  .shopping #sub_bestSellers .inner .wrap .shopSwiper .swiper-wrapper .swiper-slide article {
     width: 100%;
     margin-right: 0;
-    margin-bottom: 20px;
   }
-  .shopping #sub_bestSellers .inner .wrap article .pic {
-    width: 50%;
+  .shopping #sub_bestSellers .inner .wrap .shopSwiper .swiper-wrapper .swiper-slide article .pic {
+    width: 100%;
     position: relative;
     float: left;
   }
-  .shopping #sub_bestSellers .inner .wrap article .sub_bestSellers_txt {
-    width: 50%;
-    height: 400px;
+  .shopping #sub_bestSellers .inner .wrap .shopSwiper .swiper-wrapper .swiper-slide article .sub_bestSellers_txt {
+    width: 100%;
+    height: 250px;
     position: relative;
     float: left;
     margin-right: 0;
     padding: 20px;
   }
+  .shopping #sub_bestSellers .inner .wrap .shopSwiper .swiper-wrapper .swiper-slide article .sub_bestSellers_txt p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
   .shopping .sub_content .inner {
     width: 100%;
     padding: 30px;
+  }
+  .shopping .sub_content .inner .wrap section article {
+    width: 50%;
   }
 }
 @media screen and (max-width: 539px) {
   .shopping .sub_visualTop {
     margin-bottom: 50px;
   }
-  .shopping #sub_bestSellers .inner .wrap article .pic {
+  .shopping #sub_bestSellers .inner .wrap .shopSwiper .swiper-wrapper .swiper-slide article .pic {
     width: 100%;
     height: 300px;
     margin-right: 0;
   }
-  .shopping #sub_bestSellers .inner .wrap article .pic .pic_text h4 {
+  .shopping #sub_bestSellers .inner .wrap .shopSwiper .swiper-wrapper .swiper-slide article .pic .pic_text h4 {
     line-height: 300px;
   }
-  .shopping #sub_bestSellers .inner .wrap article .sub_bestSellers_txt {
+  .shopping #sub_bestSellers .inner .wrap .shopSwiper .swiper-wrapper .swiper-slide article .sub_bestSellers_txt {
     width: 100%;
-    height: auto;
+    height: 260px;
   }
-  .shopping #sub_bestSellers .inner .wrap article .sub_bestSellers_txt h3 {
-    margin-bottom: 15px;
+  .shopping #sub_bestSellers .inner .wrap .shopSwiper .swiper-wrapper .swiper-slide article .sub_bestSellers_txt h3 {
+    font-size: 20px;
   }
-  .shopping #sub_bestSellers .inner .wrap article .sub_bestSellers_txt a {
+  .shopping #sub_bestSellers .inner .wrap .shopSwiper .swiper-wrapper .swiper-slide article .sub_bestSellers_txt a {
     position: relative;
     bottom: 0;
   }
   .shopping .sub_content .inner h2 {
     line-height: 1.2;
+  }
+  .shopping .sub_content .inner .wrap .sortBtn {
+    flex-wrap: wrap;
+  }
+  .shopping .sub_content .inner .wrap .sortBtn li {
+    width: 50%;
+  }
+  .shopping .sub_content .inner .wrap .sortBtn li:nth-of-type(2) {
+    border-right: 1px solid #444;
+  }
+  .shopping .sub_content .inner .wrap section article {
+    width: 100%;
+    padding: 30px 10px;
   }
 }
 /* header ----------------------------------------------------------- */
