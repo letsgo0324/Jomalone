@@ -2491,15 +2491,21 @@ fieldset {
   overflow: hidden;
   background-color: #fff6ef;
 }
-#visual .visual_img {
-  width: 50%;
+#visual .visual_sliders {
+  width: 500%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: url(../img/visual_img1.jpg) no-repeat center/cover;
+  position: relative;
 }
-#visual .inner {
+#visual .visual_sliders .visual_slide {
+  width: 20%;
+  height: 100%;
+  float: left;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-content: center;
+}
+#visual .visual_sliders .visual_slide .inner {
   width: 1180px;
   height: calc(100vh - 120px);
   position: absolute;
@@ -2507,11 +2513,11 @@ fieldset {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#visual .inner .wrap {
+#visual .visual_sliders .visual_slide .inner .wrap {
   position: relative;
   height: 100%;
 }
-#visual .inner .wrap .visual_txt {
+#visual .visual_sliders .visual_slide .inner .wrap .visual_txt {
   width: 50%;
   height: 100%;
   position: absolute;
@@ -2519,52 +2525,97 @@ fieldset {
   left: 0;
   padding: 50px;
   transform: translateY(-50%);
+  background-color: #fff6ef;
 }
-#visual .inner .wrap .visual_txt h1 {
+#visual .visual_sliders .visual_slide .inner .wrap .visual_txt h1 {
   font: bold 22px/1 "Rajdhani";
   color: #df9f8c;
   margin-bottom: 12vh;
 }
-#visual .inner .wrap .visual_txt h2 {
+#visual .visual_sliders .visual_slide .inner .wrap .visual_txt h2 {
   font: bold 70px/1.2 "Noto Serif Display";
   color: #df9f8c;
   margin-bottom: 6vh;
   font-weight: bold;
   position: relative;
 }
-#visual .inner .wrap .visual_txt h3 {
+#visual .visual_sliders .visual_slide .inner .wrap .visual_txt h3 {
   font: normal 20px/1.5 "Merriweather";
   margin-bottom: 2vh;
   color: #444;
 }
-#visual .inner .wrap .visual_txt p {
+#visual .visual_sliders .visual_slide .inner .wrap .visual_txt p {
   font: normal 14px/1.5 "Merriweather";
   margin-bottom: 10vh;
   color: #444;
 }
-#visual .inner .wrap .visual_txt > a {
+#visual .visual_sliders .visual_slide .inner .wrap .visual_txt > a {
   font: bold 16px/1 "Rajdhani";
   color: #444;
   margin-bottom: 50px;
   transition: all 0.2s;
+  position: relative;
 }
-#visual .inner .wrap .visual_txt > a:hover {
+#visual .visual_sliders .visual_slide .inner .wrap .visual_txt > a span {
+  width: 0;
+  height: 1px;
+  background: #444;
+  position: absolute;
+  top: 10px;
+  left: 80px;
+  transition: 0.5s;
+}
+#visual .visual_sliders .visual_slide .inner .wrap .visual_txt > a:hover {
   color: #df9f8c;
 }
-#visual .inner .wrap .visual_txt .pagenation_main {
+#visual .visual_sliders .visual_slide .visual_img {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#visual .visual_sliders .visual_slide .visual_img .line {
+  width: 30px;
+  height: 0;
+  background: #fff6ef;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  transition: 0.5s;
+}
+#visual .visual_sliders .visual_slide:nth-of-type(1) .visual_img {
+  background-image: url(../img/visual_img1.jpg);
+}
+#visual .visual_sliders .visual_slide:nth-of-type(2) .visual_img {
+  background-image: url(../img/visual_img2.jpg);
+}
+#visual .visual_sliders .visual_slide:nth-of-type(3) .visual_img {
+  background-image: url(../img/visual_img3.jpg);
+}
+#visual .visual_sliders .visual_slide:nth-of-type(4) .visual_img {
+  background-image: url(../img/visual_img4.jpg);
+}
+#visual .visual_sliders .visual_slide:nth-of-type(5) .visual_img {
+  background-image: url(../img/visual_img5.jpg);
+}
+#visual .pagenation_main {
   width: 100%;
+  max-width: 590px;
   display: inline-block;
   position: absolute;
   bottom: 2vh;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 50%;
   text-align: center;
 }
-#visual .inner .wrap .visual_txt .pagenation_main .btnCircle {
+#visual .pagenation_main .btnCircle {
   display: inline-block;
   font-size: 0;
 }
-#visual .inner .wrap .visual_txt .pagenation_main .btnCircle li {
+#visual .pagenation_main .btnCircle li {
   display: inline-block;
   width: 40px;
   height: 40px;
@@ -2575,13 +2626,13 @@ fieldset {
   margin-right: 10px;
   transition: 0.5s;
 }
-#visual .inner .wrap .visual_txt .pagenation_main .btnCircle li a {
+#visual .pagenation_main .btnCircle li a {
   color: #444;
 }
-#visual .inner .wrap .visual_txt .pagenation_main .btnCircle li:hover {
+#visual .pagenation_main .btnCircle li:hover, #visual .pagenation_main .btnCircle li.on {
   border: 2px solid #df9f8c;
 }
-#visual .inner .wrap .visual_txt .pagenation_main .btnCircle li:hover a {
+#visual .pagenation_main .btnCircle li:hover a, #visual .pagenation_main .btnCircle li.on a {
   color: #df9f8c;
 }
 
@@ -3146,40 +3197,50 @@ fieldset {
   #visual {
     height: calc(100vh - 80px);
   }
-  #visual .visual_img {
+  #visual .visual_sliders .visual_slide .inner {
     width: 100%;
-  }
-  #visual .inner {
-    width: 100%;
-    height: 100%;
+    height: 50%;
     padding: 30px;
+    position: absolute;
+    bottom: 0;
+    top: auto;
+    left: 0;
+    transform: translate(0);
   }
-  #visual .inner .wrap {
-    top: 50%;
-    transform: translateY(-50%);
-    height: 100%;
-  }
-  #visual .inner .wrap .visual_txt {
+  #visual .visual_sliders .visual_slide .inner .wrap .visual_txt {
     width: 100%;
-    position: relative;
+    height: 100%;
+    padding: 0;
     text-align: center;
-    background: rgba(255, 255, 255, 0.7);
   }
-  #visual .inner .wrap .visual_txt h1 {
-    margin-bottom: 10vh;
+  #visual .visual_sliders .visual_slide .inner .wrap .visual_txt h1 {
+    margin-top: 20px;
+    margin-bottom: 2vh;
   }
-  #visual .inner .wrap .visual_txt h2 {
-    font-size: 60px;
-    line-height: 1.2;
+  #visual .visual_sliders .visual_slide .inner .wrap .visual_txt h2 {
+    font: bold 8vw/1.2 "Noto Serif Display";
+    margin-bottom: 2vh;
   }
-  #visual .inner .wrap .visual_txt h3 {
-    font-size: 18px;
+  #visual .visual_sliders .visual_slide .inner .wrap .visual_txt h3 {
+    font: normal 15px/1.5 "Merriweather";
+    margin-bottom: 2vh;
   }
-  #visual .inner .wrap .visual_txt p {
-    margin-bottom: 5vh;
+  #visual .visual_sliders .visual_slide .inner .wrap .visual_txt p {
+    display: none;
   }
-  #visual .inner .wrap .visual_txt a {
-    margin: 0 auto;
+  #visual .visual_sliders .visual_slide .inner .wrap .visual_txt > a {
+    position: absolute;
+    bottom: 6vh;
+    transform: translateX(-50%);
+    margin-bottom: 0;
+  }
+  #visual .visual_sliders .visual_slide .visual_img {
+    width: 100%;
+    height: 50%;
+  }
+  #visual .pagenation_main {
+    right: 0;
+    max-width: 100%;
   }
 
   /* main_search ----------------------------------------------------------- */
@@ -3335,29 +3396,12 @@ fieldset {
 }
 @media screen and (max-width: 539px) {
   /* visual ----------------------------------------------------------- */
-  #visual .inner .wrap .visual_txt {
-    padding: 30px;
-    height: 80%;
-  }
-  #visual .inner .wrap .visual_txt h1 {
-    font-size: 18px;
-    margin-bottom: 5vh;
-  }
-  #visual .inner .wrap .visual_txt h2 {
-    font-size: 36px;
-    margin-bottom: 5vh;
-  }
-  #visual .inner .wrap .visual_txt h3 {
-    font-size: 16px;
-  }
-  #visual .inner .wrap .visual_txt p {
-    font-size: 12px;
+  #visual .visual_sliders .visual_slide .inner .wrap .visual_txt h1 {
+    margin-top: 0;
     margin-bottom: 2vh;
   }
-  #visual .inner .wrap .visual_txt .pagenation_main .btnCircle li {
-    width: 30px;
-    height: 30px;
-    font: bold 13px/25px "Rajdhani";
+  #visual .visual_sliders .visual_slide .inner .wrap .visual_txt h2 {
+    margin-bottom: 4vh;
   }
 
   /* main_search ----------------------------------------------------------- */
