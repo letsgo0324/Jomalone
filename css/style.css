@@ -3259,6 +3259,91 @@ fieldset {
   object-fit: cover;
 }
 
+/* tab ----------------------------------------------------------- */
+#main_tab {
+  width: 100%;
+  background: #fff6ef;
+  padding: 100px 0;
+}
+#main_tab .inner {
+  width: 1180px;
+  margin: 0 auto;
+}
+#main_tab .inner #tab {
+  width: 100%;
+  padding-top: 60px;
+  position: relative;
+}
+#main_tab .inner #tab dt {
+  width: 15%;
+  height: 60px;
+  position: absolute;
+  top: 0;
+}
+#main_tab .inner #tab dt:nth-of-type(1) {
+  left: 0;
+}
+#main_tab .inner #tab dt:nth-of-type(2) {
+  left: 15%;
+}
+#main_tab .inner #tab dt:nth-of-type(3) {
+  left: 30%;
+}
+#main_tab .inner #tab dt:nth-of-type(4) {
+  left: 45%;
+}
+#main_tab .inner #tab dt a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #f6e6d6;
+  font: bold 16px/60px "Rajdhani";
+  color: #444;
+  letter-spacing: 1px;
+  text-align: center;
+}
+#main_tab .inner #tab dt.on a {
+  background-color: #fbfbfb;
+}
+#main_tab .inner #tab dd {
+  width: 100%;
+  height: 260px;
+  background: #fbfbfb;
+  display: none;
+  top: 60px;
+}
+#main_tab .inner #tab dd a {
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  position: relative;
+}
+#main_tab .inner #tab dd a img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  object-position: top center;
+}
+#main_tab .inner #tab dd a .txt {
+  width: 70%;
+  padding: 50px;
+}
+#main_tab .inner #tab dd a .txt h1 {
+  font: bold 20px/1 "Merriweather";
+  color: #df9f8c;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+#main_tab .inner #tab dd a .txt p {
+  font: 16px/1.4 "Merriweather";
+  color: #666;
+}
+#main_tab .inner #tab dd.on {
+  display: block;
+}
+
 /* insta ----------------------------------------------------------- */
 #insta {
   width: 100%;
@@ -3565,6 +3650,44 @@ fieldset {
     width: 100%;
   }
 
+  /* tab ----------------------------------------------------------- */
+  #main_tab {
+    padding: 80px 30px;
+  }
+  #main_tab .inner {
+    width: 100%;
+  }
+  #main_tab .inner #tab {
+    padding-top: 40px;
+  }
+  #main_tab .inner #tab dt {
+    width: 25%;
+    height: 40px;
+  }
+  #main_tab .inner #tab dt:nth-of-type(1) {
+    left: 0;
+  }
+  #main_tab .inner #tab dt:nth-of-type(2) {
+    left: 25%;
+  }
+  #main_tab .inner #tab dt:nth-of-type(3) {
+    left: 50%;
+  }
+  #main_tab .inner #tab dt:nth-of-type(4) {
+    left: 75%;
+  }
+  #main_tab .inner #tab dt a {
+    line-height: 40px;
+  }
+  #main_tab .inner #tab dd {
+    height: 500px;
+    top: 40px;
+  }
+  #main_tab .inner #tab dd a .txt {
+    width: 100%;
+    padding: 40px 20px;
+  }
+
   /* brand ----------------------------------------------------------- */
   #brand {
     padding: 80px 30px;
@@ -3723,6 +3846,29 @@ fieldset {
   }
   #brand .inner .wrap article:nth-of-type(1) p {
     margin-bottom: 20px;
+  }
+
+  /* tab ----------------------------------------------------------- */
+  #main_tab .inner #tab dt a {
+    font-size: 13px;
+    letter-spacing: 0;
+  }
+  #main_tab .inner #tab dd {
+    height: 390px;
+  }
+  #main_tab .inner #tab dd a img {
+    width: 100%;
+    height: 150px;
+  }
+  #main_tab .inner #tab dd a .txt {
+    width: 100%;
+    padding: 30px 0 0;
+  }
+  #main_tab .inner #tab dd a .txt h1 {
+    font-size: 18px;
+  }
+  #main_tab .inner #tab dd a .txt p {
+    font-size: 12px;
   }
 
   /* insta ----------------------------------------------------------- */

@@ -775,6 +775,101 @@ $mobile: 539px;
     }
 }
 
+/* tab ----------------------------------------------------------- */
+#main_tab{
+    width: 100%;
+    background: #fff6ef;
+    padding: 100px 0;
+
+    .inner{
+        width: 1180px;
+        margin: 0 auto;
+
+        #tab{
+            width: 100%;       
+            padding-top: 60px;     
+            position: relative;
+
+            dt{
+                width: 15%;
+                height: 60px;
+                position: absolute;
+                top: 0;
+                
+                &:nth-of-type(1){
+                    left: 0;
+                }
+                &:nth-of-type(2){
+                    left: calc(15% * 1);
+                }
+                &:nth-of-type(3){
+                    left: calc(15% * 2);
+                }
+                &:nth-of-type(4){
+                    left: calc(15% * 3);
+                }
+                
+                a{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    background: #f6e6d6;
+                    font: bold 16px/60px 'Rajdhani';
+                    color: #444;
+                    letter-spacing: 1px;
+                    text-align: center;
+                }
+                &.on a{
+                    background-color: #fbfbfb;
+                }
+            }
+            dd{
+                width: 100%;
+                height: 260px;
+                background: #fbfbfb;
+                display: none;
+                top: 60px;       
+
+                a{
+                    padding: 30px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    align-content: center;
+                    position: relative;
+
+                    img{
+                        width: 300px;
+                        height: 200px;
+                        object-fit: cover;
+                        object-position: top center;
+                    }
+                    .txt{
+                        width: 70%;
+                        padding: 50px;
+
+                        h1{                            
+                            font: bold 20px/1 'Merriweather';
+                            color: #df9f8c;
+                            letter-spacing: 1px;
+                            margin-bottom: 20px;
+                        }
+                        p{
+                            font: 16px/1.4 'Merriweather';
+                            color: #666;
+                        }
+                    }
+                    
+                }
+                &.on{
+                    display: block;
+                }
+            }
+        }
+
+    }
+}
+
 /* insta ----------------------------------------------------------- */
 #insta{
     width: 100%;
@@ -1145,6 +1240,53 @@ $mobile: 539px;
         }
     }
 
+    /* tab ----------------------------------------------------------- */
+    #main_tab{
+        padding: 80px 30px;
+
+        .inner{
+            width: 100%;
+
+            #tab{
+                padding-top: 40px;
+
+                dt{
+                    width: 25%;
+                    height: 40px;
+                    
+                    &:nth-of-type(1){
+                        left: 0;
+                    }
+                    &:nth-of-type(2){
+                        left: calc(25% * 1);
+                    }
+                    &:nth-of-type(3){
+                        left: calc(25% * 2);
+                    }
+                    &:nth-of-type(4){
+                        left: calc(25% * 3);
+                    }
+                    
+                    a{
+                        line-height: 40px;
+                    }
+                }
+                dd{
+                    height: 500px;
+                    top: 40px;       
+
+                    a{
+                        .txt{
+                            width: 100%;
+                            padding: 40px 20px;
+                        }   
+                    }
+                }
+            }
+
+        }
+    }
+
     /* brand ----------------------------------------------------------- */
     #brand{
         padding: 80px 30px;
@@ -1369,6 +1511,41 @@ $mobile: 539px;
                     }
                 }
             }
+        }
+    }
+
+    /* tab ----------------------------------------------------------- */
+    #main_tab{
+        .inner{
+            #tab{
+                dt{      
+                    a{
+                        font-size: 13px;
+                        letter-spacing: 0;
+                    }
+                }
+                dd{
+                    height: 390px;   
+                    
+                    a{  
+                        img{
+                            width: 100%;
+                            height: 150px;
+                        }
+                        .txt{
+                            width: 100%;
+                            padding: 30px 0 0;
+                            h1{
+                                font-size: 18px;
+                            }
+                            p{
+                                font-size: 12px;
+                            }
+                        }   
+                    }
+                }
+            }
+
         }
     }
 
