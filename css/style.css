@@ -2243,6 +2243,258 @@ fieldset {
     padding: 30px 10px;
   }
 }
+/* story ----------------------------------------------------------- */
+.story {
+  width: 100%;
+}
+.story .sub_visualTop {
+  width: 100%;
+  height: 200px;
+  background: url(../img/story_bg.jpg) no-repeat center/cover fixed;
+  margin-bottom: 100px;
+}
+.story .sub_visualTop .inner {
+  width: 1180px;
+  margin: 0 auto;
+}
+.story .sub_visualTop .inner h1 {
+  font: bold 30px/200px "Rajdhani";
+  color: #eee;
+  font-weight: normal;
+  text-align: center;
+}
+.story .sub_content {
+  width: 100%;
+  margin-bottom: 100px;
+}
+.story .sub_content .inner {
+  width: 1180px;
+  margin: 0 auto;
+}
+.story .sub_content .inner h2 {
+  font: 30px/1 "Yeseva One";
+  color: #444;
+  margin-bottom: 50px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.story .sub_content .inner .wrap {
+  position: relative;
+  height: 600px;
+  border: 1px solid transparent;
+}
+.story .sub_content .inner .wrap #story_sliders1 {
+  width: 70%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  background: #fff;
+}
+.story .sub_content .inner .wrap #story_sliders1 > ul {
+  width: 400%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.story .sub_content .inner .wrap #story_sliders1 > ul li {
+  width: 25%;
+  height: 100%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.story .sub_content .inner .wrap #story_sliders1 > ul li .pic {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
+.story .sub_content .inner .wrap #story_sliders1 > ul li .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.story .sub_content .inner .wrap #story_sliders2 {
+  width: 30%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+.story .sub_content .inner .wrap #story_sliders2 > ul {
+  width: 400%;
+  height: 40vh;
+  position: absolute;
+  bottom: 10vh;
+  left: 0;
+  z-index: 1;
+}
+.story .sub_content .inner .wrap #story_sliders2 > ul li {
+  width: 25%;
+  height: 100%;
+  padding: 0 20px;
+  float: left;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.story .sub_content .inner .wrap #story_sliders2 > ul li span {
+  display: block;
+  width: 100%;
+  font: 16px/1 "Rajdhani";
+  color: #444;
+  transition: 0.5s;
+}
+.story .sub_content .inner .wrap #story_sliders2 > ul li h1 {
+  font: normal 55px/1.2 "Merriweather";
+  color: #444;
+  margin-right: 10px;
+  transition: 0.5s;
+}
+.story .sub_content .inner .wrap #story_sliders2 > ul li p {
+  width: 70%;
+  font: 16px/1.3 "Rajdhani";
+  color: #444;
+  text-align: left;
+  transition: 0.5s;
+}
+.story .sub_content .inner .wrap #story_sliders2 > ul li a {
+  width: 100%;
+  font: bold 16px/1 "Rajdhani";
+  color: #888;
+  transition: 0.5s;
+}
+.story .sub_content .inner .wrap #story_sliders2 > ul li:hover a {
+  color: #444;
+}
+.story .sub_content .inner .wrap .sliderBtns {
+  width: 100px;
+  position: absolute;
+  left: 30%;
+  bottom: 0;
+  z-index: 2;
+}
+.story .sub_content .inner .wrap .sliderBtns li {
+  float: left;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-right: 0;
+}
+.story .sub_content .inner .wrap .sliderBtns li a {
+  display: block;
+  width: 100%;
+  height: 50px;
+  font: 25px/50px "Rajdhani";
+  text-align: center;
+  color: #888;
+}
+.story .sub_content .inner .wrap .sliderBtns li:hover a {
+  color: #444;
+}
+
+@media screen and (max-width: 1179px) {
+  /* story ----------------------------------------------------------- */
+  .story {
+    width: 100%;
+  }
+  .story .sub_visualTop {
+    height: 150px;
+    margin-bottom: 50px;
+  }
+  .story .sub_visualTop .inner {
+    width: 100%;
+  }
+  .story .sub_visualTop .inner h1 {
+    line-height: 150px;
+  }
+  .story .sub_content .inner {
+    width: 100%;
+    padding: 30px;
+  }
+  .story .sub_content .inner .wrap {
+    height: 600px;
+    border: 1px solid #eee;
+  }
+  .story .sub_content .inner .wrap #story_sliders1 {
+    width: 100%;
+    height: 50%;
+  }
+  .story .sub_content .inner .wrap #story_sliders2 {
+    width: 100%;
+    height: 50%;
+    top: auto;
+    bottom: 0;
+    background: #fbfbfb;
+  }
+  .story .sub_content .inner .wrap #story_sliders2 > ul {
+    height: 25vh;
+    bottom: 5vh;
+  }
+  .story .sub_content .inner .wrap #story_sliders2 > ul li h1 {
+    font: normal 35px/1.2 "Merriweather";
+  }
+  .story .sub_content .inner .wrap #story_sliders2 > ul li p {
+    width: 100%;
+  }
+  .story .sub_content .inner .wrap .sliderBtns {
+    left: auto;
+    right: 0;
+    top: 250px;
+  }
+  .story .sub_content .inner .wrap .sliderBtns li {
+    background: #fbfbfb;
+  }
+}
+@media screen and (max-width: 539px) {
+  /* story ----------------------------------------------------------- */
+  .story .sub_visualTop {
+    margin-bottom: 50px;
+  }
+  .story .sub_content .inner h2 {
+    line-height: 1.2;
+  }
+  .story .sub_content .inner .wrap #story_sliders2 {
+    top: auto;
+    bottom: 0;
+    background: #fbfbfb;
+  }
+  .story .sub_content .inner .wrap #story_sliders2 > ul {
+    height: 100%;
+    bottom: 0;
+  }
+  .story .sub_content .inner .wrap #story_sliders2 > ul li {
+    padding: 20px;
+  }
+  .story .sub_content .inner .wrap #story_sliders2 > ul li h1 {
+    font-size: 25px;
+  }
+  .story .sub_content .inner .wrap #story_sliders2 > ul li p {
+    font-size: 14px;
+  }
+  .story .sub_content .inner .wrap #story_sliders2 > ul li a {
+    font-size: 14px;
+  }
+  .story .sub_content .inner .wrap .sliderBtns {
+    top: 270px;
+    width: 60px;
+  }
+  .story .sub_content .inner .wrap .sliderBtns li {
+    width: 30px;
+    height: 30px;
+  }
+  .story .sub_content .inner .wrap .sliderBtns li a {
+    height: 30px;
+    font: 15px/30px "Rajdhani";
+  }
+}
 /* header ----------------------------------------------------------- */
 #header {
   width: 100%;
