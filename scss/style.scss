@@ -522,23 +522,25 @@ $mobile: 539px;
 /* content ----------------------------------------------------------- */
 #content{
     width: 100%;
+    height: auto;
     margin-bottom: 150px;
     margin-top: 100px;
-    padding-top: 50px;
+    padding-top: 50px;    
 
     .inner{
         width: 1180px;
         margin: 0 auto;
         position: relative;
 
-        .wrap{
+        .wrap{    
             .con_article{
                 width: 580px;
                 margin-right: 20px;
                 float: left;
-                
+
                 &:first-child{
-                    article{
+
+                    article{                       
                         &:nth-of-type(1){
                             width: 100%;
                             height: 200px;
@@ -678,13 +680,12 @@ $mobile: 539px;
 /* banner ----------------------------------------------------------- */
 #banner{
     width: 100%;
-    padding: 140px 0;
+    padding: 100px 0;
     background: url(../img/banner.jpg) no-repeat center/cover fixed;
 
     .inner{
         width: 1180px;
         margin: 0 auto;
-
 
         h1{
             font: bold 20px/1 'Rajdhani';
@@ -710,7 +711,6 @@ $mobile: 539px;
             }
         }
     }
-    
 }
 
 /* brand ----------------------------------------------------------- */
@@ -765,6 +765,7 @@ $mobile: 539px;
                     }
                 }
                 &:nth-of-type(2){
+
                     img{
                         width: 100%;
                         height: 100%;
@@ -774,6 +775,7 @@ $mobile: 539px;
             }
         }
     }
+
 }
 
 /* tab ----------------------------------------------------------- */
@@ -788,12 +790,12 @@ $mobile: 539px;
 
         #tab{
             width: 100%;       
-            padding-top: 60px;     
+            padding-top: 40px;     
             position: relative;
 
             dt{
                 width: 15%;
-                height: 60px;
+                height: 40px;
                 position: absolute;
                 top: 0;
                 
@@ -815,7 +817,7 @@ $mobile: 539px;
                     width: 100%;
                     height: 100%;
                     background: #f6e6d6;
-                    font: bold 16px/60px 'Rajdhani';
+                    font: bold 16px/40px 'Rajdhani';
                     color: #444;
                     letter-spacing: 1px;
                     text-align: center;
@@ -1218,6 +1220,9 @@ $mobile: 539px;
             width: 100%;
 
             .wrap{
+                opacity: 1;
+                transform: translateY(0);
+                
                 .con_article{
                     width: 100%;
                     margin-right: 0;
@@ -1274,11 +1279,9 @@ $mobile: 539px;
             width: 100%;
 
             #tab{
-                padding-top: 40px;
 
                 dt{
                     width: 25%;
-                    height: 40px;
                     
                     &:nth-of-type(1){
                         left: 0;
@@ -1291,10 +1294,6 @@ $mobile: 539px;
                     }
                     &:nth-of-type(4){
                         left: calc(25% * 3);
-                    }
-                    
-                    a{
-                        line-height: 40px;
                     }
                 }
                 dd{

@@ -59,33 +59,16 @@ function activation(index, items){
 }
 
 //scroll ---------------------------------------------------------------
-const sections = document.querySelectorAll("section");
-const lenSec = sections.length;
+const sections = document.querySelectorAll("section", "header");
 const scrollBtn = document.querySelector("#scrollBtn")
 const lis = document.querySelectorAll("#scrollBtn li");
 const lis_arr = Array.from(lis);
 let posArr = null;
 let enableClick = true;
-let base = -300;
+let base = -400;
+
 
 setPos();
-
-window.addEventListener("mousewheel",e=>{
-    e.preventDefault();
-
-    let activeSec = document.querySelector("section.on");
-    let arrSec = Array.from(sections);
-    let activeIndex = arrSec.indexOf(activeSec);
-
-    if(e.deltaY < 0){
-        if(activeIndex == 0) return;
-        moveScroll(activeIndex - 1);
-    }else{
-        if(activeIndex == lenSec - 1) return;
-        moveScroll(activeIndex + 1);
-    }
-    
-},{passive:false})
 
 window.addEventListener("resize",()=>{
     setPos();
@@ -109,13 +92,21 @@ window.addEventListener("scroll", e=>{
     activationScroll();
 })
 
-
 function setPos(){
     posArr = [];
 
-    for(let section of sections){
-        posArr.push(section.offsetTop);
+    const headerHt = document.querySelector("header").offsetHeight;
+
+    if(sections.offsetTop == 0){
+        posArr.push(section.offsetTop + headerHt);
+        return; 
+        //첫화면 로딩시 section[1]부터 시작하는 문제 수정
+    }else{
+        for(let section of sections){
+            posArr.push(section.offsetTop);
+        } return;
     }
+    
 
     const active = scrollBtn.querySelector("li.on");
     const activeIndex = lis_arr.indexOf(active);
