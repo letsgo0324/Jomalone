@@ -1,13 +1,15 @@
 /* content ----------------------------------------------------------- */
-.gallery{
+.campaign{
     width: 100%;
     position: relative;
 
     .sub_visualTop{
         width: 100%;
         height: 200px;
-        background: url(../img/gallery_bg.jpg) no-repeat center/cover fixed;
+        background: url(../img/campaign_bg.jpg) no-repeat center/cover fixed;
+        opacity: 1;
         margin-bottom: 100px;
+        position: relative;
 
         .inner{
             width: 1180px;
@@ -110,7 +112,7 @@
 //미디어쿼리
 @media screen and (max-width:$tablet){
     /* content ----------------------------------------------------------- */
-    .gallery{
+    .campaign{
         width: 100%;
 
         .sub_visualTop{
@@ -143,7 +145,7 @@
 }
 
 @media screen and (max-width:1025px){
-    .gallery{
+    .campaign{
         .sub_content{
             .inner{
                 .wrap{   
@@ -159,7 +161,7 @@
 }
 
 @media screen and (max-width:769px){
-    .gallery{
+    .campaign{
         .sub_content{
             .inner{
                 .wrap{   
@@ -176,7 +178,7 @@
 
 @media screen and (max-width:$mobile){
     /* content ----------------------------------------------------------- */
-    .gallery{
+    .campaign{
         .sub_visualTop{
             margin-bottom: 50px;
         }   

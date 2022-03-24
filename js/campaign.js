@@ -1,6 +1,6 @@
 window.addEventListener("load", ()=>{
 
-    const grid = new Isotope(".gallery .sub_content .wrap section", {
+    const grid = new Isotope(".campaign .sub_content .wrap section", {
         itemSelector : "article",
         columnWidth : "aritcle",
         transitionDuration : "0.6s"
