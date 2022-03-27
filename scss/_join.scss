@@ -1,4 +1,3 @@
-
 .join{
     width: 100%;
 
@@ -109,6 +108,13 @@
                             position: relative;
                             top: 0.5px;
                         }
+                        p{
+                            width: 100%;
+                            font: bold 14px/1.5 'Rajdhani';
+                            color: #810006;
+                            text-align: right;
+                            margin-top: 5px;
+                        }
                     }
                     table{
                         width: 100%;
@@ -155,6 +161,11 @@
                                     letter-spacing: 2px;
                                     text-align: center;
                                     cursor: pointer;
+
+                                    &:hover{
+                                        background: #df9f8c;
+                                        color: #fff;
+                                    }
                                 }
                                 input[type=submit]{
                                     margin-right: 0;
@@ -171,9 +182,9 @@
                                 width: 80%;
                                 
                                 input[type=text], input[type=password], select{
-                                    padding: 10px;
+                                    padding: 5px 10px;
                                     width: 100%;
-                                    height: 40px;
+                                    height: 35px;
                                     background: #ffeee9;
                                     border: 1px solid #f6dcd4;
                                     font: 14px/1 'Rajdhani';
@@ -201,6 +212,13 @@
                                     color: #444;
                                     resize: none;
                                 }
+                                p{
+                                    width: 100%;
+                                    font: bold 14px/1.5 'Rajdhani';
+                                    color: #810006;
+                                    text-align: left;
+                                    margin-top: 5px;
+                                }
                             }
                         }
                     }  
@@ -208,6 +226,74 @@
             }  
         }
     }    
+}
+.join_result{
+    width: 100%;
+
+    .sub_visualTop{
+        width: 100%;
+        height: 200px;
+        background: #bbb;
+        margin-bottom: 100px;
+
+        .inner{
+            width: 1180px;
+            margin: 0 auto;
+
+            h1{
+                font: bold 30px/200px 'Rajdhani';
+                color: #444;
+                font-weight: normal;
+                text-align: center;
+            }
+        }
+    }
+
+    .sub_content{
+        width: 100%;
+        margin-bottom: 100px;
+
+        .inner{
+            width: 1180px;
+            min-height: 300px;
+            margin: 0 auto;            
+
+            .inner{
+                width: 1180px;
+                margin: 100px auto;
+                min-height: 30vh;
+                
+                h2{
+                    font: normal 24px/1 'Merriweather';
+                    color: #444;
+                    text-align: center;
+                    margin-bottom: 50px;
+                }
+                p{
+                    font: 14px/1.2 'Merriweather';
+                    color: #444;
+                }
+                a{
+                    display: block;
+                    width: 10%;
+                    height: 40px;
+                    margin: 0 auto;
+                    background: #f6dcd4;
+                    font: bold 16px/40px 'Rajdhani';
+                    color: #444;
+                    letter-spacing: 2px;
+                    text-align: center;
+        
+                    &:hover{
+                        background: #df9f8c;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    
 }
 
 //미디어쿼리

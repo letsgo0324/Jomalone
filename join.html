@@ -9,6 +9,7 @@
     <script src="https://kit.fontawesome.com/b9f8ab812c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/common.js"></script>
+    <script defer src="js/join.js"></script>
 
 </head>
 
@@ -110,7 +111,7 @@
                         <h3>Corporate Information</h3>
                         <p>Jo Malone London joined The Estée Lauder Companies' family of brands in 1999 and is available in 69 countries and territories. Jo Malone London is a British lifestyle brand known for its unique fragrance portfolio and luxury products for the bath, body and home.</p>
                     </div>
-                    <form action="result.html">
+                    <form action="result.html" method="get" id="member">
                         <fieldset>
                             <legend class="hidden">CREATE ACCOUNT FORM</legend>
 
@@ -129,21 +130,21 @@
                                     <th colspan="2">MEMBERS INFORMATION</th>
                                 </tr>
                                 <tr>
-                                    <th scope="row"><label for="id">USER ID</label></th>
+                                    <th scope="row"><label for="userid">USER ID</label></th>
                                     <td>
-                                        <input type="text" name="id" id="id" placeholder="ID" required>
+                                        <input type="text" name="userid" id="userid" placeholder="ID">
                                     </td>
                                 </tr>
                                 <tr>
                                     <th scope="row"><label for="pwd1">PASSWORD</label></th>
                                     <td>
-                                        <input type="password" name="pwd1" id="pwd1" placeholder="PASSWORD" required>
+                                        <input type="password" name="pwd1" id="pwd1" placeholder="PASSWORD">
                                     </td>
                                 </tr>
                                 <tr>
                                     <th scope="row"><label for="pwd2">RE-PASSWORD</label></th>
                                     <td>
-                                        <input type="password" name="pwd2" id="pwd2" placeholder="RE-PASSWORD" required>
+                                        <input type="password" name="pwd2" id="pwd2" placeholder="RE-PASSWORD">
                                     </td>
                                 </tr>
                                 <tr>
@@ -159,7 +160,7 @@
                                         <label for="female">
                                             <input type="radio" name="gender" id="female" value="female">Female
                                         </label>
-                                    </td>
+                                    </td>                                    
                                 </tr>
                                 <tr>
                                     <th colspan="2">ADD INFORMATION</th>
@@ -171,22 +172,22 @@
                                             <input type="checkbox" name="interest" id="joinColognes" value="joinColognes">Colognes
                                         </label>
                                         <label for="joinBathShower">
-                                            <input type="checkbox" name="favorite" id="joinBathShower" value="joinBathShower">Bath&Shower
+                                            <input type="checkbox" name="interest" id="joinBathShower" value="joinBathShower">Bath&Shower
                                         </label>
                                         <label for="joinBodycare">
-                                            <input type="checkbox" name="favorite" id="joinBodycare" value="joinBodycare">Body Care
+                                            <input type="checkbox" name="interest" id="joinBodycare" value="joinBodycare">Body Care
                                         </label>
                                         <label for="joinFacecare">
-                                            <input type="checkbox" name="favorite" id="joinFacecare" value="joinFacecare">Face Care
+                                            <input type="checkbox" name="interest" id="joinFacecare" value="joinFacecare">Face Care
                                         </label>
                                         <label for="joinCandles">
                                             <input type="checkbox" name="interest" id="joinCandles" value="joinCandles">Candles
                                         </label>
                                         <label for="joinDiffusers">
-                                            <input type="checkbox" name="favorite" id="joinDiffusers" value="joinDiffusers">Diffusers
+                                            <input type="checkbox" name="interest" id="joinDiffusers" value="joinDiffusers">Diffusers
                                         </label>
                                         <label for="joinEtc">
-                                            <input type="checkbox" name="favorite" id="joinEtc" value="joinEtc">Etc
+                                            <input type="checkbox" name="interest" id="joinEtc" value="joinEtc">Etc
                                         </label> 
                                     </td>
                                 </tr>
