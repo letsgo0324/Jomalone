@@ -1,469 +1,465 @@
-.join{
-    width: 100%;
+.join {
+	width: 100%;
 
-    .sub_visualTop{
-        width: 100%;
-        height: 200px;
-        background: url(../img/join_bg.jpg) no-repeat center/cover fixed;
-        margin-bottom: 100px;
+	.sub_visualTop {
+		width: 100%;
+		height: 200px;
+		background: #bbb;
+		margin-bottom: 100px;
 
-        .inner{
-            width: 1180px;
-            margin: 0 auto;
+		.inner {
+			width: 1180px;
+			margin: 0 auto;
 
-            h1{
-                font: bold 30px/200px 'Rajdhani';
-                color: #444;
-                font-weight: normal;
-                text-align: center;
-            }
-        }
-    }
-    .sub_content{
-        width: 100%;
-        margin-bottom: 100px;
+			h1 {
+				font: bold 30px/200px "Rajdhani";
+				color: #444;
+				font-weight: normal;
+				text-align: center;
+			}
+		}
+	}
+	.sub_content {
+		width: 100%;
+		margin-bottom: 100px;
 
-        .inner{
-            width: 1180px;
-            height: auto;
-            margin: 0 auto;            
+		.inner {
+			width: 1180px;
+			height: auto;
+			margin: 0 auto;
 
-            h2{
-                font: 30px/1 'Yeseva One';
-                color: #444;
-                margin-bottom: 50px;
-                text-align: center;
-                letter-spacing: 2px;
-            }
+			h2 {
+				font: 30px/1 "Yeseva One";
+				color: #444;
+				margin-bottom: 50px;
+				text-align: center;
+				letter-spacing: 2px;
+			}
 
-            .wrap{
-                .pic{
-                    width: 220px;
-                    margin-right: 20px;
-                    height: 1244px;
-                    background: #ffeee9;
-                    float: left;
-                    position: relative;
+			.wrap {
+				.pic {
+					width: 220px;
+					margin-right: 20px;
+					height: 1244px;
+					background: #f6f6f6;
+					float: left;
+					position: relative;
 
-                    h3{
-                        font: normal 30px/1.3 'Merriweather';
-                        color: #fffcfb;
-                        writing-mode: vertical-rl;
-                        position: absolute;
-                        top: 0;
-                        right: 0;
-                        margin: 30px;
+					h3 {
+						font: normal 30px/1.3 "Merriweather";
+						color: #fff;
+						writing-mode: vertical-rl;
+						position: absolute;
+						top: 0;
+						right: 0;
+						margin: 30px;
+					}
+					p {
+						font: 12px/1.5 "Merriweather";
+						color: #fff;
+						writing-mode: vertical-rl;
+						text-align: left;
+						position: absolute;
+						top: 0;
+						right: 60px;
+						height: 50%;
+						margin: 30px;
+					}
 
-                    }
-                    p{
-                        font: 12px/1.5 'Merriweather';
-                        color: #fffcfb;
-                        writing-mode: vertical-rl;
-                        text-align: left;
-                        position: absolute;
-                        top: 0;
-                        right: 60px;
-                        height: 50%;
-                        margin: 30px;
-                    }
-                    
-                    img{
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        object-position: left top;
-                        opacity: 0.1;
-                    }
-                }
-                fieldset{
-                    width: 940px;
-                    background: #fff7f4;
-                    padding: 50px;
-                    float: left;
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+						object-position: left top;
+						opacity: 0.1;
+					}
+				}
+				fieldset {
+					width: 940px;
+					background: #f6f6f6;
+					padding: 50px;
+					float: left;
 
-                    h3{
-                        font: bold 24px/1 'Merriweather';
-                        color: #444;
-                        margin-bottom: 20px;
-                    }
-                    #terms{
-                        width: 100%;
-                        height: 200px;
-                        padding: 10px;
-                        font: 13px/1.3 'Rajdhani';
-                        color: #999;                        
-                        background: #ffeee9;
-                        border: 1px solid #f6dcd4;
-                        resize: none;        
-                    }
-                    .agreement{
-                        margin-bottom: 30px;
-                        text-align: right;
-                        font: bold 16px/1 'Rajdhani';
-                        color: #444;
-                        margin-top: 10px;
+					h3 {
+						font: bold 24px/1 "Merriweather";
+						color: #444;
+						margin-bottom: 20px;
+					}
+					#terms {
+						width: 100%;
+						height: 200px;
+						padding: 10px;
+						font: 13px/1.3 "Rajdhani";
+						color: #888;
+						background: #ddd;
+						border: 1px solid #ddd;
+						resize: none;
+					}
+					.agreement {
+						margin-bottom: 30px;
+						text-align: right;
+						font: bold 16px/1 "Rajdhani";
+						color: #444;
+						margin-top: 10px;
 
-                        input[type=checkbox]{
-                            margin-right: 5px;
-                            position: relative;
-                            top: 0.5px;
-                        }
-                        p{
-                            width: 100%;
-                            font: bold 14px/1.5 'Rajdhani';
-                            color: #810006;
-                            text-align: right;
-                            margin-top: 5px;
-                        }
-                    }
-                    table{
-                        width: 100%;
-                        color: #444;
+						input[type="checkbox"] {
+							margin-right: 5px;
+							position: relative;
+							top: 0.5px;
+						}
+						p {
+							width: 100%;
+							font: bold 14px/1.5 "Rajdhani";
+							color: #bd0009;
+							text-align: right;
+							margin-top: 5px;
+						}
+					}
+					table {
+						width: 100%;
+						color: #444;
 
-                        tr{       
-                            height: 70px;
+						tr {
+							height: 70px;
 
-                            &:nth-of-type(1), &:nth-of-type(7){
-                                height: 45px;
+							&:nth-of-type(1),
+							&:nth-of-type(7) {
+								height: 45px;
 
-                                th{
-                                    text-align: center;
-                                    font: bold 22px/1 'Rajdhani';
-                                    letter-spacing: 2px;
-                                    background: #f6dcd4;
-                                    color: #444;
-                                }     
-                            }
-                            &:nth-of-type(10){ 
+								th {
+									text-align: center;
+									font: bold 22px/1 "Rajdhani";
+									letter-spacing: 2px;
+									background: #ddd;
+									color: #444;
+								}
+							}
+							&:nth-of-type(10) {
+								th {
+									padding-bottom: 30px;
+								}
+								td {
+									padding: 10px 0 30px;
+								}
+							}
+							&:last-child th {
+								text-align: center;
+								padding: 30px 0 0;
+								border-top: 2px solid #ddd;
 
-                                th{
-                                    padding-bottom: 30px;
-                                }
-                                td{
-                                    padding: 10px 0 30px;
-                                }
-                            }
-                            &:last-child th{
-                                text-align: center;
-                                padding: 30px 0 0;
-                                border-top: 2px solid #f6dcd4;
+								input[type="reset"],
+								input[type="submit"] {
+									display: block;
+									float: left;
+									width: 49%;
+									height: 40px;
+									margin-right: 2%;
+									border: none;
+									background: #ddd;
+									font: bold 16px/1 "Rajdhani";
+									color: #444;
+									letter-spacing: 2px;
+									text-align: center;
+									cursor: pointer;
 
-                                input[type=reset], input[type=submit]{
-                                    display: block;
-                                    float: left;
-                                    width: 49%;
-                                    height: 40px;
-                                    margin-right: 2%;
-                                    border: none;
-                                    background: #f6dcd4;
-                                    font: bold 16px/1 'Rajdhani';
-                                    color: #444;
-                                    letter-spacing: 2px;
-                                    text-align: center;
-                                    cursor: pointer;
+									&:hover {
+										background: #444;
+										color: #fff;
+									}
+								}
+								input[type="submit"] {
+									margin-right: 0;
+								}
+							}
 
-                                    &:hover{
-                                        background: #df9f8c;
-                                        color: #fff;
-                                    }
-                                }
-                                input[type=submit]{
-                                    margin-right: 0;
-                                }
-                            }
+							th {
+								text-align: left;
+								padding: 10px;
+								width: 20%;
+								font: bold 16px/1 "Rajdhani";
+							}
+							td {
+								width: 80%;
 
-                            th{
-                                text-align: left;
-                                padding: 10px;
-                                width: 20%;
-                                font: bold 16px/1 'Rajdhani';  
-                            }
-                            td{
-                                width: 80%;
-                                
-                                input[type=text], input[type=password], select{
-                                    padding: 5px 10px;
-                                    width: 100%;
-                                    height: 35px;
-                                    background: #ffeee9;
-                                    border: 1px solid #f6dcd4;
-                                    font: 14px/1 'Rajdhani';
-                                    color: #444;
-                                }
-                                input[type=radio], input[type=checkbox]{
-                                    margin-right: 5px;
-                                    
-                                    //라디오, 체크박스 높이 살짝 올라온거 내리기
-                                    position: relative;
-                                    top: 2px; 
-                                }
-                                label{
-                                    margin-right: 10px;
-                                    font: 14px/1 'Rajdhani';
-                                    color: #444;
-                                }
-                                textarea#comments{
-                                    padding: 10px;
-                                    width: 100%;
-                                    height: 100px;
-                                    background: #ffeee9;
-                                    border: 1px solid #f6dcd4;
-                                    font: 14px/1.5 'Rajdhani';
-                                    color: #444;
-                                    resize: none;
-                                }
-                                p{
-                                    width: 100%;
-                                    font: bold 14px/1.5 'Rajdhani';
-                                    color: #810006;
-                                    text-align: left;
-                                    margin-top: 5px;
-                                }
-                            }
-                        }
-                    }  
-                }
-            }  
-        }
-    }    
+								input[type="text"],
+								input[type="password"],
+								select {
+									padding: 5px 10px;
+									width: 100%;
+									height: 35px;
+									background: #eee;
+									border: 1px solid #ddd;
+									font: 14px/1 "Rajdhani";
+									color: #444;
+								}
+								input[type="radio"],
+								input[type="checkbox"] {
+									margin-right: 5px;
+
+									//라디오, 체크박스 높이 살짝 올라온거 내리기
+									position: relative;
+									top: 2px;
+								}
+								label {
+									margin-right: 10px;
+									font: 14px/1 "Rajdhani";
+									color: #444;
+								}
+								textarea#comments {
+									padding: 10px;
+									width: 100%;
+									height: 100px;
+									background: #eee;
+									border: 1px solid #ddd;
+									font: 14px/1.5 "Rajdhani";
+									color: #444;
+									resize: none;
+								}
+								p {
+									width: 100%;
+									font: bold 14px/1.5 "Rajdhani";
+									color: #bd0009;
+									text-align: left;
+									margin-top: 5px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
-.join_result{
-    width: 100%;
+.join_result {
+	width: 100%;
 
-    .sub_visualTop{
-        width: 100%;
-        height: 200px;
-        background: #bbb;
-        margin-bottom: 100px;
+	.sub_visualTop {
+		width: 100%;
+		height: 200px;
+		background: #bbb;
+		margin-bottom: 100px;
 
-        .inner{
-            width: 1180px;
-            margin: 0 auto;
+		.inner {
+			width: 1180px;
+			margin: 0 auto;
 
-            h1{
-                font: bold 30px/200px 'Rajdhani';
-                color: #444;
-                font-weight: normal;
-                text-align: center;
-            }
-        }
-    }
+			h1 {
+				font: bold 30px/200px "Rajdhani";
+				color: #444;
+				font-weight: normal;
+				text-align: center;
+			}
+		}
+	}
 
-    .sub_content{
-        width: 100%;
-        margin-bottom: 100px;
+	.sub_content {
+		width: 100%;
+		margin-bottom: 100px;
 
-        .inner{
-            width: 1180px;
-            min-height: 300px;
-            margin: 0 auto;            
+		.inner {
+			width: 1180px;
+			margin: 100px auto;
+			min-height: 30vh;
 
-            .inner{
-                width: 1180px;
-                margin: 100px auto;
-                min-height: 30vh;
-                
-                h2{
-                    font: normal 24px/1 'Merriweather';
-                    color: #444;
-                    text-align: center;
-                    margin-bottom: 50px;
-                }
-                p{
-                    font: 14px/1.2 'Merriweather';
-                    color: #444;
-                }
-                a{
-                    display: block;
-                    width: 10%;
-                    height: 40px;
-                    margin: 0 auto;
-                    background: #f6dcd4;
-                    font: bold 16px/40px 'Rajdhani';
-                    color: #444;
-                    letter-spacing: 2px;
-                    text-align: center;
-        
-                    &:hover{
-                        background: #df9f8c;
-                        color: #fff;
-                    }
-                }
-            }
-        }
-    }
+			h2 {
+				font: normal 24px/1 "Merriweather";
+				color: #444;
+				text-align: center;
+				margin-bottom: 50px;
+			}
+			p {
+				font: 14px/1.2 "Merriweather";
+				color: #444;
+				margin-bottom: 50px;
+			}
+			> a {
+				display: block;
+				width: 10%;
+				height: 40px;
+				margin: 0 auto;
+				font: bold 16px/40px "Rajdhani";
+				color: #444;
+				border: 1px solid #444;
+				letter-spacing: 2px;
+				text-align: center;
 
-    
+				&:hover {
+					background: #444;
+					color: #fff;
+				}
+			}
+		}
+	}
 }
 
 //미디어쿼리
-@media screen and (max-width:$tablet){
-    /* join ----------------------------------------------------------- */
-    .join{
-        width: 100%;
+@media screen and (max-width: $tablet) {
+	/* join ----------------------------------------------------------- */
+	.join {
+		width: 100%;
 
-        .sub_visualTop{
-            height: 150px;
-            margin-bottom: 50px;
+		.sub_visualTop {
+			height: 150px;
+			margin-bottom: 50px;
 
-            .inner{
-                width: 100%;
-                
-                h1{
-                    line-height: 150px;
-                }
-            }
-        }
-        .sub_content{    
-            .inner{
-                width: 100%;
-                padding: 30px;
-    
-                .wrap{
-                    .pic{
-                        display: none;
-                    }
-                    fieldset{
-                        width: 100%;
-                        padding: 30px 20px;
+			.inner {
+				width: 100%;
 
-                        table{
-    
-                            tr{       
-                                height: 60px;
+				h1 {
+					line-height: 150px;
+				}
+			}
+		}
+		.sub_content {
+			.inner {
+				width: 100%;
+				padding: 30px;
 
-                                &:nth-of-type(1), &:nth-of-type(7){
-    
-                                    th{
-                                        font-size: 18px;
-                                    }     
-                                }
+				.wrap {
+					.pic {
+						display: none;
+					}
+					fieldset {
+						width: 100%;
+						padding: 30px 20px;
 
-                                &:nth-of-type(8){
-                                    height: 100px;
+						table {
+							tr {
+								height: 60px;
 
-                                    td{
-                                        width: 100%;
-                                        padding: 10px 0;
+								&:nth-of-type(1),
+								&:nth-of-type(7) {
+									th {
+										font-size: 18px;
+									}
+								}
 
-                                        label{
-                                            width: 49%;
-                                            display: block;
-                                            float: left;
-                                            margin-right: 2%;
-                                            margin-bottom: 5px;
-    
-                                            &:nth-of-type(even){
-                                                margin-right: 0;
-                                            }
-                                        }
-                                    }      
-                                }
-                                &:last-child th{
-    
-                                    input[type=reset], input[type=submit]{
-                                        font-size: 14px;
-                                    }
-                                }
-    
-                                th{
-                                    line-height: 1.5;
-                                }
-                            }
-                        }  
-                    }
-                }  
-            }
-        }      
-    }
+								&:nth-of-type(8) {
+									height: 100px;
+
+									td {
+										width: 100%;
+										padding: 10px 0;
+
+										label {
+											width: 49%;
+											display: block;
+											float: left;
+											margin-right: 2%;
+											margin-bottom: 5px;
+
+											&:nth-of-type(even) {
+												margin-right: 0;
+											}
+										}
+									}
+								}
+								&:last-child th {
+									input[type="reset"],
+									input[type="submit"] {
+										font-size: 14px;
+									}
+								}
+
+								th {
+									line-height: 1.5;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
-@media screen and (max-width:$mobile){
-    /* join ----------------------------------------------------------- */
-    .join{
-        .sub_visualTop{
-            margin-bottom: 50px;
-        }     
-        .sub_content{    
-            .inner{
-                h2{
-                    line-height: 1.2;
-                } 
-                .wrap{
-                    .pic{
-                        display: none;
-                    }
-                    fieldset{
-                        padding: 20px;
+@media screen and (max-width: $mobile) {
+	/* join ----------------------------------------------------------- */
+	.join {
+		.sub_visualTop {
+			margin-bottom: 50px;
+		}
+		.sub_content {
+			.inner {
+				h2 {
+					line-height: 1.2;
+				}
+				.wrap {
+					.pic {
+						display: none;
+					}
+					fieldset {
+						padding: 20px;
 
-                        h3{
-                            font-size: 16px;
-                            margin-bottom: 10px;
-                        }
-                        .agreement{
-                            font-size: 14px;
+						h3 {
+							font-size: 16px;
+							margin-bottom: 10px;
+						}
+						.agreement {
+							font-size: 14px;
 
-                            input[type=checkbox]{
-                                top: 2px;
-                            }
-                        }
-                        table{    
-                            tr{       
-                                &::after{
-                                    content: '';
-                                    display: block;
-                                    clear: both;
-                                }
+							input[type="checkbox"] {
+								top: 2px;
+							}
+						}
+						table {
+							tr {
+								&::after {
+									content: "";
+									display: block;
+									clear: both;
+								}
 
-                                &:nth-of-type(1), &:nth-of-type(7){
-                                    height: auto;
+								&:nth-of-type(1),
+								&:nth-of-type(7) {
+									height: auto;
 
-                                    th{
-                                        font-size: 13px;
-                                        letter-spacing: 1px;
-                                        padding: 10px;
-                                    }
-                                }
+									th {
+										font-size: 13px;
+										letter-spacing: 1px;
+										padding: 10px;
+									}
+								}
 
-                                &:nth-of-type(8){
-                                    height: auto;
+								&:nth-of-type(8) {
+									height: auto;
+								}
+								&:nth-of-type(10) {
+									th {
+										padding-bottom: 5px;
+									}
+									td {
+										padding: 0 0 10px;
+									}
+								}
+								&:last-child th {
+									padding: 20px 0 0;
+								}
 
-                                }
-                                &:nth-of-type(10){ 
+								th {
+									width: 100%;
+									display: block;
+									float: left;
+									font-size: 12px;
+									padding: 10px 0 5px 0;
+								}
+								td {
+									width: 100%;
+									display: block;
+									float: left;
 
-                                    th{
-                                        padding-bottom: 5px;
-                                    }
-                                    td{
-                                        padding: 0 0 10px;
-                                    }
-                                }
-                                &:last-child th{
-                                    padding: 20px 0 0;
-                                }
-
-                                th{
-                                    width: 100%;
-                                    display: block;
-                                    float: left;
-                                    font-size: 12px;
-                                    padding: 10px 0 5px 0;
-                                }
-                                td{
-                                    width: 100%;
-                                    display: block;
-                                    float: left;
-
-                                    input[type=text], input[type=password], select{
-                                        padding: 5px 10px;
-                                        height: 30px;
-                                    }
-                                }
-                            }
-                        }  
-                    }
-                }  
-            }
-        }     
-    }
+									input[type="text"],
+									input[type="password"],
+									select {
+										padding: 5px 10px;
+										height: 30px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

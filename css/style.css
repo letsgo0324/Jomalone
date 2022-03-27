@@ -36,109 +36,71 @@ fieldset {
 /* header_sub ----------------------------------------------------------- */
 #header_sub {
   width: 100%;
-  height: 120px;
+  height: 60px;
   position: relative;
-  background: #f6dcd4;
 }
 #header_sub > .inner {
   width: 1180px;
-  height: 90px;
+  height: 100%;
   margin: 0 auto;
   position: relative;
-  top: 30px;
-  z-index: 2;
+  top: 0;
 }
 #header_sub > .inner > h1 {
   float: left;
   position: absolute;
-  left: 50%;
+  left: 80px;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
 }
 #header_sub > .inner > h1 a img {
-  max-width: 136px;
+  max-width: 100px;
   height: auto;
 }
-#header_sub > .inner .menuWeb #gnb_1 {
-  float: left;
+#header_sub > .inner .btnCall_wrap {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  padding: 30px;
+  background: #444;
+  z-index: 10;
+}
+#header_sub > .inner .btnCall_wrap .btnCall {
   position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-}
-#header_sub > .inner .menuWeb #gnb_1 li {
-  float: left;
-  padding: 0 10px;
-}
-#header_sub > .inner .menuWeb #gnb_1 li a {
-  font: 12px/1 "Merriweather";
-  color: #444;
-  padding-bottom: 5px;
-  border-bottom: 2px solid transparent;
-  letter-spacing: 1.5px;
-}
-#header_sub > .inner .menuWeb #gnb_1 li a:hover {
-  color: #a34b4b;
-  border-bottom: 2px solid #a34b4b;
-}
-#header_sub > .inner .menuWeb #gnb_2 {
-  float: right;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-}
-#header_sub > .inner .menuWeb #gnb_2 li {
-  float: left;
-  padding: 0 10px;
-}
-#header_sub > .inner .menuWeb #gnb_2 li a {
-  font: 12px/1 "Merriweather";
-  color: #444;
-  padding-bottom: 5px;
-  border-bottom: 2px solid transparent;
-  letter-spacing: 1.5px;
-}
-#header_sub > .inner .menuWeb #gnb_2 li a:hover {
-  color: #a34b4b;
-  border-bottom: 2px solid #a34b4b;
-}
-#header_sub > .inner .btnCall {
-  position: absolute;
-  right: 30px;
+  left: 20px;
   top: 50%;
   transform: translateY(-50%);
   width: 20px;
   height: 20px;
-  display: none;
+  display: block;
 }
-#header_sub > .inner .btnCall::before {
+#header_sub > .inner .btnCall_wrap .btnCall::before {
   content: "";
   display: block;
   width: 100%;
   height: 2px;
-  background: #444;
+  background: #fff;
   position: absolute;
   top: 0;
   left: 0;
   transition: top 0.5s, transform 0.5s 0.5s;
 }
-#header_sub > .inner .btnCall::after {
+#header_sub > .inner .btnCall_wrap .btnCall::after {
   content: "";
   display: block;
   width: 100%;
   height: 2px;
-  background: #444;
+  background: #fff;
   position: absolute;
   bottom: 0;
   left: 0;
   transition: bottom 0.5s, transform 0.5s 0.5s;
 }
-#header_sub > .inner .btnCall span {
+#header_sub > .inner .btnCall_wrap .btnCall span {
   display: block;
   width: 100%;
   height: 2px;
-  background: #444;
+  background: #fff;
   position: absolute;
   left: 0;
   top: 50%;
@@ -146,131 +108,122 @@ fieldset {
   text-indent: -9999px;
   transition: all 0.5s;
 }
-#header_sub > .inner .btnCall.on::before {
+#header_sub > .inner .btnCall_wrap .btnCall.on::before {
   top: 50%;
   margin-top: -1px;
   transform: rotate(45deg);
 }
-#header_sub > .inner .btnCall.on::after {
+#header_sub > .inner .btnCall_wrap .btnCall.on::after {
   bottom: 50%;
   margin-bottom: -1px;
   transform: rotate(-45deg);
 }
-#header_sub > .inner .btnCall.on span {
+#header_sub > .inner .btnCall_wrap .btnCall.on span {
   transform: translateX(100%);
   opacity: 0;
 }
-#header_sub > .inner .menuMo {
-  width: 260px;
-  height: 100vh;
-  background: #fef0ec;
-  position: fixed;
-  top: 0;
-  left: -260px;
-  z-index: 10;
-  transition: all 0.5s;
+#header_sub > .inner .menu.on .menuWeb #gnbWeb li {
+  opacity: 1;
+  transform: translateY(0);
 }
-#header_sub > .inner .menuMo.on {
+#header_sub > .inner .menu.on .menuMo {
   left: 0;
 }
-#header_sub > .inner .menuMo h1 {
-  padding: 30px;
-  background: #df9f8c;
-  text-align: center;
+#header_sub > .inner .menu .menuWeb {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 220px;
+  z-index: 8;
 }
-#header_sub > .inner .menuMo h1 a {
-  display: block;
-  font: bold 26px/1 "Rajdhani";
-  color: #fff;
+#header_sub > .inner .menu .menuWeb #gnbWeb {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-#header_sub > .inner .menuMo #gnbMo {
-  padding: 30px;
+#header_sub > .inner .menu .menuWeb #gnbWeb li {
+  transition-duration: 1s;
+  opacity: 0;
+  transform: translateY(5px);
 }
-#header_sub > .inner .menuMo #gnbMo li:nth-of-type(6) {
-  border-top: 1px solid #444;
-  margin-top: 5px;
+#header_sub > .inner .menu .menuWeb #gnbWeb li:nth-of-type(1) {
+  transition-delay: 0.2s;
 }
-#header_sub > .inner .menuMo #gnbMo li:nth-of-type(8) {
-  border-bottom: 1px solid #444;
-  margin-bottom: 5px;
+#header_sub > .inner .menu .menuWeb #gnbWeb li:nth-of-type(2) {
+  transition-delay: 0.3s;
 }
-#header_sub > .inner .menuMo #gnbMo li a {
+#header_sub > .inner .menu .menuWeb #gnbWeb li:nth-of-type(3) {
+  transition-delay: 0.4s;
+}
+#header_sub > .inner .menu .menuWeb #gnbWeb li:nth-of-type(4) {
+  transition-delay: 0.5s;
+}
+#header_sub > .inner .menu .menuWeb #gnbWeb li:nth-of-type(5) {
+  transition-delay: 0.6s;
+}
+#header_sub > .inner .menu .menuWeb #gnbWeb li:nth-of-type(6) {
+  transition-delay: 0.7s;
+}
+#header_sub > .inner .menu .menuWeb #gnbWeb li:nth-of-type(7) {
+  transition-delay: 0.8s;
+}
+#header_sub > .inner .menu .menuWeb #gnbWeb li:nth-of-type(8) {
+  transition-delay: 0.9s;
+}
+#header_sub > .inner .menu .menuWeb #gnbWeb li a {
   display: block;
   width: 100%;
-  padding: 20px 0;
-  font: 14px/1 "Merriweather";
+  font: bold 15px/60px "Rajdhani";
   color: #444;
   letter-spacing: 1.5px;
   transition: all 0.4s;
 }
-#header_sub > .inner .menuMo #gnbMo li a:hover {
-  color: #df9f8c;
+#header_sub > .inner .menu .menuWeb #gnbWeb li a:hover {
+  color: #ddd;
 }
-#header_sub .top {
-  background: #df9f8c;
+#header_sub > .inner .menu .menuMo {
   width: 100%;
+  height: 100vh;
+  background: #444;
+  position: fixed;
   top: 0;
-  height: 30px;
-  position: absolute;
-  z-index: 1;
+  left: -100%;
+  padding: 50px;
+  z-index: 9;
+  transition: 0.5s;
+  display: none;
 }
-#header_sub .top .inner {
-  width: 1180px;
-  margin: 0 auto;
-  position: relative;
+#header_sub > .inner .menu .menuMo h1 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#header_sub > .inner .menu .menuMo h1 a img {
+  max-width: 200px;
   height: auto;
 }
-#header_sub .top .inner .util {
-  position: absolute;
-  top: 5px;
-  right: 0;
+#header_sub > .inner .menu .menuMo #gnbMo li:nth-of-type(6) {
+  border-top: 1px solid rgba(238, 238, 238, 0.3);
+  margin-top: 5px;
+}
+#header_sub > .inner .menu .menuMo #gnbMo li:nth-of-type(7) {
+  border-bottom: 1px solid rgba(238, 238, 238, 0.3);
+  margin-bottom: 5px;
+}
+#header_sub > .inner .menu .menuMo #gnbMo li a {
   display: block;
+  width: 100%;
+  padding: 20px 0;
+  font: bold 15px/1 "Rajdhani";
+  color: #eee;
+  letter-spacing: 1.5px;
+  transition: all 0.4s;
 }
-#header_sub .top .inner .util li {
-  float: left;
-  margin-right: 13px;
-}
-#header_sub .top .inner .util li:nth-of-type(4) {
-  float: left;
-  margin-right: 0;
-}
-#header_sub .top .inner .util li:nth-of-type(4) input {
-  font-family: "Rajdhani";
-  font-size: 12px;
-  color: #444;
-  padding: 2px 5px;
-  border: 1px solid #f6dcd4;
-  background: #f6e9e4;
-  width: 230px;
-  height: 20px;
-  float: left;
-}
-#header_sub .top .inner .util li:nth-of-type(4) button {
-  width: 20px;
-  height: 20px;
-  font-size: 12px;
-  color: #df9f8c;
-  text-align: center;
-  line-height: 20px;
-  background: #f6dcd4;
-  display: block;
-  float: left;
-  border: 0;
-  cursor: pointer;
-}
-#header_sub .top .inner .util li:nth-of-type(1), #header_sub .top .inner .util li:nth-of-type(2), #header_sub .top .inner .util li:nth-of-type(3) {
-  float: left;
-  width: 20px;
-  height: 20px;
-  text-align: center;
-}
-#header_sub .top .inner .util li:nth-of-type(1) a, #header_sub .top .inner .util li:nth-of-type(2) a, #header_sub .top .inner .util li:nth-of-type(3) a {
-  color: #f6dcd4;
-  font-size: 15px;
-  line-height: 20px;
-}
-#header_sub .top .inner .util li:nth-of-type(1) a:hover, #header_sub .top .inner .util li:nth-of-type(2) a:hover, #header_sub .top .inner .util li:nth-of-type(3) a:hover {
-  color: #fff6ef;
+#header_sub > .inner .menu .menuMo #gnbMo li a:hover {
+  color: #888;
 }
 
 /* content ----------------------------------------------------------- */
@@ -318,7 +271,7 @@ fieldset {
 /* footer_sub ----------------------------------------------------------- */
 #footer_sub {
   width: 100%;
-  background-color: #df9f8c;
+  background-color: #222;
   padding: 50px 0 20px;
 }
 #footer_sub .inner {
@@ -334,14 +287,20 @@ fieldset {
   height: 220px;
 }
 #footer_sub .inner .wrap article:nth-of-type(1) h1 {
+  width: 180px;
   margin-bottom: 30px;
+}
+#footer_sub .inner .wrap article:nth-of-type(1) h1 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 #footer_sub .inner .wrap article:nth-of-type(1) ul {
   width: 100%;
 }
 #footer_sub .inner .wrap article:nth-of-type(1) ul li {
   display: inline-block;
-  background: #222;
+  background: #666;
   width: 40px;
   height: 40px;
   text-align: center;
@@ -349,11 +308,11 @@ fieldset {
   margin-right: 2px;
 }
 #footer_sub .inner .wrap article:nth-of-type(1) ul li:hover {
-  background-color: #a34b4b;
+  background-color: #bbb;
 }
 #footer_sub .inner .wrap article:nth-of-type(1) ul li a {
   font-size: 20px;
-  color: #df9f8c;
+  color: #222;
   line-height: 40px;
 }
 #footer_sub .inner .wrap article:nth-of-type(2) {
@@ -362,18 +321,18 @@ fieldset {
 }
 #footer_sub .inner .wrap article:nth-of-type(2) h2 {
   font: bold 20px/1 "Yeseva One";
-  color: #222;
+  color: #666;
   margin-bottom: 30px;
   letter-spacing: 2px;
 }
 #footer_sub .inner .wrap article:nth-of-type(2) address {
   font: 14px/1.2 "Rajdhani";
   margin-bottom: 10px;
-  color: #222;
+  color: #666;
 }
 #footer_sub .inner .wrap article:nth-of-type(2) p {
   font: normal 14px/1 "Rajdhani";
-  color: #222;
+  color: #666;
   margin-bottom: 10px;
 }
 #footer_sub .inner .wrap article:nth-of-type(3) {
@@ -382,7 +341,7 @@ fieldset {
 }
 #footer_sub .inner .wrap article:nth-of-type(3) h2 {
   font: bold 20px/1 "Yeseva One";
-  color: #222;
+  color: #666;
   margin-bottom: 30px;
   letter-spacing: 2px;
 }
@@ -394,11 +353,11 @@ fieldset {
 }
 #footer_sub .inner .wrap article:nth-of-type(3) ul li a {
   font: 14px/1 "Rajdhani";
-  color: #222;
+  color: #666;
   margin-bottom: 10px;
 }
 #footer_sub .inner .wrap article:nth-of-type(3) ul li a:hover {
-  color: #a34b4b;
+  color: #bbb;
 }
 #footer_sub .inner .wrap article:nth-of-type(4) {
   width: 180px;
@@ -407,7 +366,7 @@ fieldset {
 }
 #footer_sub .inner .wrap article:nth-of-type(4) h2 {
   font: bold 20px/1 "Yeseva One";
-  color: #222;
+  color: #666;
   margin-bottom: 30px;
   letter-spacing: 2px;
 }
@@ -419,44 +378,31 @@ fieldset {
 }
 #footer_sub .inner .wrap article:nth-of-type(4) ul li a {
   font: 14px/1 "Rajdhani";
-  color: #222;
+  color: #666;
   margin-bottom: 10px;
 }
 #footer_sub .inner .wrap article:nth-of-type(4) ul li a:hover {
-  color: #a34b4b;
+  color: #bbb;
 }
 #footer_sub .inner > p {
   width: 100%;
   text-align: center;
   padding-top: 20px;
   font: 14px/1 "Rajdhani";
-  color: #222;
-  border-top: 1px solid rgba(34, 34, 34, 0.2);
+  color: #666;
+  border-top: 1px solid rgba(102, 102, 102, 0.1);
 }
 
 @media screen and (max-width: 1179px) {
   /* header_sub ----------------------------------------------------------- */
-  #header_sub {
-    height: 80px;
-  }
-  #header_sub > .inner {
-    width: 100%;
-    top: 0;
-    height: 80px;
-  }
   #header_sub > .inner > h1 {
-    line-height: 80px;
-    top: 0;
-    transform: translateX(-50%);
-  }
-  #header_sub > .inner .menuWeb {
     display: none;
   }
-  #header_sub > .inner .btnCall {
+  #header_sub > .inner .menu .menuWeb {
+    display: none;
+  }
+  #header_sub > .inner .menu .menuMo {
     display: block;
-  }
-  #header_sub .top {
-    display: none;
   }
 
   /* content ----------------------------------------------------------- */
@@ -554,7 +500,7 @@ fieldset {
 .about .sub_visualTop {
   width: 100%;
   height: 200px;
-  background: url(../img/about_bg_1.png) no-repeat center/cover fixed;
+  background: #bbb;
   margin-bottom: 100px;
 }
 .about .sub_visualTop .inner {
@@ -584,8 +530,8 @@ fieldset {
   letter-spacing: 2px;
 }
 .about .sub_content .inner h3 {
-  font: normal 24px/1.5 "Merriweather";
-  color: #df9f8c;
+  font: 24px/1.5 "Merriweather";
+  color: #888;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -595,17 +541,17 @@ fieldset {
   width: 2px;
   height: 100px;
   margin: 30px auto;
-  background: #df9f8c;
+  background: #888;
 }
 .about .sub_content .inner p {
-  font: 14px/1.5 "Merriweather";
-  color: #444;
+  font: 18px/1.5 "Rajdhani";
+  color: #666;
   text-align: center;
   padding: 50px;
 }
 .about #sub_about_visualNumber {
   width: 100%;
-  background: url(../img/about_bg_2.png) no-repeat center/cover fixed;
+  background: url(../img/about_bg_2.jpg) no-repeat center/cover fixed;
   padding: 100px 0;
 }
 .about #sub_about_visualNumber .inner {
@@ -632,10 +578,10 @@ fieldset {
 }
 .about #sub_about_visualNumber .inner .wrap article:hover h1 {
   transform: scale(1.2);
-  color: #a34b4b;
+  color: #eee;
 }
 .about #sub_about_visualNumber .inner .wrap article p {
-  font: 14px/1.3 "Merriweather";
+  font: 16px/1.3 "Rajdhani";
   color: #444;
   word-break: keep-all;
   word-wrap: break-word;
@@ -678,12 +624,12 @@ fieldset {
 }
 .about #sub_about_leadership .inner .wrap article:nth-of-type(2) h3 {
   font: bold 28px/1 "Rajdhani";
-  color: #a34b4b;
+  color: #888;
   margin-bottom: 30px;
 }
 .about #sub_about_leadership .inner .wrap article:nth-of-type(2) h3 span {
   font: bold 18px/1 "Rajdhani";
-  color: #a34b4b;
+  color: #888;
 }
 .about #sub_about_leadership .inner .wrap article:nth-of-type(2) h3 span::before {
   content: "/";
@@ -743,7 +689,7 @@ fieldset {
   padding: 30px;
   background: rgba(0, 0, 0, 0.8);
   opacity: 0;
-  transition: all 0.5s;
+  transition: all 0.7s;
 }
 .about #sub_about_members .inner .wrap article .sub_about_members_pic .sub_about_members_txt_more p {
   font: normal 16px/1.2 "Rajdhani";
@@ -813,7 +759,7 @@ fieldset {
   display: block;
   width: 100px;
   height: 100px;
-  background: #d47457;
+  background: #444;
   border-radius: 50%;
   color: #fff;
   text-align: center;
@@ -827,7 +773,7 @@ fieldset {
   display: block;
   width: 1px;
   height: 1425px;
-  background: #f6dcd4;
+  background: #eee;
   position: absolute;
   top: 100px;
   left: 50px;
@@ -837,7 +783,7 @@ fieldset {
   min-width: 150px;
   height: 50px;
   border-radius: 25px;
-  background: #df9f8c;
+  background: #bbb;
   font: bold 18px/50px "Rajdhani";
   letter-spacing: 2px;
   transform: translateX(70px);
@@ -847,7 +793,7 @@ fieldset {
   display: block;
   width: 20px;
   height: 1px;
-  background: #f6dcd4;
+  background: #eee;
   position: absolute;
   top: 50%;
   left: -20px;
@@ -881,7 +827,7 @@ fieldset {
   width: 50%;
   min-width: 140px;
   height: 40px;
-  background: #f6dcd4;
+  background: #eee;
   font: 13px/40px "Rajdhani";
   color: #444;
   letter-spacing: 0;
@@ -1061,7 +1007,7 @@ fieldset {
 .notice .sub_visualTop {
   width: 100%;
   height: 200px;
-  background: url(../img/notice_bg.jpg) no-repeat center/cover fixed;
+  background: #bbb;
   margin-bottom: 100px;
 }
 .notice .sub_visualTop .inner {
@@ -1433,7 +1379,7 @@ fieldset {
 .join .sub_visualTop {
   width: 100%;
   height: 200px;
-  background: url(../img/join_bg.jpg) no-repeat center/cover fixed;
+  background: #bbb;
   margin-bottom: 100px;
 }
 .join .sub_visualTop .inner {
@@ -1466,13 +1412,13 @@ fieldset {
   width: 220px;
   margin-right: 20px;
   height: 1244px;
-  background: #ffeee9;
+  background: #f6f6f6;
   float: left;
   position: relative;
 }
 .join .sub_content .inner .wrap .pic h3 {
   font: normal 30px/1.3 "Merriweather";
-  color: #fffcfb;
+  color: #fff;
   writing-mode: vertical-rl;
   position: absolute;
   top: 0;
@@ -1481,7 +1427,7 @@ fieldset {
 }
 .join .sub_content .inner .wrap .pic p {
   font: 12px/1.5 "Merriweather";
-  color: #fffcfb;
+  color: #fff;
   writing-mode: vertical-rl;
   text-align: left;
   position: absolute;
@@ -1499,7 +1445,7 @@ fieldset {
 }
 .join .sub_content .inner .wrap fieldset {
   width: 940px;
-  background: #fff7f4;
+  background: #f6f6f6;
   padding: 50px;
   float: left;
 }
@@ -1513,9 +1459,9 @@ fieldset {
   height: 200px;
   padding: 10px;
   font: 13px/1.3 "Rajdhani";
-  color: #999;
-  background: #ffeee9;
-  border: 1px solid #f6dcd4;
+  color: #888;
+  background: #ddd;
+  border: 1px solid #ddd;
   resize: none;
 }
 .join .sub_content .inner .wrap fieldset .agreement {
@@ -1533,7 +1479,7 @@ fieldset {
 .join .sub_content .inner .wrap fieldset .agreement p {
   width: 100%;
   font: bold 14px/1.5 "Rajdhani";
-  color: #810006;
+  color: #bd0009;
   text-align: right;
   margin-top: 5px;
 }
@@ -1551,7 +1497,7 @@ fieldset {
   text-align: center;
   font: bold 22px/1 "Rajdhani";
   letter-spacing: 2px;
-  background: #f6dcd4;
+  background: #ddd;
   color: #444;
 }
 .join .sub_content .inner .wrap fieldset table tr:nth-of-type(10) th {
@@ -1563,24 +1509,26 @@ fieldset {
 .join .sub_content .inner .wrap fieldset table tr:last-child th {
   text-align: center;
   padding: 30px 0 0;
-  border-top: 2px solid #f6dcd4;
+  border-top: 2px solid #ddd;
 }
-.join .sub_content .inner .wrap fieldset table tr:last-child th input[type=reset], .join .sub_content .inner .wrap fieldset table tr:last-child th input[type=submit] {
+.join .sub_content .inner .wrap fieldset table tr:last-child th input[type=reset],
+.join .sub_content .inner .wrap fieldset table tr:last-child th input[type=submit] {
   display: block;
   float: left;
   width: 49%;
   height: 40px;
   margin-right: 2%;
   border: none;
-  background: #f6dcd4;
+  background: #ddd;
   font: bold 16px/1 "Rajdhani";
   color: #444;
   letter-spacing: 2px;
   text-align: center;
   cursor: pointer;
 }
-.join .sub_content .inner .wrap fieldset table tr:last-child th input[type=reset]:hover, .join .sub_content .inner .wrap fieldset table tr:last-child th input[type=submit]:hover {
-  background: #df9f8c;
+.join .sub_content .inner .wrap fieldset table tr:last-child th input[type=reset]:hover,
+.join .sub_content .inner .wrap fieldset table tr:last-child th input[type=submit]:hover {
+  background: #444;
   color: #fff;
 }
 .join .sub_content .inner .wrap fieldset table tr:last-child th input[type=submit] {
@@ -1595,16 +1543,19 @@ fieldset {
 .join .sub_content .inner .wrap fieldset table tr td {
   width: 80%;
 }
-.join .sub_content .inner .wrap fieldset table tr td input[type=text], .join .sub_content .inner .wrap fieldset table tr td input[type=password], .join .sub_content .inner .wrap fieldset table tr td select {
+.join .sub_content .inner .wrap fieldset table tr td input[type=text],
+.join .sub_content .inner .wrap fieldset table tr td input[type=password],
+.join .sub_content .inner .wrap fieldset table tr td select {
   padding: 5px 10px;
   width: 100%;
   height: 35px;
-  background: #ffeee9;
-  border: 1px solid #f6dcd4;
+  background: #eee;
+  border: 1px solid #ddd;
   font: 14px/1 "Rajdhani";
   color: #444;
 }
-.join .sub_content .inner .wrap fieldset table tr td input[type=radio], .join .sub_content .inner .wrap fieldset table tr td input[type=checkbox] {
+.join .sub_content .inner .wrap fieldset table tr td input[type=radio],
+.join .sub_content .inner .wrap fieldset table tr td input[type=checkbox] {
   margin-right: 5px;
   position: relative;
   top: 2px;
@@ -1618,8 +1569,8 @@ fieldset {
   padding: 10px;
   width: 100%;
   height: 100px;
-  background: #ffeee9;
-  border: 1px solid #f6dcd4;
+  background: #eee;
+  border: 1px solid #ddd;
   font: 14px/1.5 "Rajdhani";
   color: #444;
   resize: none;
@@ -1627,7 +1578,7 @@ fieldset {
 .join .sub_content .inner .wrap fieldset table tr td p {
   width: 100%;
   font: bold 14px/1.5 "Rajdhani";
-  color: #810006;
+  color: #bd0009;
   text-align: left;
   margin-top: 5px;
 }
@@ -1657,37 +1608,33 @@ fieldset {
 }
 .join_result .sub_content .inner {
   width: 1180px;
-  min-height: 300px;
-  margin: 0 auto;
-}
-.join_result .sub_content .inner .inner {
-  width: 1180px;
   margin: 100px auto;
   min-height: 30vh;
 }
-.join_result .sub_content .inner .inner h2 {
+.join_result .sub_content .inner h2 {
   font: normal 24px/1 "Merriweather";
   color: #444;
   text-align: center;
   margin-bottom: 50px;
 }
-.join_result .sub_content .inner .inner p {
+.join_result .sub_content .inner p {
   font: 14px/1.2 "Merriweather";
   color: #444;
+  margin-bottom: 50px;
 }
-.join_result .sub_content .inner .inner a {
+.join_result .sub_content .inner > a {
   display: block;
   width: 10%;
   height: 40px;
   margin: 0 auto;
-  background: #f6dcd4;
   font: bold 16px/40px "Rajdhani";
   color: #444;
+  border: 1px solid #444;
   letter-spacing: 2px;
   text-align: center;
 }
-.join_result .sub_content .inner .inner a:hover {
-  background: #df9f8c;
+.join_result .sub_content .inner > a:hover {
+  background: #444;
   color: #fff;
 }
 
@@ -1740,7 +1687,8 @@ fieldset {
   .join .sub_content .inner .wrap fieldset table tr:nth-of-type(8) td label:nth-of-type(even) {
     margin-right: 0;
   }
-  .join .sub_content .inner .wrap fieldset table tr:last-child th input[type=reset], .join .sub_content .inner .wrap fieldset table tr:last-child th input[type=submit] {
+  .join .sub_content .inner .wrap fieldset table tr:last-child th input[type=reset],
+.join .sub_content .inner .wrap fieldset table tr:last-child th input[type=submit] {
     font-size: 14px;
   }
   .join .sub_content .inner .wrap fieldset table tr th {
@@ -1808,7 +1756,9 @@ fieldset {
     display: block;
     float: left;
   }
-  .join .sub_content .inner .wrap fieldset table tr td input[type=text], .join .sub_content .inner .wrap fieldset table tr td input[type=password], .join .sub_content .inner .wrap fieldset table tr td select {
+  .join .sub_content .inner .wrap fieldset table tr td input[type=text],
+.join .sub_content .inner .wrap fieldset table tr td input[type=password],
+.join .sub_content .inner .wrap fieldset table tr td select {
     padding: 5px 10px;
     height: 30px;
   }
@@ -1821,7 +1771,7 @@ fieldset {
 .campaign .sub_visualTop {
   width: 100%;
   height: 200px;
-  background: url(../img/campaign_bg.jpg) no-repeat center/cover fixed;
+  background: #bbb;
   opacity: 1;
   margin-bottom: 100px;
   position: relative;
@@ -1967,7 +1917,7 @@ fieldset {
 .shopping .sub_visualTop {
   width: 100%;
   height: 200px;
-  background: url(../img/shopping_bg.jpg) no-repeat center/cover fixed;
+  background: #bbb;
   margin-bottom: 100px;
 }
 .shopping .sub_visualTop .inner {
@@ -2026,7 +1976,7 @@ fieldset {
   width: 100%;
   height: 400px;
   overflow: hidden;
-  background: #fef0ec;
+  background: #eee;
   position: relative;
   top: 0;
   left: 0;
@@ -2036,8 +1986,8 @@ fieldset {
   margin: 0 auto;
 }
 .shopping #sub_bestSellers .inner .wrap .shopSwiper .swiper-wrapper .swiper-slide article .pic .pic_text h4 {
-  font: 20px/400px "Merriweather";
-  color: #444;
+  font: bold 20px/400px "Noto Serif Display";
+  color: #888;
   text-align: center;
   width: 100%;
   display: none;
@@ -2074,8 +2024,8 @@ fieldset {
   color: #444;
 }
 .shopping #sub_bestSellers .inner .wrap .shopSwiper .swiper-wrapper .swiper-slide article .sub_bestSellers_txt p {
-  font: 12px/1.5 "Merriweather";
-  color: #444;
+  font: 12px/1.5 "Rajdhan";
+  color: #888;
 }
 .shopping #sub_bestSellers .inner .wrap .shopSwiper .swiper-wrapper .swiper-slide article .sub_bestSellers_txt a {
   display: block;
@@ -2097,14 +2047,14 @@ fieldset {
   display: block;
   width: 100px;
   height: 30px;
-  background: #fef0ec;
-  color: #444;
+  background: #444;
+  color: #fff;
   font-size: 12px;
   font-weight: bold;
   border-radius: 0px;
   font-family: "Rajdhani";
   line-height: 30px;
-  border: 1px solid #fef0ec;
+  border: 1px solid #444;
   text-align: center;
 }
 .shopping #sub_bestSellers .inner .wrap .shopSwiper .swiper-pagination .swiper-pagination-bullet {
@@ -2322,364 +2272,74 @@ fieldset {
     padding: 30px 10px;
   }
 }
-/* story ----------------------------------------------------------- */
-.story {
-  width: 100%;
-}
-.story .sub_visualTop {
-  width: 100%;
-  height: 200px;
-  background: url(../img/story_bg.jpg) no-repeat center/cover fixed;
-  margin-bottom: 100px;
-}
-.story .sub_visualTop .inner {
-  width: 1180px;
-  margin: 0 auto;
-}
-.story .sub_visualTop .inner h1 {
-  font: bold 30px/200px "Rajdhani";
-  color: #eee;
-  font-weight: normal;
-  text-align: center;
-}
-.story .sub_content {
-  width: 100%;
-  margin-bottom: 100px;
-}
-.story .sub_content .inner {
-  width: 1180px;
-  margin: 0 auto;
-}
-.story .sub_content .inner h2 {
-  font: 30px/1 "Yeseva One";
-  color: #444;
-  margin-bottom: 50px;
-  text-align: center;
-  letter-spacing: 2px;
-}
-.story .sub_content .inner .wrap {
-  position: relative;
-  height: 600px;
-  border: 1px solid transparent;
-}
-.story .sub_content .inner .wrap #story_sliders1 {
-  width: 70%;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  top: 0;
-  overflow: hidden;
-  background: #fff;
-}
-.story .sub_content .inner .wrap #story_sliders1 > ul {
-  width: 400%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.story .sub_content .inner .wrap #story_sliders1 > ul li {
-  width: 25%;
-  height: 100%;
-  float: left;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-.story .sub_content .inner .wrap #story_sliders1 > ul li .pic {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  right: 0;
-}
-.story .sub_content .inner .wrap #story_sliders1 > ul li .pic img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.story .sub_content .inner .wrap #story_sliders2 {
-  width: 30%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  overflow: hidden;
-}
-.story .sub_content .inner .wrap #story_sliders2 > ul {
-  width: 400%;
-  height: 40vh;
-  position: absolute;
-  bottom: 10vh;
-  left: 0;
-  z-index: 1;
-}
-.story .sub_content .inner .wrap #story_sliders2 > ul li {
-  width: 25%;
-  height: 100%;
-  padding: 0 20px;
-  float: left;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-.story .sub_content .inner .wrap #story_sliders2 > ul li span {
-  display: block;
-  width: 100%;
-  font: 16px/1 "Rajdhani";
-  color: #444;
-  transition: 0.5s;
-}
-.story .sub_content .inner .wrap #story_sliders2 > ul li h1 {
-  font: normal 55px/1.2 "Merriweather";
-  color: #444;
-  margin-right: 10px;
-  transition: 0.5s;
-}
-.story .sub_content .inner .wrap #story_sliders2 > ul li p {
-  width: 70%;
-  font: 16px/1.3 "Rajdhani";
-  color: #444;
-  text-align: left;
-  transition: 0.5s;
-}
-.story .sub_content .inner .wrap #story_sliders2 > ul li a {
-  width: 100%;
-  font: bold 16px/1 "Rajdhani";
-  color: #888;
-  transition: 0.5s;
-}
-.story .sub_content .inner .wrap #story_sliders2 > ul li:hover a {
-  color: #444;
-}
-.story .sub_content .inner .wrap .sliderBtns {
-  width: 100px;
-  position: absolute;
-  left: 30%;
-  bottom: 0;
-  z-index: 2;
-}
-.story .sub_content .inner .wrap .sliderBtns li {
-  float: left;
-  width: 50px;
-  height: 50px;
-  background: #fff;
-  border-right: 0;
-}
-.story .sub_content .inner .wrap .sliderBtns li a {
-  display: block;
-  width: 100%;
-  height: 50px;
-  font: 25px/50px "Rajdhani";
-  text-align: center;
-  color: #888;
-}
-.story .sub_content .inner .wrap .sliderBtns li:hover a {
-  color: #444;
-}
-
-@media screen and (max-width: 1179px) {
-  /* story ----------------------------------------------------------- */
-  .story {
-    width: 100%;
-  }
-  .story .sub_visualTop {
-    height: 150px;
-    margin-bottom: 50px;
-  }
-  .story .sub_visualTop .inner {
-    width: 100%;
-  }
-  .story .sub_visualTop .inner h1 {
-    line-height: 150px;
-  }
-  .story .sub_content .inner {
-    width: 100%;
-    padding: 30px;
-  }
-  .story .sub_content .inner .wrap {
-    height: 600px;
-    border: 1px solid #eee;
-  }
-  .story .sub_content .inner .wrap #story_sliders1 {
-    width: 100%;
-    height: 50%;
-  }
-  .story .sub_content .inner .wrap #story_sliders2 {
-    width: 100%;
-    height: 50%;
-    top: auto;
-    bottom: 0;
-    background: #fbfbfb;
-  }
-  .story .sub_content .inner .wrap #story_sliders2 > ul {
-    height: 25vh;
-    bottom: 5vh;
-  }
-  .story .sub_content .inner .wrap #story_sliders2 > ul li h1 {
-    font: normal 35px/1.2 "Merriweather";
-  }
-  .story .sub_content .inner .wrap #story_sliders2 > ul li p {
-    width: 100%;
-  }
-  .story .sub_content .inner .wrap .sliderBtns {
-    left: auto;
-    right: 0;
-    top: 250px;
-  }
-  .story .sub_content .inner .wrap .sliderBtns li {
-    background: #fbfbfb;
-  }
-}
-@media screen and (max-width: 539px) {
-  /* story ----------------------------------------------------------- */
-  .story .sub_visualTop {
-    margin-bottom: 50px;
-  }
-  .story .sub_content .inner h2 {
-    line-height: 1.2;
-  }
-  .story .sub_content .inner .wrap #story_sliders2 {
-    top: auto;
-    bottom: 0;
-    background: #fbfbfb;
-  }
-  .story .sub_content .inner .wrap #story_sliders2 > ul {
-    height: 100%;
-    bottom: 0;
-  }
-  .story .sub_content .inner .wrap #story_sliders2 > ul li {
-    padding: 20px;
-  }
-  .story .sub_content .inner .wrap #story_sliders2 > ul li h1 {
-    font-size: 25px;
-  }
-  .story .sub_content .inner .wrap #story_sliders2 > ul li p {
-    font-size: 14px;
-  }
-  .story .sub_content .inner .wrap #story_sliders2 > ul li a {
-    font-size: 14px;
-  }
-  .story .sub_content .inner .wrap .sliderBtns {
-    top: 270px;
-    width: 60px;
-  }
-  .story .sub_content .inner .wrap .sliderBtns li {
-    width: 30px;
-    height: 30px;
-  }
-  .story .sub_content .inner .wrap .sliderBtns li a {
-    height: 30px;
-    font: 15px/30px "Rajdhani";
-  }
-}
 /* header ----------------------------------------------------------- */
 #header {
   width: 100%;
-  height: 120px;
+  height: 60px;
   position: relative;
-  background: #f6dcd4;
 }
 #header > .inner {
   width: 1180px;
-  height: 90px;
+  height: 100%;
   margin: 0 auto;
   position: relative;
-  top: 30px;
-  z-index: 2;
+  top: 0;
 }
 #header > .inner > h1 {
   float: left;
   position: absolute;
-  left: 50%;
+  left: 80px;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
 }
 #header > .inner > h1 a img {
-  max-width: 136px;
+  max-width: 100px;
   height: auto;
 }
-#header > .inner .menuWeb #gnb_1 {
-  float: left;
+#header > .inner .btnCall_wrap {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  padding: 30px;
+  background: #444;
+  z-index: 10;
+}
+#header > .inner .btnCall_wrap .btnCall {
   position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-}
-#header > .inner .menuWeb #gnb_1 li {
-  float: left;
-  padding: 0 10px;
-}
-#header > .inner .menuWeb #gnb_1 li a {
-  font: 12px/1 "Merriweather";
-  color: #444;
-  padding-bottom: 5px;
-  border-bottom: 2px solid transparent;
-  letter-spacing: 1.5px;
-}
-#header > .inner .menuWeb #gnb_1 li a:hover {
-  color: #a34b4b;
-  border-bottom: 2px solid #a34b4b;
-}
-#header > .inner .menuWeb #gnb_2 {
-  float: right;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-}
-#header > .inner .menuWeb #gnb_2 li {
-  float: left;
-  padding: 0 10px;
-}
-#header > .inner .menuWeb #gnb_2 li a {
-  font: 12px/1 "Merriweather";
-  color: #444;
-  padding-bottom: 5px;
-  border-bottom: 2px solid transparent;
-  letter-spacing: 1.5px;
-}
-#header > .inner .menuWeb #gnb_2 li a:hover {
-  color: #a34b4b;
-  border-bottom: 2px solid #a34b4b;
-}
-#header > .inner .btnCall {
-  position: absolute;
-  right: 30px;
+  left: 20px;
   top: 50%;
   transform: translateY(-50%);
   width: 20px;
   height: 20px;
-  display: none;
+  display: block;
 }
-#header > .inner .btnCall::before {
+#header > .inner .btnCall_wrap .btnCall::before {
   content: "";
   display: block;
   width: 100%;
   height: 2px;
-  background: #444;
+  background: #fff;
   position: absolute;
   top: 0;
   left: 0;
   transition: top 0.5s, transform 0.5s 0.5s;
 }
-#header > .inner .btnCall::after {
+#header > .inner .btnCall_wrap .btnCall::after {
   content: "";
   display: block;
   width: 100%;
   height: 2px;
-  background: #444;
+  background: #fff;
   position: absolute;
   bottom: 0;
   left: 0;
   transition: bottom 0.5s, transform 0.5s 0.5s;
 }
-#header > .inner .btnCall span {
+#header > .inner .btnCall_wrap .btnCall span {
   display: block;
   width: 100%;
   height: 2px;
-  background: #444;
+  background: #fff;
   position: absolute;
   left: 0;
   top: 50%;
@@ -2687,220 +2347,161 @@ fieldset {
   text-indent: -9999px;
   transition: all 0.5s;
 }
-#header > .inner .btnCall.on::before {
+#header > .inner .btnCall_wrap .btnCall.on::before {
   top: 50%;
   margin-top: -1px;
   transform: rotate(45deg);
 }
-#header > .inner .btnCall.on::after {
+#header > .inner .btnCall_wrap .btnCall.on::after {
   bottom: 50%;
   margin-bottom: -1px;
   transform: rotate(-45deg);
 }
-#header > .inner .btnCall.on span {
+#header > .inner .btnCall_wrap .btnCall.on span {
   transform: translateX(100%);
   opacity: 0;
 }
-#header > .inner .menuMo {
-  width: 260px;
-  height: 100vh;
-  background: #fef0ec;
-  position: fixed;
-  top: 0;
-  left: -260px;
-  z-index: 10;
-  transition: all 0.5s;
+#header > .inner .menu.on .menuWeb #gnbWeb li {
+  opacity: 1;
+  transform: translateY(0);
 }
-#header > .inner .menuMo.on {
+#header > .inner .menu.on .menuMo {
   left: 0;
 }
-#header > .inner .menuMo h1 {
-  padding: 30px;
-  background: #df9f8c;
-  text-align: center;
+#header > .inner .menu .menuWeb {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 220px;
+  z-index: 8;
 }
-#header > .inner .menuMo h1 a {
-  display: block;
-  font: bold 26px/1 "Rajdhani";
-  color: #fff;
+#header > .inner .menu .menuWeb #gnbWeb {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-#header > .inner .menuMo #gnbMo {
-  padding: 30px;
+#header > .inner .menu .menuWeb #gnbWeb li {
+  transition-duration: 1s;
+  opacity: 0;
+  transform: translateY(5px);
 }
-#header > .inner .menuMo #gnbMo li:nth-of-type(6) {
-  border-top: 1px solid #444;
-  margin-top: 5px;
+#header > .inner .menu .menuWeb #gnbWeb li:nth-of-type(1) {
+  transition-delay: 0.2s;
 }
-#header > .inner .menuMo #gnbMo li:nth-of-type(8) {
-  border-bottom: 1px solid #444;
-  margin-bottom: 5px;
+#header > .inner .menu .menuWeb #gnbWeb li:nth-of-type(2) {
+  transition-delay: 0.3s;
 }
-#header > .inner .menuMo #gnbMo li a {
+#header > .inner .menu .menuWeb #gnbWeb li:nth-of-type(3) {
+  transition-delay: 0.4s;
+}
+#header > .inner .menu .menuWeb #gnbWeb li:nth-of-type(4) {
+  transition-delay: 0.5s;
+}
+#header > .inner .menu .menuWeb #gnbWeb li:nth-of-type(5) {
+  transition-delay: 0.6s;
+}
+#header > .inner .menu .menuWeb #gnbWeb li:nth-of-type(6) {
+  transition-delay: 0.7s;
+}
+#header > .inner .menu .menuWeb #gnbWeb li:nth-of-type(7) {
+  transition-delay: 0.8s;
+}
+#header > .inner .menu .menuWeb #gnbWeb li:nth-of-type(8) {
+  transition-delay: 0.9s;
+}
+#header > .inner .menu .menuWeb #gnbWeb li a {
   display: block;
   width: 100%;
-  padding: 20px 0;
-  font: 14px/1 "Merriweather";
+  font: bold 15px/60px "Rajdhani";
   color: #444;
   letter-spacing: 1.5px;
   transition: all 0.4s;
 }
-#header > .inner .menuMo #gnbMo li a:hover {
-  color: #df9f8c;
+#header > .inner .menu .menuWeb #gnbWeb li a:hover {
+  color: #ddd;
 }
-#header .top {
-  background: #df9f8c;
+#header > .inner .menu .menuMo {
   width: 100%;
+  height: 100vh;
+  background: #444;
+  position: fixed;
   top: 0;
-  height: 30px;
-  position: absolute;
-  z-index: 1;
+  left: -100%;
+  padding: 50px;
+  z-index: 9;
+  transition: 0.5s;
+  display: none;
 }
-#header .top .inner {
-  width: 1180px;
-  margin: 0 auto;
-  position: relative;
+#header > .inner .menu .menuMo h1 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#header > .inner .menu .menuMo h1 a img {
+  max-width: 200px;
   height: auto;
 }
-#header .top .inner .util {
-  position: absolute;
-  top: 5px;
-  right: 0;
+#header > .inner .menu .menuMo #gnbMo li:nth-of-type(6) {
+  border-top: 1px solid rgba(238, 238, 238, 0.3);
+  margin-top: 5px;
+}
+#header > .inner .menu .menuMo #gnbMo li:nth-of-type(7) {
+  border-bottom: 1px solid rgba(238, 238, 238, 0.3);
+  margin-bottom: 5px;
+}
+#header > .inner .menu .menuMo #gnbMo li a {
   display: block;
+  width: 100%;
+  padding: 20px 0;
+  font: bold 15px/1 "Rajdhani";
+  color: #eee;
+  letter-spacing: 1.5px;
+  transition: all 0.4s;
 }
-#header .top .inner .util li {
-  float: left;
-  margin-right: 13px;
-}
-#header .top .inner .util li:nth-of-type(4) {
-  float: left;
-  margin-right: 0;
-}
-#header .top .inner .util li:nth-of-type(4) input {
-  font-family: "Rajdhani";
-  font-size: 12px;
-  color: #444;
-  padding: 2px 5px;
-  border: 1px solid #f6dcd4;
-  background: #f6e9e4;
-  width: 230px;
-  height: 20px;
-  float: left;
-}
-#header .top .inner .util li:nth-of-type(4) button {
-  width: 20px;
-  height: 20px;
-  font-size: 12px;
-  color: #df9f8c;
-  text-align: center;
-  line-height: 20px;
-  background: #f6dcd4;
-  display: block;
-  float: left;
-  border: 0;
-  cursor: pointer;
-}
-#header .top .inner .util li:nth-of-type(1), #header .top .inner .util li:nth-of-type(2), #header .top .inner .util li:nth-of-type(3) {
-  float: left;
-  width: 20px;
-  height: 20px;
-  text-align: center;
-}
-#header .top .inner .util li:nth-of-type(1) a, #header .top .inner .util li:nth-of-type(2) a, #header .top .inner .util li:nth-of-type(3) a {
-  color: #f6dcd4;
-  font-size: 15px;
-  line-height: 20px;
-}
-#header .top .inner .util li:nth-of-type(1) a:hover, #header .top .inner .util li:nth-of-type(2) a:hover, #header .top .inner .util li:nth-of-type(3) a:hover {
-  color: #fff6ef;
+#header > .inner .menu .menuMo #gnbMo li a:hover {
+  color: #888;
 }
 
 /* visual ----------------------------------------------------------- */
 #visual {
   width: 100%;
-  height: calc(100vh - 120px);
   position: relative;
   overflow: hidden;
-  background-color: #fff6ef;
 }
-#visual .visual_sliders {
-  width: 500%;
-  height: 100%;
+#visual .visual_wrap {
+  width: 100%;
+  height: calc(100vh - 60px);
   position: relative;
 }
-#visual .visual_sliders .visual_slide {
+#visual .visual_wrap .visual_slider1_wrap {
+  width: 60%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+}
+#visual .visual_wrap .visual_slider1_wrap .visual_sliders1 {
+  width: 500%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#visual .visual_wrap .visual_slider1_wrap .visual_sliders1 .visual_slide1 {
   width: 20%;
   height: 100%;
   float: left;
   display: flex;
-  position: relative;
   justify-content: center;
   align-content: center;
-}
-#visual .visual_sliders .visual_slide .inner {
-  width: 1180px;
-  height: calc(100vh - 120px);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-#visual .visual_sliders .visual_slide .inner .wrap {
-  position: relative;
-  height: 100%;
-}
-#visual .visual_sliders .visual_slide .inner .wrap .visual_txt {
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  padding: 50px;
-  transform: translateY(-50%);
-  background-color: #fff6ef;
-}
-#visual .visual_sliders .visual_slide .inner .wrap .visual_txt h1 {
-  font: bold 22px/1 "Rajdhani";
-  color: #df9f8c;
-  margin-bottom: 12vh;
-}
-#visual .visual_sliders .visual_slide .inner .wrap .visual_txt h2 {
-  font: bold 70px/1.2 "Noto Serif Display";
-  color: #df9f8c;
-  margin-bottom: 6vh;
-  font-weight: bold;
   position: relative;
 }
-#visual .visual_sliders .visual_slide .inner .wrap .visual_txt h3 {
-  font: normal 20px/1.5 "Merriweather";
-  margin-bottom: 2vh;
-  color: #444;
-}
-#visual .visual_sliders .visual_slide .inner .wrap .visual_txt p {
-  font: normal 14px/1.5 "Merriweather";
-  margin-bottom: 10vh;
-  color: #444;
-}
-#visual .visual_sliders .visual_slide .inner .wrap .visual_txt > a {
-  font: bold 16px/1 "Rajdhani";
-  color: #444;
-  margin-bottom: 50px;
-  transition: all 0.2s;
-  position: relative;
-}
-#visual .visual_sliders .visual_slide .inner .wrap .visual_txt > a span {
-  width: 0;
-  height: 1px;
-  background: #444;
-  position: absolute;
-  top: 10px;
-  left: 80px;
-  transition: 0.5s;
-}
-#visual .visual_sliders .visual_slide .inner .wrap .visual_txt > a:hover {
-  color: #df9f8c;
-}
-#visual .visual_sliders .visual_slide .visual_img {
-  width: 50%;
+#visual .visual_wrap .visual_slider1_wrap .visual_sliders1 .visual_slide1 .visual_img {
+  width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
@@ -2909,68 +2510,124 @@ fieldset {
   background-position: center;
   background-size: cover;
 }
-#visual .visual_sliders .visual_slide .visual_img .line {
-  width: 30px;
-  height: 0;
-  background: #fff6ef;
-  position: absolute;
-  top: 0;
-  left: 20px;
-  transition: 0.5s;
-}
-#visual .visual_sliders .visual_slide:nth-of-type(1) .visual_img {
+#visual .visual_wrap .visual_slider1_wrap .visual_sliders1 .visual_slide1[data-index="1"] .visual_img {
   background-image: url(../img/visual_img1.jpg);
 }
-#visual .visual_sliders .visual_slide:nth-of-type(2) .visual_img {
+#visual .visual_wrap .visual_slider1_wrap .visual_sliders1 .visual_slide1[data-index="2"] .visual_img {
   background-image: url(../img/visual_img2.jpg);
 }
-#visual .visual_sliders .visual_slide:nth-of-type(3) .visual_img {
+#visual .visual_wrap .visual_slider1_wrap .visual_sliders1 .visual_slide1[data-index="3"] .visual_img {
   background-image: url(../img/visual_img3.jpg);
 }
-#visual .visual_sliders .visual_slide:nth-of-type(4) .visual_img {
+#visual .visual_wrap .visual_slider1_wrap .visual_sliders1 .visual_slide1[data-index="4"] .visual_img {
   background-image: url(../img/visual_img4.jpg);
 }
-#visual .visual_sliders .visual_slide:nth-of-type(5) .visual_img {
+#visual .visual_wrap .visual_slider1_wrap .visual_sliders1 .visual_slide1[data-index="5"] .visual_img {
   background-image: url(../img/visual_img5.jpg);
+}
+#visual .visual_wrap .visual_slider2_wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#visual .visual_wrap .visual_slider2_wrap .visual_sliders2 {
+  width: 1180px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  transition: 0.1s;
+}
+#visual .visual_wrap .visual_slider2_wrap .visual_sliders2 .visual_slide2 {
+  width: 30%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#visual .visual_wrap .visual_slider2_wrap .visual_sliders2 .visual_slide2 .visual_txt {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  padding: 50px 0;
+  transform: translateY(-50%);
+  background-color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-content: space-evenly;
+  flex-wrap: wrap;
+}
+#visual .visual_wrap .visual_slider2_wrap .visual_sliders2 .visual_slide2 .visual_txt h1 {
+  font: bold 22px/1 "Rajdhani";
+  color: #444;
+}
+#visual .visual_wrap .visual_slider2_wrap .visual_sliders2 .visual_slide2 .visual_txt h2 {
+  font: 70px/1.2 "Noto Serif Display";
+  color: #444;
+  font-weight: bold;
+  position: relative;
+}
+#visual .visual_wrap .visual_slider2_wrap .visual_sliders2 .visual_slide2 .visual_txt h3 {
+  font: normal 20px/1.5 "Rajdhani";
+  color: #444;
+}
+#visual .visual_wrap .visual_slider2_wrap .visual_sliders2 .visual_slide2 .visual_txt p {
+  font: normal 14px/1.3 "Rajdhani";
+  color: #888;
+}
+#visual .visual_wrap .visual_slider2_wrap .visual_sliders2 .visual_slide2 .visual_txt > a {
+  font: bold 16px/1 "Rajdhani";
+  color: #888;
+  transition: all 0.2s;
+  position: relative;
+}
+#visual .visual_wrap .visual_slider2_wrap .visual_sliders2 .visual_slide2 .visual_txt > a:hover {
+  color: #444;
 }
 #visual .pagenation_main {
   width: 100%;
-  max-width: 590px;
-  display: inline-block;
+  height: 50px;
   position: absolute;
-  bottom: 2vh;
-  right: 50%;
+  bottom: 0;
+  left: 0;
   text-align: center;
 }
-#visual .pagenation_main .btnCircle {
-  display: inline-block;
-  font-size: 0;
+#visual .pagenation_main .inner {
+  width: 1180px;
+  height: 100%;
+  margin: 0 auto;
 }
-#visual .pagenation_main .btnCircle li {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  font: bold 15px/40px "Rajdhani";
+#visual .pagenation_main .inner .wrap .btnCircle {
+  width: 100px;
+  position: absolute;
+  left: 40%;
+  bottom: 0;
+  z-index: 2;
+}
+#visual .pagenation_main .inner .wrap .btnCircle li {
+  float: left;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-right: 0;
+}
+#visual .pagenation_main .inner .wrap .btnCircle li a {
+  display: block;
+  width: 100%;
+  height: 50px;
+  font: 25px/50px "Rajdhani";
   text-align: center;
-  border: 2px solid transparent;
-  border-radius: 50%;
-  margin-right: 10px;
-  transition: 0.5s;
+  color: #888;
 }
-#visual .pagenation_main .btnCircle li a {
+#visual .pagenation_main .inner .wrap .btnCircle li:hover a {
   color: #444;
-}
-#visual .pagenation_main .btnCircle li:hover, #visual .pagenation_main .btnCircle li.on {
-  border: 2px solid #df9f8c;
-}
-#visual .pagenation_main .btnCircle li:hover a, #visual .pagenation_main .btnCircle li.on a {
-  color: #df9f8c;
 }
 
 /* main_search ----------------------------------------------------------- */
 #main_search {
   width: 100%;
-  background: #f6ceac;
+  background: #444;
   position: relative;
 }
 #main_search .inner {
@@ -3020,7 +2677,7 @@ fieldset {
   height: 40px;
   display: block;
   float: left;
-  background: #f6ceac;
+  background: #444;
   border: 1px solid #fff;
   color: #fff;
   font: 16px/40px "Rajdhani";
@@ -3028,8 +2685,8 @@ fieldset {
   cursor: pointer;
 }
 #main_search .inner .wrap button:hover {
-  background: #ce8a6c;
-  border: 1px solid #ce8a6c;
+  background: #666;
+  border: 1px solid #666;
 }
 
 /* content ----------------------------------------------------------- */
@@ -3058,8 +2715,8 @@ fieldset {
   float: left;
 }
 #content .inner .wrap .con_article:first-child article:nth-of-type(1) h1 {
-  font: bold 20px/1 "Rajdhani";
-  color: #a34b4b;
+  font: normal 20px/1 "Rajdhani";
+  color: #666;
   margin-bottom: 20px;
 }
 #content .inner .wrap .con_article:first-child article:nth-of-type(1) h2 {
@@ -3068,8 +2725,8 @@ fieldset {
   margin-bottom: 20px;
 }
 #content .inner .wrap .con_article:first-child article:nth-of-type(1) p {
-  font: 14px/1.3 "Merriweather";
-  color: #444;
+  font: 16px/1.3 "Rajdhani";
+  color: #888;
   margin-bottom: 30px;
 }
 #content .inner .wrap .con_article:first-child article:nth-of-type(1) a {
@@ -3091,14 +2748,14 @@ fieldset {
   display: block;
   width: 100px;
   height: 30px;
-  background: #a34b4b;
+  background: #444;
   color: #fff;
   font-size: 12px;
   font-weight: bold;
   border-radius: 0px;
   font-family: "Rajdhani";
   line-height: 30px;
-  border: 1px solid #a34b4b;
+  border: 1px solid #444;
   text-align: center;
 }
 #content .inner .wrap .con_article:first-child article:nth-of-type(2) {
@@ -3122,7 +2779,7 @@ fieldset {
 }
 #content .inner .wrap .con_article:first-child article:nth-of-type(2) h1 {
   font: bold 20px/1 "Noto Serif Display";
-  color: #a34b4b;
+  color: #666;
   margin-top: 20px;
   text-align: right;
   width: 100%;
@@ -3152,7 +2809,7 @@ fieldset {
 }
 #content .inner .wrap .con_article:last-child article:nth-of-type(1) h1 {
   font: bold 20px/1 "Noto Serif Display";
-  color: #a34b4b;
+  color: #666;
   margin-top: 20px;
   text-align: right;
   width: 100%;
@@ -3164,8 +2821,8 @@ fieldset {
   float: left;
 }
 #content .inner .wrap .con_article:last-child article:nth-of-type(2) h1 {
-  font: bold 20px/1 "Rajdhani";
-  color: #a34b4b;
+  font: normal 20px/1 "Rajdhani";
+  color: #666;
   margin-bottom: 20px;
 }
 #content .inner .wrap .con_article:last-child article:nth-of-type(2) h2 {
@@ -3174,8 +2831,8 @@ fieldset {
   margin-bottom: 20px;
 }
 #content .inner .wrap .con_article:last-child article:nth-of-type(2) p {
-  font: 14px/1.3 "Merriweather";
-  color: #444;
+  font: 16px/1.3 "Rajdhani";
+  color: #888;
   margin-bottom: 30px;
 }
 #content .inner .wrap .con_article:last-child article:nth-of-type(2) a {
@@ -3197,69 +2854,14 @@ fieldset {
   display: block;
   width: 100px;
   height: 30px;
-  background: #a34b4b;
+  background: #444;
   color: #fff;
   font-size: 12px;
   font-weight: bold;
   border-radius: 0px;
   font-family: "Rajdhani";
   line-height: 30px;
-  border: 1px solid #a34b4b;
-  text-align: center;
-}
-
-/* banner ----------------------------------------------------------- */
-#banner {
-  width: 100%;
-  padding: 100px 0;
-  background: url(../img/banner.jpg) no-repeat center/cover fixed;
-}
-#banner .inner {
-  width: 1180px;
-  margin: 0 auto;
-}
-#banner .inner h1 {
-  font: bold 20px/1 "Rajdhani";
-  color: #a34b4b;
-  margin-bottom: 20px;
-}
-#banner .inner h2 {
-  font: bold 26px/1 "Noto Serif Display";
-  color: #222;
-  margin-bottom: 20px;
-}
-#banner .inner p {
-  font: 14px/1.3 "Merriweather";
-  color: #222;
-  margin-bottom: 40px;
-}
-#banner .inner a {
-  display: block;
-  width: 100px;
-  height: 30px;
-  background: rgba(255, 255, 255, 0);
-  color: #222;
-  font-size: 12px;
-  font-weight: bold;
-  border-radius: 0px;
-  font-family: "Rajdhani";
-  line-height: 30px;
-  border: 1px solid #222;
-  text-align: center;
-  transition: all 0.2s;
-}
-#banner .inner a:hover {
-  display: block;
-  width: 100px;
-  height: 30px;
-  background: #a34b4b;
-  color: #fff;
-  font-size: 12px;
-  font-weight: bold;
-  border-radius: 0px;
-  font-family: "Rajdhani";
-  line-height: 30px;
-  border: 1px solid #a34b4b;
+  border: 1px solid #444;
   text-align: center;
 }
 
@@ -3267,7 +2869,7 @@ fieldset {
 #brand {
   width: 100%;
   background-color: #eee;
-  padding: 100px 0;
+  padding: 150px 0;
 }
 #brand .inner {
   width: 1180px;
@@ -3276,24 +2878,21 @@ fieldset {
 #brand .inner .wrap {
   width: 100%;
   transition: all 0.2s;
-}
-#brand .inner .wrap:hover {
   box-shadow: 10px 10px 10px #ddd;
-  transform: translate(-10px, -10px);
 }
 #brand .inner .wrap article {
   width: 50%;
-  height: 500px;
+  height: 400px;
   background-color: #fff;
   float: left;
 }
 #brand .inner .wrap article:nth-of-type(1) {
-  padding: 100px;
+  padding: 80px;
 }
 #brand .inner .wrap article:nth-of-type(1) h1 {
-  font: bold 20px/1 "Rajdhani";
-  color: #a34b4b;
-  margin-bottom: 30px;
+  font: normal 20px/1 "Rajdhani";
+  color: #666;
+  margin-bottom: 10px;
 }
 #brand .inner .wrap article:nth-of-type(1) h2 {
   font: bold 26px/1.4 "Noto Serif Display";
@@ -3301,8 +2900,8 @@ fieldset {
   margin-bottom: 20px;
 }
 #brand .inner .wrap article:nth-of-type(1) p {
-  font: 14px/1.3 "Merriweather";
-  color: #444;
+  font: 16px/1.3 "Rajdhani";
+  color: #888;
   margin-bottom: 40px;
 }
 #brand .inner .wrap article:nth-of-type(1) a {
@@ -3324,14 +2923,14 @@ fieldset {
   display: block;
   width: 100px;
   height: 30px;
-  background: #a34b4b;
+  background: #444;
   color: #fff;
   font-size: 12px;
   font-weight: bold;
   border-radius: 0px;
   font-family: "Rajdhani";
   line-height: 30px;
-  border: 1px solid #a34b4b;
+  border: 1px solid #444;
   text-align: center;
 }
 #brand .inner .wrap article:nth-of-type(2) img {
@@ -3340,10 +2939,133 @@ fieldset {
   object-fit: cover;
 }
 
+/* txt_box ----------------------------------------------------------- */
+#txt_box {
+  width: 100%;
+  padding: 200px 0;
+}
+#txt_box .inner {
+  width: 1180px;
+  margin: 0 auto;
+}
+#txt_box .inner .wrap article {
+  width: 380px;
+  height: 500px;
+  margin-bottom: 20px;
+  float: left;
+  margin-right: 20px;
+}
+#txt_box .inner .wrap article h1 {
+  font: bold 26px/1.4 "Noto Serif Display";
+  color: #444;
+  letter-spacing: 2px;
+}
+#txt_box .inner .wrap article span {
+  display: block;
+  font: 16px/1.3 "Rajdhani";
+  color: #666;
+  margin-bottom: 10px;
+}
+#txt_box .inner .wrap article h2 {
+  font: bold 20px/1.3 "Noto Serif Display";
+  color: #444;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+#txt_box .inner .wrap article p {
+  font: 16px/1.3 "Rajdhani";
+  color: #888;
+}
+#txt_box .inner .wrap article:nth-of-type(1) {
+  height: 740px;
+  margin-bottom: 0;
+}
+#txt_box .inner .wrap article:nth-of-type(2) {
+  height: 240px;
+}
+#txt_box .inner .wrap article:nth-of-type(3) {
+  height: 240px;
+  margin-right: 0;
+}
+#txt_box .inner .wrap article:nth-of-type(4) {
+  margin-bottom: 0;
+}
+#txt_box .inner .wrap article:nth-of-type(4) > p {
+  margin-bottom: 20px;
+}
+#txt_box .inner .wrap article:nth-of-type(4) > p:last-child {
+  margin-bottom: 0;
+}
+#txt_box .inner .wrap article:nth-of-type(5) {
+  margin-right: 0;
+  margin-bottom: 0;
+}
+#txt_box .inner .wrap article:nth-of-type(5) p {
+  margin-bottom: 20px;
+}
+#txt_box .inner .wrap article:nth-of-type(5) p:last-child {
+  margin-bottom: 0;
+}
+
+/* banner ----------------------------------------------------------- */
+#banner {
+  width: 100%;
+  padding: 100px 0;
+  background: url(../img/banner.jpg) no-repeat center/cover fixed;
+}
+#banner .inner {
+  width: 1180px;
+  margin: 0 auto;
+}
+#banner .inner h1 {
+  font: normal 20px/1 "Rajdhani";
+  color: #888;
+  margin-bottom: 20px;
+}
+#banner .inner h2 {
+  font: bold 26px/1 "Noto Serif Display";
+  color: #bbb;
+  margin-bottom: 20px;
+}
+#banner .inner p {
+  font: 16px/1.3 "Rajdhani";
+  color: #888;
+  margin-bottom: 40px;
+}
+#banner .inner a {
+  display: block;
+  width: 100px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0);
+  color: #888;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 0px;
+  font-family: "Rajdhani";
+  line-height: 30px;
+  border: 1px solid #888;
+  text-align: center;
+  transition: all 0.2s;
+}
+#banner .inner a:hover {
+  display: block;
+  width: 100px;
+  height: 30px;
+  background: #444;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 0px;
+  font-family: "Rajdhani";
+  line-height: 30px;
+  border: 1px solid #444;
+  text-align: center;
+}
+
 /* tab ----------------------------------------------------------- */
 #main_tab {
   width: 100%;
-  background: #fff6ef;
+  background: #eee;
   padding: 100px 0;
 }
 #main_tab .inner {
@@ -3352,33 +3074,36 @@ fieldset {
 }
 #main_tab .inner #tab {
   width: 100%;
-  padding-top: 40px;
+  padding-top: 50px;
   position: relative;
+  box-shadow: 10px 10px 10px #ddd;
 }
 #main_tab .inner #tab dt {
-  width: 15%;
-  height: 40px;
+  width: 25%;
+  height: 50px;
   position: absolute;
   top: 0;
+  background: #c1c1c1;
+  border-right: 1px solid #d7d7d7;
 }
 #main_tab .inner #tab dt:nth-of-type(1) {
   left: 0;
 }
 #main_tab .inner #tab dt:nth-of-type(2) {
-  left: 15%;
+  left: 25%;
 }
 #main_tab .inner #tab dt:nth-of-type(3) {
-  left: 30%;
+  left: 50%;
 }
 #main_tab .inner #tab dt:nth-of-type(4) {
-  left: 45%;
+  left: 75%;
+  border-right: 0;
 }
 #main_tab .inner #tab dt a {
   display: block;
   width: 100%;
   height: 100%;
-  background: #f6e6d6;
-  font: bold 16px/40px "Rajdhani";
+  font: bold 16px/50px "Rajdhani";
   color: #444;
   letter-spacing: 1px;
   text-align: center;
@@ -3388,7 +3113,7 @@ fieldset {
 }
 #main_tab .inner #tab dd {
   width: 100%;
-  height: 260px;
+  height: 180px;
   background: #fbfbfb;
   display: none;
   top: 60px;
@@ -3402,23 +3127,23 @@ fieldset {
   position: relative;
 }
 #main_tab .inner #tab dd a img {
-  width: 300px;
-  height: 200px;
+  width: 200px;
+  height: 120px;
   object-fit: cover;
   object-position: top center;
 }
 #main_tab .inner #tab dd a .txt {
-  width: 70%;
-  padding: 50px;
+  width: 80%;
+  padding: 20px;
 }
 #main_tab .inner #tab dd a .txt h1 {
-  font: bold 20px/1 "Merriweather";
-  color: #df9f8c;
+  font: bold 18px/1 "Noto Serif Display";
+  color: #444;
   letter-spacing: 1px;
   margin-bottom: 20px;
 }
 #main_tab .inner #tab dd a .txt p {
-  font: 16px/1.4 "Merriweather";
+  font: 16px/1.3 "Rajdhani";
   color: #666;
 }
 #main_tab .inner #tab dd.on {
@@ -3428,7 +3153,7 @@ fieldset {
 /* insta ----------------------------------------------------------- */
 #insta {
   width: 100%;
-  padding: 100px 0;
+  padding: 200px 0 100px;
 }
 #insta .inner {
   width: 1180px;
@@ -3451,7 +3176,6 @@ fieldset {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background-color: #df9f8c;
 }
 #insta .inner .wrap article .pic a img {
   width: 100%;
@@ -3460,9 +3184,11 @@ fieldset {
   transition: all 0.5s;
   transform: scale(1.2);
   transition: all 0.5s;
-  opacity: 0.5;
+  opacity: 0.8;
+  filter: grayscale(1);
 }
 #insta .inner .wrap article .pic:hover a img {
+  filter: grayscale(0);
   transform: scale(1);
   opacity: 1;
 }
@@ -3478,22 +3204,20 @@ fieldset {
   width: 10px;
   height: 10px;
   border-radius: 5px;
-  border: 1px solid #f6ceac;
-  background: #f6e6d6;
+  border: 1px solid #bbb;
   margin-bottom: 20px;
   cursor: pointer;
   transition: 0.5s;
 }
 #scrollBtn li.on {
   height: 100px;
-  border: 1px solid #a34b4b;
-  background: #a34b4b;
+  background: #444;
 }
 
 /* footer ----------------------------------------------------------- */
 #footer {
   width: 100%;
-  background-color: #df9f8c;
+  background-color: #222;
   padding: 50px 0 20px;
 }
 #footer .inner {
@@ -3509,14 +3233,20 @@ fieldset {
   height: 220px;
 }
 #footer .inner .wrap article:nth-of-type(1) h1 {
+  width: 180px;
   margin-bottom: 30px;
+}
+#footer .inner .wrap article:nth-of-type(1) h1 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 #footer .inner .wrap article:nth-of-type(1) ul {
   width: 100%;
 }
 #footer .inner .wrap article:nth-of-type(1) ul li {
   display: inline-block;
-  background: #222;
+  background: #666;
   width: 40px;
   height: 40px;
   text-align: center;
@@ -3524,11 +3254,11 @@ fieldset {
   margin-right: 2px;
 }
 #footer .inner .wrap article:nth-of-type(1) ul li:hover {
-  background-color: #a34b4b;
+  background-color: #bbb;
 }
 #footer .inner .wrap article:nth-of-type(1) ul li a {
   font-size: 20px;
-  color: #df9f8c;
+  color: #222;
   line-height: 40px;
 }
 #footer .inner .wrap article:nth-of-type(2) {
@@ -3537,18 +3267,18 @@ fieldset {
 }
 #footer .inner .wrap article:nth-of-type(2) h2 {
   font: bold 20px/1 "Yeseva One";
-  color: #222;
+  color: #666;
   margin-bottom: 30px;
   letter-spacing: 2px;
 }
 #footer .inner .wrap article:nth-of-type(2) address {
   font: 14px/1.2 "Rajdhani";
   margin-bottom: 10px;
-  color: #222;
+  color: #666;
 }
 #footer .inner .wrap article:nth-of-type(2) p {
   font: normal 14px/1 "Rajdhani";
-  color: #222;
+  color: #666;
   margin-bottom: 10px;
 }
 #footer .inner .wrap article:nth-of-type(3) {
@@ -3557,7 +3287,7 @@ fieldset {
 }
 #footer .inner .wrap article:nth-of-type(3) h2 {
   font: bold 20px/1 "Yeseva One";
-  color: #222;
+  color: #666;
   margin-bottom: 30px;
   letter-spacing: 2px;
 }
@@ -3569,11 +3299,11 @@ fieldset {
 }
 #footer .inner .wrap article:nth-of-type(3) ul li a {
   font: 14px/1 "Rajdhani";
-  color: #222;
+  color: #666;
   margin-bottom: 10px;
 }
 #footer .inner .wrap article:nth-of-type(3) ul li a:hover {
-  color: #a34b4b;
+  color: #bbb;
 }
 #footer .inner .wrap article:nth-of-type(4) {
   width: 180px;
@@ -3582,7 +3312,7 @@ fieldset {
 }
 #footer .inner .wrap article:nth-of-type(4) h2 {
   font: bold 20px/1 "Yeseva One";
-  color: #222;
+  color: #666;
   margin-bottom: 30px;
   letter-spacing: 2px;
 }
@@ -3594,96 +3324,34 @@ fieldset {
 }
 #footer .inner .wrap article:nth-of-type(4) ul li a {
   font: 14px/1 "Rajdhani";
-  color: #222;
+  color: #666;
   margin-bottom: 10px;
 }
 #footer .inner .wrap article:nth-of-type(4) ul li a:hover {
-  color: #a34b4b;
+  color: #bbb;
 }
 #footer .inner > p {
   width: 100%;
   text-align: center;
   padding-top: 20px;
   font: 14px/1 "Rajdhani";
-  color: #222;
-  border-top: 1px solid rgba(34, 34, 34, 0.2);
+  color: #666;
+  border-top: 1px solid rgba(102, 102, 102, 0.1);
 }
 
 @media screen and (max-width: 1179px) {
   /* header ----------------------------------------------------------- */
-  #header {
-    height: 80px;
-  }
-  #header > .inner {
-    width: 100%;
-    top: 0;
-    height: 80px;
-  }
   #header > .inner > h1 {
-    line-height: 80px;
-    top: 0;
-    transform: translateX(-50%);
-  }
-  #header > .inner .menuWeb {
     display: none;
   }
-  #header > .inner .btnCall {
+  #header > .inner .menu .menuWeb {
+    display: none;
+  }
+  #header > .inner .menu .menuMo {
     display: block;
-  }
-  #header .top {
-    display: none;
   }
 
   /* visual ----------------------------------------------------------- */
-  #visual {
-    height: calc(100vh - 80px);
-  }
-  #visual .visual_sliders .visual_slide .inner {
-    width: 100%;
-    height: 50%;
-    padding: 30px;
-    position: absolute;
-    bottom: 0;
-    top: auto;
-    left: 0;
-    transform: translate(0);
-  }
-  #visual .visual_sliders .visual_slide .inner .wrap .visual_txt {
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    text-align: center;
-  }
-  #visual .visual_sliders .visual_slide .inner .wrap .visual_txt h1 {
-    margin-top: 20px;
-    margin-bottom: 2vh;
-  }
-  #visual .visual_sliders .visual_slide .inner .wrap .visual_txt h2 {
-    font: bold 8vw/1.2 "Noto Serif Display";
-    margin-bottom: 2vh;
-  }
-  #visual .visual_sliders .visual_slide .inner .wrap .visual_txt h3 {
-    font: normal 15px/1.5 "Merriweather";
-    margin-bottom: 2vh;
-  }
-  #visual .visual_sliders .visual_slide .inner .wrap .visual_txt p {
-    display: none;
-  }
-  #visual .visual_sliders .visual_slide .inner .wrap .visual_txt > a {
-    position: absolute;
-    bottom: 6vh;
-    transform: translateX(-50%);
-    margin-bottom: 0;
-  }
-  #visual .visual_sliders .visual_slide .visual_img {
-    width: 100%;
-    height: 50%;
-  }
-  #visual .pagenation_main {
-    right: 0;
-    max-width: 100%;
-  }
-
   /* main_search ----------------------------------------------------------- */
   #main_search .inner {
     width: 100%;
@@ -3748,6 +3416,74 @@ fieldset {
     height: auto;
   }
 
+  /* brand ----------------------------------------------------------- */
+  #brand {
+    padding: 80px 30px;
+  }
+  #brand .inner {
+    width: 100%;
+  }
+  #brand .inner .wrap article {
+    width: 100%;
+    height: 350px;
+  }
+  #brand .inner .wrap article:nth-of-type(1) {
+    padding: 40px;
+  }
+  #brand .inner .wrap article:nth-of-type(1) h1 {
+    margin-bottom: 10px;
+  }
+  #brand .inner .wrap article:nth-of-type(1) p {
+    margin-bottom: 20px;
+  }
+
+  /* txt_box ----------------------------------------------------------- */
+  #txt_box {
+    padding: 100px 30px;
+  }
+  #txt_box .inner {
+    width: 100%;
+  }
+  #txt_box .inner .wrap article {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #ddd;
+  }
+  #txt_box .inner .wrap article:nth-of-type(1) {
+    height: auto;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #888;
+    text-align: center;
+  }
+  #txt_box .inner .wrap article:nth-of-type(2) {
+    height: auto;
+  }
+  #txt_box .inner .wrap article:nth-of-type(3) {
+    height: auto;
+  }
+  #txt_box .inner .wrap article:nth-of-type(4) {
+    margin-bottom: 40px;
+  }
+  #txt_box .inner .wrap article:nth-of-type(4) p {
+    margin-bottom: 0;
+  }
+  #txt_box .inner .wrap article:nth-of-type(4) p:last-child {
+    display: none;
+  }
+  #txt_box .inner .wrap article:nth-of-type(5) {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+  #txt_box .inner .wrap article:nth-of-type(5) p {
+    margin-bottom: 0;
+  }
+  #txt_box .inner .wrap article:nth-of-type(5) p:last-child {
+    display: none;
+  }
+
   /* banner ----------------------------------------------------------- */
   #banner {
     padding: 100px 30px;
@@ -3763,43 +3499,13 @@ fieldset {
   #main_tab .inner {
     width: 100%;
   }
-  #main_tab .inner #tab dt {
-    width: 25%;
-  }
-  #main_tab .inner #tab dt:nth-of-type(1) {
-    left: 0;
-  }
-  #main_tab .inner #tab dt:nth-of-type(2) {
-    left: 25%;
-  }
-  #main_tab .inner #tab dt:nth-of-type(3) {
-    left: 50%;
-  }
-  #main_tab .inner #tab dt:nth-of-type(4) {
-    left: 75%;
-  }
   #main_tab .inner #tab dd {
-    height: 500px;
+    height: 340px;
     top: 40px;
   }
   #main_tab .inner #tab dd a .txt {
     width: 100%;
-    padding: 40px 20px;
-  }
-
-  /* brand ----------------------------------------------------------- */
-  #brand {
-    padding: 80px 30px;
-  }
-  #brand .inner {
-    width: 100%;
-  }
-  #brand .inner .wrap article {
-    width: 100%;
-    height: 350px;
-  }
-  #brand .inner .wrap article:nth-of-type(1) {
-    padding: 40px;
+    padding: 40px 20px 0;
   }
 
   /* insta ----------------------------------------------------------- */
@@ -3875,14 +3581,6 @@ fieldset {
 }
 @media screen and (max-width: 539px) {
   /* visual ----------------------------------------------------------- */
-  #visual .visual_sliders .visual_slide .inner .wrap .visual_txt h1 {
-    margin-top: 0;
-    margin-bottom: 2vh;
-  }
-  #visual .visual_sliders .visual_slide .inner .wrap .visual_txt h2 {
-    margin-bottom: 4vh;
-  }
-
   /* main_search ----------------------------------------------------------- */
   #main_search .inner {
     width: 100%;
@@ -3925,11 +3623,6 @@ fieldset {
     line-height: 1.2;
   }
 
-  /* banner ----------------------------------------------------------- */
-  #banner .inner h2 {
-    line-height: 1.5;
-  }
-
   /* brand ----------------------------------------------------------- */
   #brand .inner .wrap article {
     width: 100%;
@@ -3952,13 +3645,25 @@ fieldset {
     margin-bottom: 20px;
   }
 
+  /* banner ----------------------------------------------------------- */
+  #banner .inner h2 {
+    line-height: 1.5;
+  }
+
   /* tab ----------------------------------------------------------- */
+  #main_tab .inner #tab {
+    padding-top: 40px;
+  }
+  #main_tab .inner #tab dt {
+    height: 40px;
+  }
   #main_tab .inner #tab dt a {
     font-size: 13px;
+    line-height: 40px;
     letter-spacing: 0;
   }
   #main_tab .inner #tab dd {
-    height: 390px;
+    height: 400px;
   }
   #main_tab .inner #tab dd a img {
     width: 100%;
@@ -3972,7 +3677,7 @@ fieldset {
     font-size: 18px;
   }
   #main_tab .inner #tab dd a .txt p {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   /* insta ----------------------------------------------------------- */

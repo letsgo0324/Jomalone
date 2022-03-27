@@ -1,10 +1,10 @@
 //햄버거 메뉴
 const btnCall = document.querySelector(".btnCall"); 
-const menuMo = document.querySelector(".menuMo"); 
+const menu = document.querySelector(".menu"); 
 
 btnCall.onclick = function(e){
     e.preventDefault(); 
 
     btnCall.classList.toggle("on"); 
-    menuMo.classList.toggle("on"); 
+    menu.classList.toggle("on"); 
 }

@@ -1,27 +1,94 @@
-//비주얼 슬라이더 ---------------------------------------------------------------//
-const visual = document.querySelector("#visual");
-const visualSliders = visual.querySelector(".visual_sliders");
-const btnCircle = document.querySelectorAll(".btnCircle li");
+const slider1 = document.querySelector(".visual_slider1_wrap");
+const slider2 = document.querySelector(".visual_slider2_wrap")
+const prev = document.querySelector(".prevBtn");
+const next = document.querySelector(".nextBtn");
+let enableClickVs = true; //재클릭 방지 함수 선언
 
-btnCircle.forEach((el,index)=>{
-    el.addEventListener("click", e=>{
-        e.preventDefault();
+init();
 
-        let isOn = e.currentTarget.classList.contains("on");
-        if(isOn) return;
+next.addEventListener("click", e=>{
+    e.preventDefault();
 
-        new Anim(visualSliders, {
-            prop: "margin-left", 
-            value: -100 * index + "%",
-            duration: 1000
-        }); 
+    if(enableClickVs){
+        enableClickVs = false;
+        nextSlide();
+    } 
+});
 
-        for(let el of btnCircle){
-            el.classList.remove("on");
-        }
-        el.classList.add("on");
-    })    
+prev.addEventListener("click", e=>{
+    e.preventDefault();
+
+    if(enableClickVs){
+        enableClickVs = false;
+        prevSlide();
+    } 
 })
+
+function init(){
+
+    const slideCon = slider1.querySelector(".visual_sliders1");
+    const slideTxt = slider2.querySelector(".visual_sliders2");
+    
+    slideCon.style.left = "-100%";
+    slideCon.prepend(slideCon.lastElementChild);  
+
+    slideTxt.style.opacity = "1";
+    slideTxt.append(slideTxt.firstElementChild);
+}
+
+function nextSlide(){
+
+    const slideCon = slider1.querySelector(".visual_sliders1");
+    const slideTxt = slider2.querySelector(".visual_sliders2");
+
+    new Anim(slideCon, {
+        prop: "left",
+        value: "-200%",
+        duration: 1000,
+        callback: ()=>{
+            slideCon.style.left = "-100%";
+            slideCon.append(slideCon.firstElementChild);
+            enableClickVs = true;
+        }
+    })
+    new Anim(slideTxt, {
+        prop: "opacity",
+        value: "0",
+        duration: 1000,
+        callback: ()=>{
+            slideTxt.style.opacity = "1";
+            slideTxt.append(slideTxt.firstElementChild);
+            enableClickVs = true;
+        }
+    })   
+}
+
+function prevSlide(){
+    const slideCon = slider1.querySelector(".visual_sliders1");
+    const slideTxt = slider2.querySelector(".visual_sliders2");
+
+    new Anim(slideCon, {
+        prop: "left",
+        value: "0%",
+        duration: 1000,
+        callback: ()=>{
+            slideCon.style.left = "-100%";
+            slideCon.prepend(slideCon.lastElementChild);
+            enableClickVs = true;
+        }
+    })
+    new Anim(slideTxt, {
+        prop: "opacity",
+        value: "0",
+        duration: 1000,
+        callback: ()=>{
+            slideTxt.style.opacity = "1";
+            slideTxt.prepend(slideTxt.lastElementChild);
+            enableClickVs = true;
+        }
+    })
+}
+
 
 //탭 메뉴 ---------------------------------------------------------------//
 const tab = document.querySelector("#tab");
@@ -105,8 +172,7 @@ function setPos(){
         for(let section of sections){
             posArr.push(section.offsetTop);
         } return;
-    }
-    
+    }    
 
     const active = scrollBtn.querySelector("li.on");
     const activeIndex = lis_arr.indexOf(active);

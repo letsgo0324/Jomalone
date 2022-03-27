@@ -5,7 +5,7 @@
     .sub_visualTop{
         width: 100%;
         height: 200px;
-        background: url(../img/shopping_bg.jpg) no-repeat center/cover fixed;
+        background: #bbb;
         margin-bottom: 100px;
 
         .inner{
@@ -67,7 +67,7 @@
                                     width: 100%;
                                     height: 400px;
                                     overflow: hidden;
-                                    background: #fef0ec;
+                                    background: #eee;
                                     position: relative;
                                     top: 0;
                                     left: 0;
@@ -77,8 +77,8 @@
                                         margin: 0 auto;
             
                                         h4{
-                                            font: 20px/400px 'Merriweather';
-                                            color: #444;
+                                            font: bold 20px/400px 'Noto Serif Display';
+                                            color: #888;
                                             text-align: center;
                                             width: 100%;
                                             display: none;
@@ -121,8 +121,8 @@
                                         color: #444;
                                     }
                                     p{
-                                        font: 12px/1.5 'Merriweather';
-                                        color: #444;
+                                        font: 12px/1.5 'Rajdhan';
+                                        color: #888;
                                     }
                                     a{
                                         @include button();
@@ -130,7 +130,7 @@
                                         margin: 0 auto;
             
                                         &:hover{
-                                            @include button($color:#444, $bgColor:#fef0ec, $border:1px solid #fef0ec);
+                                            @include button($color:#fff, $bgColor:#444);
                                         }
                                     }
                                 }
