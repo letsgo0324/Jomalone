@@ -224,19 +224,38 @@ fieldset {
 }
 .content .sub_visualTop {
   width: 100%;
-  height: 200px;
-  background: #bbb;
+  height: 180px;
+  border-top: 1px solid #888;
+  border-bottom: 1px solid #888;
   margin-bottom: 100px;
 }
 .content .sub_visualTop .inner {
   width: 1180px;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px 0;
 }
 .content .sub_visualTop .inner h1 {
-  font: bold 30px/200px "Rajdhani";
-  color: #444;
-  font-weight: normal;
-  text-align: center;
+  width: 28%;
+  font: normal 20px/1 "Rajdhani";
+  color: #222;
+  text-align: left;
+}
+.content .sub_visualTop .inner h1::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #444;
+  margin-bottom: 20px;
+}
+.content .sub_visualTop .inner h2 {
+  width: 70%;
+  font: 40px/1.5 "Noto Serif Display";
+  color: #222;
 }
 .content .sub_content {
   width: 100%;
@@ -257,7 +276,7 @@ fieldset {
 .content .sub_content .inner p {
   font: 14px/1.5 "Merriweather";
   color: #444;
-  text-align: center;
+  text-align: left;
 }
 
 /* footer_sub ----------------------------------------------------------- */
@@ -491,19 +510,38 @@ fieldset {
 }
 .about .sub_visualTop {
   width: 100%;
-  height: 200px;
-  background: #bbb;
+  height: 180px;
+  border-top: 1px solid #888;
+  border-bottom: 1px solid #888;
   margin-bottom: 100px;
 }
 .about .sub_visualTop .inner {
   width: 1180px;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px 0;
 }
 .about .sub_visualTop .inner h1 {
-  font: bold 30px/200px "Rajdhani";
-  color: #444;
-  font-weight: normal;
-  text-align: center;
+  width: 28%;
+  font: normal 20px/1 "Rajdhani";
+  color: #222;
+  text-align: left;
+}
+.about .sub_visualTop .inner h1::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #444;
+  margin-bottom: 20px;
+}
+.about .sub_visualTop .inner h2 {
+  width: 70%;
+  font: 40px/1.5 "Noto Serif Display";
+  color: #222;
 }
 .about .sub_content {
   width: 100%;
@@ -999,19 +1037,38 @@ fieldset {
 }
 .notice .sub_visualTop {
   width: 100%;
-  height: 200px;
-  background: #bbb;
+  height: 180px;
+  border-top: 1px solid #888;
+  border-bottom: 1px solid #888;
   margin-bottom: 100px;
 }
 .notice .sub_visualTop .inner {
   width: 1180px;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px 0;
 }
 .notice .sub_visualTop .inner h1 {
-  font: bold 30px/200px "Rajdhani";
-  color: #eee;
-  font-weight: normal;
-  text-align: center;
+  width: 28%;
+  font: normal 20px/1 "Rajdhani";
+  color: #222;
+  text-align: left;
+}
+.notice .sub_visualTop .inner h1::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #444;
+  margin-bottom: 20px;
+}
+.notice .sub_visualTop .inner h2 {
+  width: 70%;
+  font: 40px/1.5 "Noto Serif Display";
+  color: #222;
 }
 .notice .sub_content {
   width: 100%;
@@ -1371,19 +1428,38 @@ fieldset {
 }
 .join .sub_visualTop {
   width: 100%;
-  height: 200px;
-  background: #bbb;
+  height: 180px;
+  border-top: 1px solid #888;
+  border-bottom: 1px solid #888;
   margin-bottom: 100px;
 }
 .join .sub_visualTop .inner {
   width: 1180px;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px 0;
 }
 .join .sub_visualTop .inner h1 {
-  font: bold 30px/200px "Rajdhani";
-  color: #444;
-  font-weight: normal;
-  text-align: center;
+  width: 28%;
+  font: normal 20px/1 "Rajdhani";
+  color: #222;
+  text-align: left;
+}
+.join .sub_visualTop .inner h1::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #444;
+  margin-bottom: 20px;
+}
+.join .sub_visualTop .inner h2 {
+  width: 70%;
+  font: 40px/1.5 "Noto Serif Display";
+  color: #222;
 }
 .join .sub_content {
   width: 100%;
@@ -1770,19 +1846,39 @@ fieldset {
 }
 .youtube .sub_visualTop {
   width: 100%;
-  height: 200px;
-  background: #bbb;
+  height: 180px;
+  border-top: 1px solid #888;
+  border-bottom: 1px solid #888;
   margin-bottom: 0;
+  background: #fff;
 }
 .youtube .sub_visualTop .inner {
   width: 1180px;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px 0;
 }
 .youtube .sub_visualTop .inner h1 {
-  font: bold 30px/200px "Rajdhani";
-  color: #444;
-  font-weight: normal;
-  text-align: center;
+  width: 28%;
+  font: normal 20px/1 "Rajdhani";
+  color: #222;
+  text-align: left;
+}
+.youtube .sub_visualTop .inner h1::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #444;
+  margin-bottom: 20px;
+}
+.youtube .sub_visualTop .inner h2 {
+  width: 70%;
+  font: 40px/1.5 "Noto Serif Display";
+  color: #222;
 }
 .youtube .sub_content {
   width: 100%;
@@ -1916,6 +2012,7 @@ aside {
   left: 0;
   background: rgba(0, 0, 0, 0.9);
   padding: 10vw;
+  z-index: 11;
 }
 aside .btnClose {
   position: absolute;
@@ -2126,19 +2223,38 @@ aside .btnClose:hover {
 }
 .shopping .sub_visualTop {
   width: 100%;
-  height: 200px;
-  background: #bbb;
+  height: 180px;
+  border-top: 1px solid #888;
+  border-bottom: 1px solid #888;
   margin-bottom: 100px;
 }
 .shopping .sub_visualTop .inner {
   width: 1180px;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px 0;
 }
 .shopping .sub_visualTop .inner h1 {
-  font: bold 30px/200px "Rajdhani";
-  color: #eee;
-  font-weight: normal;
-  text-align: center;
+  width: 28%;
+  font: normal 20px/1 "Rajdhani";
+  color: #222;
+  text-align: left;
+}
+.shopping .sub_visualTop .inner h1::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #444;
+  margin-bottom: 20px;
+}
+.shopping .sub_visualTop .inner h2 {
+  width: 70%;
+  font: 40px/1.5 "Noto Serif Display";
+  color: #222;
 }
 .shopping #sub_bestSellers {
   width: 100%;
