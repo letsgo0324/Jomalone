@@ -1,0 +1,476 @@
+/* content ----------------------------------------------------------- */
+.youtube{
+    width: 100%;       
+    background: #111;
+    opacity: 1;   
+
+    .sub_visualTop{
+        width: 100%;
+        height: 200px;
+        background: #bbb;
+        margin-bottom: 0;
+
+        .inner{
+            width: 1180px;
+            margin: 0 auto;
+
+            h1{
+                font: bold 30px/200px 'Rajdhani';
+                color: #444;
+                font-weight: normal;
+                text-align: center;
+            }
+        }
+    }
+    .sub_content{
+        width: 100%;
+        margin-bottom: 0; 
+        padding-top: 100px;
+        padding-bottom: 100px; 
+        position: relative;   
+
+        &::before{
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(../img/ad_bg.jpg) no-repeat center/cover;
+            opacity: 0.15;
+        }
+
+        .inner{
+            width: 1180px;
+            margin: 0 auto;            
+
+            h2{
+                font: 30px/1 'Yeseva One';
+                color: #eee;
+                margin-bottom: 50px;
+                text-align: center;
+                letter-spacing: 2px;
+            }
+
+            .wrap{
+                width: 100%;
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                .youtube_left{
+                    width: 30%;
+                    padding-right: 20px;
+                    margin-top: 10%;
+
+                    .txt{
+                        
+                        position: sticky;
+                        top: 50px;
+
+                        a{  
+                            width: 100%;
+                            height: 60px;
+                            display: inline-block;
+                            font-size: 40px;
+                            line-height: 60px;
+                            color: #888;
+                            margin-bottom: 20px;    
+                            
+                            span{
+                                font-family: 'Rajdhani';             
+                            }
+                            &:hover, &:hover span{
+                                color: #eee;
+                            }
+                        }
+                        
+                        p{
+                            font: 16px/1.2 'Rajdhani';
+                            color: #666;
+                            text-align: left;
+                        }   
+                    }
+                                     
+                }
+
+                .youtube_wrap{
+                    width: 70%;
+                    height: 100%;
+                    position: relative;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    article{
+                        width: 50%;
+                        height: 230px;
+                        position: relative;
+
+                        .pic{
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                transition: 0.5s;
+                                filter: grayscale(1);
+                            }
+                            .con{
+                                width: 100%;
+                                height: auto;
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                padding: 20px;
+                                background: linear-gradient(180deg, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.9));
+                                
+                                h3{
+                                    font: bold 18px/1 'Rajdhani';
+                                    color: #fff;
+                                    margin-bottom: 10px;
+                                    letter-spacing: 1px;
+                                }
+                                span{
+                                    font: 12px/1 'Rajdhani';
+                                    color: #bbb;
+                                    display: block;
+                                    text-align: right;
+                                }
+                                p{
+                                    width: 100%;
+                                    font: 14px/1.2 'Rajdhani';
+                                    color: #bbb;
+                                    text-align: left;
+                                }
+    
+                            }
+                        }
+                        &:hover .pic img{
+                            filter: grayscale(0);
+                        }
+                    }
+                }
+            }   
+        }
+    }    
+}
+aside{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10vw;
+
+    .btnClose{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        font: bold 20px/1 'Rajdhani';
+        color: #fff;
+        cursor: pointer;
+
+        &:hover{
+            color: #bbb;
+        }
+    }
+
+}
+
+.campaign{
+    width: 100%;
+    position: relative;
+
+    .sub_content{
+        width: 100%;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        position: relative;
+
+        .inner{
+            width: 1180px;
+            min-height: 300px;
+            margin: 0 auto;
+            position: relative;     
+
+            >h2{
+                font: 30px/1 'Yeseva One';
+                color: #444;
+                margin-bottom: 50px;
+                text-align: center;
+                letter-spacing: 2px;
+            }
+
+            .wrap{
+                position: relative;
+
+                .sortBtn{
+                    width: 100%;
+                    text-align: center;         
+                    position: relative;
+                    margin-bottom: 40px;
+
+                    li{
+                        display: inline-block;
+                        width: 30%;
+                        height: 40px;
+
+                        a{
+                            width: 100%;
+                            height: 100%;
+                            font: 22px/40px 'Merriweather';
+                            color: #ddd;
+                            letter-spacing: 1px;
+                            text-align: center;
+                        }
+                        &.on a{
+                            color: #444;
+                        }
+                    }
+                }
+
+                section{
+                    width: 100%;
+                    float: left;
+                    position: relative;
+
+                    article{
+                        float: left;
+                        width: 20%;
+                        padding: 10px;
+
+                        div{
+                            width: 100%;
+                            background: #fff;
+
+                            img{
+                                width: 100%;
+                            }
+                            h2{
+                                font: bold 16px/1.2 'Rajdhani';
+                                color: #444;
+                                margin-top: 20px;
+                                margin-bottom: 10px;
+                                padding: 0 10px;
+                            }
+                            p{
+                                font: 12px/1.4 'Merriweather';
+                                color: #666;
+                                padding: 0 10px 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    
+}
+
+//미디어쿼리
+@media screen and (max-width:$tablet){
+    /* content ----------------------------------------------------------- */
+    .youtube{
+        width: 100%;
+
+        .sub_visualTop{
+            height: 150px;
+            margin-bottom: 0;
+
+            .inner{
+                width: 100%;
+                
+                h1{
+                    line-height: 150px;
+                }
+            }
+        }
+        .sub_content{
+            padding-top: 50px;
+            padding-bottom: 50px;
+
+            .inner{
+                width: 100%;
+                padding: 30px;
+
+                .wrap{
+                    width: 100%;
+    
+                    .youtube_left{
+                        width: 100%;
+                        margin-top: 0;
+                        margin-bottom: 60px;  
+
+                        .txt{      
+                            position: sticky;
+                            top: 0;
+    
+                            a{  
+                                font-size: 30px;
+                                margin-bottom: 0;
+                                
+                                span{
+                                    font-size: 30px;           
+                                }
+                            }
+                        }               
+                    }
+    
+                    .youtube_wrap{
+                        width: 100%;
+    
+                        article{
+                            width: 100%;
+                            height: 260px;
+    
+                            .pic{    
+                                .con{      
+
+                                    h3{
+                                        font-size: 16px;
+                                        margin-top: 5px;
+                                        margin-bottom: 5px;
+                                    }        
+                                }
+                            }
+                        }
+                    }
+                } 
+            }
+        }        
+    }
+
+    .campaign{
+        width: 100%;
+
+        .sub_content{
+            .inner{
+                width: 100%;
+                padding: 20px;
+
+                .wrap{   
+                    section{    
+                        article{
+                            width: 25%;
+                        }
+                    }
+                }
+            }
+        }        
+    }
+}
+
+@media screen and (max-width:1025px){
+    .campaign{
+        .sub_content{
+            .inner{
+                .wrap{   
+                    section{    
+                        article{
+                            width: 33%;
+                        }
+                    }
+                }
+            }
+        }        
+    }
+}
+
+@media screen and (max-width:769px){
+    .campaign{
+        .sub_content{
+            .inner{
+                .wrap{   
+                    section{    
+                        article{
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+        }        
+    }
+}
+
+@media screen and (max-width:$mobile){
+    /* content ----------------------------------------------------------- */
+    .youtube{
+        .sub_content{
+            .inner{
+                h2{
+                    line-height: 1.2;
+                }
+                .wrap{
+    
+                    .youtube_left{
+    
+                        .txt{
+                            a{  
+                                font-size: 20px;
+
+                                span{
+                                    font-size: 20px;            
+                                } 
+                            }                                
+                        }            
+                    }
+    
+                    .youtube_wrap{
+    
+                        article{
+                            height: 160px;
+    
+                            .pic{    
+                                
+                                .con{      
+                                    padding: 10px;  
+
+                                    span{
+                                        display: none;
+                                    }
+                                    p{
+                                        display: none;
+                                    }
+        
+                                }
+                            }
+                        }
+                    }
+                }  
+            }
+        }     
+    }
+
+    .campaign{
+        .sub_content{
+            .inner{
+                padding: 0;
+
+                >h2{
+                    line-height: 1.2;
+                }
+                .wrap{
+                    ul{
+                        margin-bottom: 20px;
+                    }   
+                    section{    
+                        article{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }     
+    }
+}
