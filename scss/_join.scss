@@ -3,15 +3,14 @@
 
 	.sub_visualTop{
         width: 100%;
-        height: 180px;
         border-top: 1px solid #888;
         border-bottom: 1px solid #888;
         margin-bottom: 100px;
-        
+
         .inner{
             width: 1180px;
             margin: 0 auto;
-            display: flex;
+			display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: flex-start;
@@ -319,18 +318,18 @@
 	.join {
 		width: 100%;
 
-		.sub_visualTop {
-			height: 150px;
-			margin-bottom: 50px;
+		.sub_visualTop{
+            margin-bottom: 50px;
 
-			.inner {
-				width: 100%;
+            .inner{
+                width: 100%;
+                padding: 30px;
 
-				h1 {
-					line-height: 150px;
-				}
-			}
-		}
+                h2{
+                    font-size: 20px;
+                }
+            }
+        }
 		.sub_content {
 			.inner {
 				width: 100%;
@@ -397,9 +396,16 @@
 @media screen and (max-width: $mobile) {
 	/* join ----------------------------------------------------------- */
 	.join {
-		.sub_visualTop {
-			margin-bottom: 50px;
-		}
+		.sub_visualTop{
+            .inner{
+				h1{
+                    width: 100%;
+                }
+                h2{
+                    display: none;
+                }
+            }
+        } 
 		.sub_content {
 			.inner {
 				h2 {

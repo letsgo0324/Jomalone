@@ -60,13 +60,18 @@ function createPop(e){
     `;
 
     body.append(pop);
+    body.style.overflow = "hidden";
 }
 
 function removePop(e){
     const pop = document.querySelector("aside");
     if(pop == null) return;
     const close = pop.querySelector("span");
-    if(e.target == close) e.target.closest("aside").remove();
+    if(e.target == close){
+        e.target.closest("aside").remove()
+        body.style.overflow = "auto";
+    };
+
 }
 
 

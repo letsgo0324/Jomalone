@@ -6,7 +6,7 @@ $mobile: 539px;
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Noto+Serif+Display&family=Rajdhani&family=Yeseva+One&display=swap');
 
 @import "reset.scss", "mixin.scss", "sub_layout.scss", "about.scss",
-	"notice.scss", "join.scss", "advertisement.scss", "shopping.scss";
+	"notice.scss", "join.scss", "advertisement.scss", "shopping.scss", "review.scss";
 
 /* header ----------------------------------------------------------- */
 #header {
@@ -42,6 +42,18 @@ $mobile: 539px;
 			padding: 30px;
 			background: #444;
             z-index: 10;
+
+			&.Web{
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			&.Mo{
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: none;
+			}
 
 			.btnCall {
 				position: absolute;
@@ -105,14 +117,11 @@ $mobile: 539px;
 			}
 		}
 
-        .menu{
+        .menuWeb_wrap{
 
             &.on .menuWeb #gnbWeb li {
                 opacity: 1;
                 transform: translateY(0);
-            }
-            &.on .menuMo{
-                left: 0;
             }
 
             .menuWeb{
@@ -132,33 +141,30 @@ $mobile: 539px;
                     align-items: center;
     
                     li {
-                        transition-duration: 1s;
+                        transition-duration: 0.5s;
                         opacity: 0;
                         transform: translateY(5px);
     
                         &:nth-of-type(1) {
-                            transition-delay: 0.2s;
+                            transition-delay: 0.04s;
                         }
                         &:nth-of-type(2) {
-                            transition-delay: 0.3s;
+                            transition-delay: 0.08s;
                         }
                         &:nth-of-type(3) {
-                            transition-delay: 0.4s;
+                            transition-delay: 0.12s;
                         }
                         &:nth-of-type(4) {
-                            transition-delay: 0.5s;
+                            transition-delay: 0.16s;
                         }
                         &:nth-of-type(5) {
-                            transition-delay: 0.6s;
+                            transition-delay: 0.20s;
                         }
                         &:nth-of-type(6) {
-                            transition-delay: 0.7s;
+                            transition-delay: 0.24s;
                         }
                         &:nth-of-type(7) {
-                            transition-delay: 0.8s;
-                        }
-                        &:nth-of-type(8) {
-                            transition-delay: 0.9s;
+                            transition-delay: 0.28s;
                         }
     
                         a {
@@ -178,6 +184,13 @@ $mobile: 539px;
                     }
                 }
             }
+        }
+		.menuMo_wrap{
+			display: none;
+
+            &.on .menuMo{
+                left: 0;
+            }
             .menuMo{
                 width: 100%;
                 height: 100vh;
@@ -188,7 +201,7 @@ $mobile: 539px;
                 padding: 50px;
                 z-index: 9;
                 transition: 0.5s;
-                display: none;
+                
                 
                 h1{
                     margin-top: 30px;
@@ -224,7 +237,6 @@ $mobile: 539px;
                 }
             }
         }
-		
 
 	}
 }
@@ -1152,15 +1164,21 @@ $mobile: 539px;
     
             > h1 {
                 display: none;
-            }       
-            .menu{
-    
-                .menuWeb{
-                    display: none;
-                }
-                .menuMo{
-                    display: block;
-                }
+            } 
+			
+			.btnCall_wrap {	
+				&.Web{
+					display: none;
+				}
+				&.Mo{
+					display: block;
+				}
+			}
+            .menuWeb_wrap{
+				display: none;
+            }
+			.menuMo_wrap{
+				display: block;
             }         
         }
     }
