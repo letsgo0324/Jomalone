@@ -1012,6 +1012,131 @@ $mobile: 539px;
 	}
 }
 
+/* popup -----------------------------------------------------------*/
+#popup{
+	width: 100%;
+	height: 100vh;
+	background: rgba(255,255,255,0.9);
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 10vw;
+	z-index: 11;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: none;
+
+	.popup_wrap{
+		width: 700px;
+		height: 500px;
+		background: #fff;
+		border: 1px solid #eee;
+		padding: 10px;
+		margin: 0 auto;
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		box-shadow: 5px 5px 10px rgba(141, 141, 141, 0.5);
+
+		.pic{
+			width: 45%;
+			height: 100%;
+			background: #fbfaf8;		
+
+			img{
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}		
+		.con_popup{
+			width: 55%;
+			height: 100%;
+			padding: 40px;
+			position: relative;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+	
+			>.txt{
+				width: 100%;		
+
+				h1{
+					font: 36px/1 'Yeseva One';
+					color: #222;
+					margin-bottom: 30px;
+					padding-bottom: 30px;
+					border-bottom: 2px solid #222;
+				}
+				p{
+					font: 18px/1.4 'Rajdhani';
+					color: #666;
+					margin-bottom: 20px;
+				}
+				span{
+					display: block;
+					font: bold 20px/1 "Rajdhani";
+					color: #444;
+					letter-spacing: 1px;
+					margin-bottom: 20px;
+
+					b{
+						color: #a10000;
+					}
+				}
+				a{
+					display: block;
+					font: 16px/1 'Rajdhani';
+					color: #888;	
+					
+					&:hover{
+						color: #444;
+					}
+				}
+	
+			}
+			.check_wrap{
+				display: inline-flex;
+				align-items: center;
+				margin-bottom: 30px;
+
+				input{
+					margin-right: 10px;
+				}
+				label{
+					font: 16px/1 'Rajdhani';
+					color: #444;
+				}	
+			}
+			>.btnClose{
+				position: absolute;
+				bottom: 40px;
+				right: 40px;
+				top: auto;
+				width: 100%;
+				
+				@include button($color: #888, $border: 1px solid #888, $wid: calc(100% - 80px));
+				transition: all 0.2s;
+	
+				&:hover {
+					@include button(
+						$color: #fff,
+						$bgColor: #444,
+						$border: 1px solid #444,
+						$wid: calc(100% - 80px)
+					);
+				}
+			}
+		}
+	}
+
+	
+}
+
 /* footer ----------------------------------------------------------- */
 #footer {
 	width: 100%;
@@ -1464,6 +1589,27 @@ $mobile: 539px;
 		display: none;
 	}
 
+	/* popup -----------------------------------------------------------*/
+	#popup{
+		.popup_wrap{
+			width: 100%;
+			height: 100%;
+
+			.pic{
+				width: 100%;
+				height: 50%;
+			}		
+			.con_popup{
+				width: 100%;
+				height: 50%;
+
+				.check_wrap{
+					margin-bottom: 40px;
+				}
+			}
+		}		
+	}
+
 	/* footer ----------------------------------------------------------- */
 	#footer {
 		padding: 50px 30px 20px;
@@ -1703,6 +1849,47 @@ $mobile: 539px;
 				}
 			}
 		}
+	}
+
+	/* popup -----------------------------------------------------------*/
+	#popup{
+		.popup_wrap{
+			.con_popup{
+				padding: 20px;
+
+				>.txt{	
+	
+					h1{
+						font-size: 26px;
+						margin-bottom: 20px;
+						padding-bottom: 20px;
+					}
+					p{
+						font-size: 14px;
+					}
+					span{
+						font-size: 16px;
+					}
+					a{
+						font-size: 14px;
+					}		
+				}
+				.check_wrap{
+					label{
+						font-size: 14px;
+					}	
+				}
+				>.btnClose{
+					bottom: 20px;
+					right: 20px;
+					width: calc(100% - 40px);
+		
+					&:hover {
+						width: calc(100% - 40px);
+					}
+				}
+			}
+		}		
 	}
 
 	/* footer ----------------------------------------------------------- */

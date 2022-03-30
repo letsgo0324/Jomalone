@@ -3793,6 +3793,135 @@ aside .btnClose:hover {
   background: #444;
 }
 
+/* popup -----------------------------------------------------------*/
+#popup {
+  width: 100%;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10vw;
+  z-index: 11;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+#popup .popup_wrap {
+  width: 700px;
+  height: 500px;
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 10px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 5px 5px 10px rgba(141, 141, 141, 0.5);
+}
+#popup .popup_wrap .pic {
+  width: 45%;
+  height: 100%;
+  background: #fbfaf8;
+}
+#popup .popup_wrap .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#popup .popup_wrap .con_popup {
+  width: 55%;
+  height: 100%;
+  padding: 40px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+#popup .popup_wrap .con_popup > .txt {
+  width: 100%;
+}
+#popup .popup_wrap .con_popup > .txt h1 {
+  font: 36px/1 "Yeseva One";
+  color: #222;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #222;
+}
+#popup .popup_wrap .con_popup > .txt p {
+  font: 18px/1.4 "Rajdhani";
+  color: #666;
+  margin-bottom: 20px;
+}
+#popup .popup_wrap .con_popup > .txt span {
+  display: block;
+  font: bold 20px/1 "Rajdhani";
+  color: #444;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+#popup .popup_wrap .con_popup > .txt span b {
+  color: #a10000;
+}
+#popup .popup_wrap .con_popup > .txt a {
+  display: block;
+  font: 16px/1 "Rajdhani";
+  color: #888;
+}
+#popup .popup_wrap .con_popup > .txt a:hover {
+  color: #444;
+}
+#popup .popup_wrap .con_popup .check_wrap {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+#popup .popup_wrap .con_popup .check_wrap input {
+  margin-right: 10px;
+}
+#popup .popup_wrap .con_popup .check_wrap label {
+  font: 16px/1 "Rajdhani";
+  color: #444;
+}
+#popup .popup_wrap .con_popup > .btnClose {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  top: auto;
+  width: 100%;
+  display: block;
+  width: calc(100% - 80px);
+  height: 30px;
+  background: rgba(255, 255, 255, 0);
+  color: #888;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 0px;
+  font-family: "Rajdhani";
+  line-height: 30px;
+  border: 1px solid #888;
+  text-align: center;
+  transition: all 0.2s;
+}
+#popup .popup_wrap .con_popup > .btnClose:hover {
+  display: block;
+  width: calc(100% - 80px);
+  height: 30px;
+  background: #444;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 0px;
+  font-family: "Rajdhani";
+  line-height: 30px;
+  border: 1px solid #444;
+  text-align: center;
+}
+
 /* footer ----------------------------------------------------------- */
 #footer {
   width: 100%;
@@ -4159,6 +4288,23 @@ aside .btnClose:hover {
     display: none;
   }
 
+  /* popup -----------------------------------------------------------*/
+  #popup .popup_wrap {
+    width: 100%;
+    height: 100%;
+  }
+  #popup .popup_wrap .pic {
+    width: 100%;
+    height: 50%;
+  }
+  #popup .popup_wrap .con_popup {
+    width: 100%;
+    height: 50%;
+  }
+  #popup .popup_wrap .con_popup .check_wrap {
+    margin-bottom: 40px;
+  }
+
   /* footer ----------------------------------------------------------- */
   #footer {
     padding: 50px 30px 20px;
@@ -4326,6 +4472,36 @@ aside .btnClose:hover {
   }
   #insta .inner .wrap article:nth-of-type(3) {
     margin-right: 2%;
+  }
+
+  /* popup -----------------------------------------------------------*/
+  #popup .popup_wrap .con_popup {
+    padding: 20px;
+  }
+  #popup .popup_wrap .con_popup > .txt h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+  #popup .popup_wrap .con_popup > .txt p {
+    font-size: 14px;
+  }
+  #popup .popup_wrap .con_popup > .txt span {
+    font-size: 16px;
+  }
+  #popup .popup_wrap .con_popup > .txt a {
+    font-size: 14px;
+  }
+  #popup .popup_wrap .con_popup .check_wrap label {
+    font-size: 14px;
+  }
+  #popup .popup_wrap .con_popup > .btnClose {
+    bottom: 20px;
+    right: 20px;
+    width: calc(100% - 40px);
+  }
+  #popup .popup_wrap .con_popup > .btnClose:hover {
+    width: calc(100% - 40px);
   }
 
   /* footer ----------------------------------------------------------- */
