@@ -1,19 +1,9 @@
-/*
-key : 7896b34c0ad4a7a716ed06e4e20bbe72
-url : https://live.staticflickr.com/{server-id}/{id}_{secret}_{size-suffix}.jpg
-buddy icon : http://farm{icon-farm}.staticflickr.com/{icon-server}/buddyicons/{nsid}.jpg / https://www.flickr.com/images/buddyicon.gif
-gallery 메소드 : flickr.galleries.getPhotos
-userId : 195365059@N08
-gallery id : 72157720546409031
-rest : https://www.flickr.com/services/rest/?method=flickr.test.echo&name=value
-*/
-
 const body = document.querySelector("body");
 const frame = document.querySelector(".review_wrap");
 const loading = document.querySelector(".loading");
 const base = "https://www.flickr.com/services/rest/?";
 const key = "7896b34c0ad4a7a716ed06e4e20bbe72";
-const per_page = 50;
+const per_page = 40;
 const username = "195365059@N08";
 const gallery = "72157720546409031";
 const method_gallery = "flickr.galleries.getPhotos";

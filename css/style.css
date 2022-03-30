@@ -3729,10 +3729,117 @@ aside .btnClose:hover {
   display: block;
 }
 
+/* icons ----------------------------------------------------------- */
+#icons {
+  width: 100%;
+  padding: 100px 0;
+  border-bottom: 1px solid #bbb;
+}
+#icons .inner {
+  width: 1180px;
+  margin: 0 auto;
+}
+#icons .inner h1 {
+  font: bold 26px/1 "Noto Serif Display";
+  color: #444;
+  margin-bottom: 30px;
+}
+#icons .inner .wrap article {
+  width: 25%;
+  float: left;
+}
+#icons .inner .wrap article .icon_wrap {
+  width: 140px;
+  height: 140px;
+  background: #eee;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  transition: 0.2s;
+  opacity: 0;
+}
+#icons .inner .wrap article .icon_wrap svg {
+  width: 60px;
+  height: auto;
+}
+#icons .inner .wrap article h2 {
+  font: bold 40px/1.3 "Rajdhani";
+  color: #444;
+  margin-bottom: 10px;
+  text-align: center;
+  letter-spacing: 2px;
+  transition: 1s;
+  opacity: 0;
+  transform: scale(0);
+}
+#icons .inner .wrap article p {
+  font: 16px/1.3 "Rajdhani";
+  color: #888;
+  text-align: center;
+  padding: 0 30px;
+  transition: 1.5s;
+  opacity: 0;
+  transform: scale(0);
+}
+#icons .inner .wrap article:nth-of-type(1) .icon_wrap svg path {
+  fill: transparent;
+  stroke: #222;
+  stroke-width: 20;
+  transform: scale(0.95);
+  stroke-dasharray: 1610;
+  stroke-dashoffset: 1610;
+  transition: 2s;
+}
+#icons .inner .wrap article:nth-of-type(2) .icon_wrap svg path {
+  fill: transparent;
+  stroke: #222;
+  stroke-width: 200;
+  transform: scale(0.95);
+  stroke-dasharray: 16900;
+  stroke-dashoffset: 16900;
+  transition: 2s;
+}
+#icons .inner .wrap article:nth-of-type(3) .icon_wrap svg path {
+  fill: transparent;
+  stroke: #222;
+  stroke-width: 200;
+  transform: scale(0.95);
+  stroke-dasharray: 7570;
+  stroke-dashoffset: 7570;
+  transition: 2s;
+}
+#icons .inner .wrap article:nth-of-type(4) .icon_wrap svg path {
+  fill: transparent;
+  stroke: #222;
+  stroke-width: 20;
+  transform: scale(0.95);
+  stroke-dasharray: 1480;
+  stroke-dashoffset: 1480;
+  transition: 2s;
+}
+#icons.on .inner .wrap article .icon_wrap {
+  opacity: 1;
+}
+#icons.on .inner .wrap article .icon_wrap svg path {
+  stroke-dashoffset: 0;
+}
+#icons.on .inner .wrap article h2 {
+  opacity: 1;
+  transform: scale(1);
+}
+#icons.on .inner .wrap article p {
+  opacity: 1;
+  transform: scale(1);
+}
+
 /* insta ----------------------------------------------------------- */
 #insta {
   width: 100%;
-  padding: 200px 0 100px;
+  padding: 100px 0;
 }
 #insta .inner {
   width: 1180px;
@@ -3740,6 +3847,7 @@ aside .btnClose:hover {
 }
 #insta .inner h1 {
   font: bold 26px/1 "Noto Serif Display";
+  color: #444;
   margin-bottom: 30px;
 }
 #insta .inner .wrap article {
@@ -4263,6 +4371,21 @@ aside .btnClose:hover {
     padding: 40px 20px 0;
   }
 
+  /* icons ----------------------------------------------------------- */
+  #icons {
+    padding: 80px 30px;
+  }
+  #icons .inner {
+    width: 100%;
+  }
+  #icons .inner .wrap article {
+    width: 50%;
+    margin-bottom: 40px;
+  }
+  #icons .inner .wrap article:nth-of-type(3), #icons .inner .wrap article:nth-of-type(4) {
+    margin-bottom: 0;
+  }
+
   /* insta ----------------------------------------------------------- */
   #insta {
     padding: 80px 30px;
@@ -4460,6 +4583,14 @@ aside .btnClose:hover {
   }
   #main_tab .inner #tab dd a .txt p {
     font-size: 14px;
+  }
+
+  /* icons ----------------------------------------------------------- */
+  #icons .inner .wrap article {
+    width: 100%;
+  }
+  #icons .inner .wrap article:nth-of-type(3) {
+    margin-bottom: 40px;
   }
 
   /* insta ----------------------------------------------------------- */

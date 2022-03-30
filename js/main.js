@@ -212,7 +212,6 @@ function activationScroll(){
 }
 
 //팝업 ---------------------------------------------------------------//
-const body = document.querySelector("body");
 const popup = document.querySelector("#popup");
 const btnClose = popup.querySelector(".btnClose");
 const isCookie = document.cookie.indexOf("today=anymore");
@@ -220,7 +219,6 @@ let isOn;
 
 (isCookie == -1) ? isOn = "block" : isOn = "none";
 popup.style.display = isOn;
-body.style.overflow = "hidden";
 
 btnClose.addEventListener("click",e=>{
     e.preventDefault();
@@ -229,7 +227,6 @@ btnClose.addEventListener("click",e=>{
     if(isChecked) setCookie("today","anymore",1);
 
     popup.style.display = "none";
-    body.style.overflow = "auto";
 })
 
 function setCookie(name, value, due){
