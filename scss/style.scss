@@ -5,8 +5,7 @@ $mobile: 539px;
 
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Noto+Serif+Display&family=Rajdhani&family=Yeseva+One&display=swap');
 
-@import "reset.scss", "mixin.scss", "sub_layout.scss", "about.scss",
-	"notice.scss", "join.scss", "advertisement.scss", "shopping.scss", "review.scss";
+@import "reset.scss", "mixin.scss", "sub_layout.scss", "about.scss", "notice.scss", "join.scss", "advertisement.scss", "shopping.scss", "review.scss", "location.scss";
 
 /* header ----------------------------------------------------------- */
 #header {

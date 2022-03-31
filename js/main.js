@@ -132,7 +132,7 @@ const lis = document.querySelectorAll("#scrollBtn li");
 const lis_arr = Array.from(lis);
 let posArr = null;
 let enableClick = true;
-let base = -400;
+let base = -500;
 
 
 setPos();

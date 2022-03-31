@@ -2844,6 +2844,307 @@ aside .btnClose:hover {
     width: 100%;
   }
 }
+/* content ----------------------------------------------------------- */
+.location {
+  width: 100%;
+}
+.location .sub_visualTop {
+  width: 100%;
+  border-top: 1px solid #888;
+  border-bottom: 1px solid #888;
+  margin-bottom: 100px;
+}
+.location .sub_visualTop .inner {
+  width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px 0;
+}
+.location .sub_visualTop .inner h1 {
+  width: 28%;
+  font: normal 20px/1 "Rajdhani";
+  color: #222;
+  text-align: left;
+}
+.location .sub_visualTop .inner h1::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #444;
+  margin-bottom: 20px;
+}
+.location .sub_visualTop .inner h2 {
+  width: 70%;
+  font: 40px/1.5 "Noto Serif Display";
+  color: #222;
+}
+.location .sub_content {
+  width: 100%;
+  margin-bottom: 100px;
+}
+.location .sub_content .inner.locationTop {
+  width: 1180px;
+  min-height: auto;
+  margin: 0 auto;
+}
+.location .sub_content .inner.locationTop h2 {
+  font: 30px/1 "Yeseva One";
+  color: #444;
+  margin-bottom: 50px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.location .sub_content .inner.locationTop .wrap ul {
+  width: 100%;
+}
+.location .sub_content .inner.locationTop .wrap ul li {
+  width: 20%;
+  float: left;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.location .sub_content .inner.locationTop .wrap ul li a {
+  font: 14px/1.5 "Rajdhani";
+  color: #888;
+}
+.location .sub_content .inner.locationTop .wrap ul li:hover, .location .sub_content .inner.locationTop .wrap ul li.on {
+  border-top: 1px solid #444;
+}
+.location .sub_content .inner.locationTop .wrap ul li:hover a, .location .sub_content .inner.locationTop .wrap ul li.on a {
+  color: #222;
+}
+.location .sub_content #map {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 100px;
+  position: relative;
+}
+.location .sub_content #map > div > div > div:nth-of-type(1), .location .sub_content #map > div > div > div:nth-of-type(2) {
+  filter: grayscale(1);
+}
+.location .sub_content #map .customoverlay {
+  position: relative;
+  bottom: 40px;
+  border-radius: 6px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-bottom: 2px solid #ddd;
+  padding: 15px;
+}
+.location .sub_content #map .customoverlay:nth-of-type(n) {
+  border: 0;
+  box-shadow: 0px 1px 2px #888;
+}
+.location .sub_content #map .customoverlay h1 {
+  font: bold 14px/1 "Rajdhani";
+  color: #444;
+  margin-bottom: 10px;
+}
+.location .sub_content #map .customoverlay p {
+  font: 12px/1.4 "Rajdhani";
+  color: #888;
+  margin-bottom: 5px;
+}
+.location .sub_content #map .customoverlay span {
+  display: block;
+  font: 12px/1 "Rajdhani";
+  color: #888;
+}
+.location .sub_content #map .customoverlay::after {
+  content: "";
+  position: absolute;
+  margin-left: -12px;
+  left: 50%;
+  bottom: -12px;
+  width: 22px;
+  height: 12px;
+  background: url("https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png");
+}
+.location .sub_content .inner.locationBottom {
+  width: 1180px;
+  margin: 0 auto;
+}
+.location .sub_content .inner.locationBottom .wrap article {
+  float: left;
+}
+.location .sub_content .inner.locationBottom .wrap article > h1 {
+  font: bold 26px/1 "Noto Serif Display";
+  color: #444;
+  margin-bottom: 50px;
+}
+.location .sub_content .inner.locationBottom .wrap article:first-child {
+  width: 380px;
+  margin-right: 20px;
+  padding-right: 40px;
+}
+.location .sub_content .inner.locationBottom .wrap article:first-child > h2 {
+  font: bold 16px/1 "Rajdhani";
+  color: #444;
+  margin-bottom: 10px;
+  text-align: left;
+  letter-spacing: 0;
+}
+.location .sub_content .inner.locationBottom .wrap article:first-child > p {
+  font: 14px/1.3 "Rajdhani";
+  color: #888;
+  margin-bottom: 30px;
+}
+.location .sub_content .inner.locationBottom .wrap article:last-child {
+  width: 780px;
+}
+.location .sub_content .inner.locationBottom .wrap article:last-child > h1 {
+  padding-left: 20px;
+}
+.location .sub_content .inner.locationBottom .wrap article:last-child table {
+  width: 100%;
+  color: #444;
+  font: 16px/1 "Rajdhani";
+  text-align: left;
+}
+.location .sub_content .inner.locationBottom .wrap article:last-child table tr {
+  height: 30px;
+}
+.location .sub_content .inner.locationBottom .wrap article:last-child table tr:nth-of-type(1) th {
+  width: 50%;
+  padding: 0 20px;
+}
+.location .sub_content .inner.locationBottom .wrap article:last-child table tr:nth-of-type(2) td {
+  width: 50%;
+  padding: 0 20px;
+}
+.location .sub_content .inner.locationBottom .wrap article:last-child table tr:nth-of-type(2) td:nth-of-type(1) {
+  padding-right: 20px;
+}
+.location .sub_content .inner.locationBottom .wrap article:last-child table tr:nth-of-type(3) th {
+  width: 100%;
+  padding: 20px 20px 10px 20px;
+}
+.location .sub_content .inner.locationBottom .wrap article:last-child table tr:nth-of-type(4) td {
+  width: 100%;
+  padding: 0 20px;
+}
+.location .sub_content .inner.locationBottom .wrap article:last-child table tr:nth-of-type(5) th {
+  width: 100%;
+  padding: 20px 20px 10px 20px;
+  font-size: 0;
+}
+.location .sub_content .inner.locationBottom .wrap article:last-child table tr:nth-of-type(5) th input[type=submit], .location .sub_content .inner.locationBottom .wrap article:last-child table tr:nth-of-type(5) th input[type=reset] {
+  display: inline-block;
+  width: 49%;
+  height: 40px;
+  font: bold 14px/1 "Rajdhani";
+  color: #444;
+  letter-spacing: 2px;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+}
+.location .sub_content .inner.locationBottom .wrap article:last-child table tr:nth-of-type(5) th input[type=submit]:hover, .location .sub_content .inner.locationBottom .wrap article:last-child table tr:nth-of-type(5) th input[type=reset]:hover {
+  background-color: #444;
+  color: #ddd;
+}
+.location .sub_content .inner.locationBottom .wrap article:last-child table tr:nth-of-type(5) th input[type=submit] {
+  margin-left: 2%;
+}
+.location .sub_content .inner.locationBottom .wrap article:last-child table tr td input[type=text] {
+  width: 100%;
+  padding: 5px 10px 5px 0;
+  font: 14px/1.3 "Rajdhani";
+  color: #444;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  background: none;
+}
+.location .sub_content .inner.locationBottom .wrap article:last-child table tr td textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px 10px 10px 0;
+  resize: none;
+  font: 14px/1.3 "Rajdhani";
+  color: #444;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  background: none;
+}
+
+@media screen and (max-width: 1179px) {
+  /* content ----------------------------------------------------------- */
+  .location {
+    width: 100%;
+  }
+  .location .sub_visualTop {
+    margin-bottom: 50px;
+  }
+  .location .sub_visualTop .inner {
+    width: 100%;
+    padding: 30px;
+  }
+  .location .sub_visualTop .inner h2 {
+    font-size: 20px;
+  }
+  .location .sub_content .inner.locationTop {
+    width: 100%;
+    padding: 30px;
+  }
+  .location .sub_content #map {
+    margin-bottom: 50px;
+  }
+  .location .sub_content .inner.locationBottom {
+    width: 100%;
+  }
+  .location .sub_content .inner.locationBottom .wrap article:first-child {
+    width: 100%;
+    margin-right: 0;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+  .location .sub_content .inner.locationBottom .wrap article:last-child {
+    width: 100%;
+  }
+  .location .sub_content .inner.locationBottom .wrap article:last-child > h1 {
+    padding-left: 0;
+  }
+  .location .sub_content .inner.locationBottom .wrap article:last-child table tr:nth-of-type(1) th {
+    padding: 0;
+  }
+  .location .sub_content .inner.locationBottom .wrap article:last-child table tr:nth-of-type(2) td {
+    padding: 0;
+  }
+  .location .sub_content .inner.locationBottom .wrap article:last-child table tr:nth-of-type(3) th {
+    padding: 20px 0 10px 0;
+  }
+  .location .sub_content .inner.locationBottom .wrap article:last-child table tr:nth-of-type(4) td {
+    padding: 0;
+  }
+  .location .sub_content .inner.locationBottom .wrap article:last-child table tr:nth-of-type(5) th {
+    padding: 20px 0 10px 0;
+  }
+}
+@media screen and (max-width: 539px) {
+  /* content ----------------------------------------------------------- */
+  .location .sub_visualTop .inner h1 {
+    width: 100%;
+  }
+  .location .sub_visualTop .inner h2 {
+    display: none;
+  }
+  .location .sub_content .inner.locationTop h2 {
+    line-height: 1.2;
+  }
+  .location .sub_content .inner.locationTop .wrap ul li {
+    width: 50%;
+  }
+  .location .sub_content .inner.locationTop .wrap ul li:first-child {
+    width: 100%;
+  }
+}
 /* header ----------------------------------------------------------- */
 #header {
   width: 100%;

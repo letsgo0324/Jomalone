@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOCATION</title>
     <script src="https://kit.fontawesome.com/b9f8ab812c.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=606c3068c61474fb5541556b9010a0a2"></script>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/common.js"></script>
+    <script defer src="js/location.js"></script>
 
 </head>
 <body>
@@ -67,19 +69,71 @@
         </div>
     </header>
 
-    <section class="content">
+    <section class="content location">
         <div class="sub_visualTop">
             <div class="inner">
-                <h1>WHERE IS Jo MALONE LONDON?</h1>
-                <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h2>
+                <h1>WHERE IS JO MALONE LONDON?</h1>
+                <h2>Each Jo Malone London boutique is a harmonious and restful haven.</h2>
             </div>
         </div>
 
         <div class="sub_content">
-            <div class="inner">                
-                <h2>SUB TITLE</h2>
-                <p>Lorem ipsum dolor sit amet.</p>
-            </div> 
+            <div class="inner locationTop">                
+                <h2>LOCATION</h2>
+                <div class="wrap">
+                    <ul>
+                        <li class="on" data-index="1"><a href="#">OFFICE</a></li>
+                        <li data-index="2"><a href="#">SEOUL</a></li>
+                        <li data-index="3"><a href="#">GYEONGGI</a></li>
+                        <li data-index="4"><a href="#">INCHEON</a></li>
+                        <li data-index="5"><a href="#">BUSAN</a></li>
+                    </ul>
+                </div>                
+            </div>
+            <div id="map"></div> 
+            <div class="inner locationBottom">
+                <div class="wrap">
+                    <article>
+                        <h1>Contact Us</h1>
+                        <h2>ADDRESS</h2>
+                        <p>382, Gangnam-daero, Gangnam-gu, Seoul, Republic of Korea, 06232</p>
+                        <h2>TEL</h2>
+                        <p>02-6971-3228</p>
+                        <h2>E-MAIL</h2>
+                        <p>consumercare-kr@jomalone.com</p>
+                    </article>
+                    <article>
+                        <h1>Have a Question?</h1>
+                        <table>
+                            <caption class="hidden">LOCATION CONTACT FORM</caption>
+                            <tr>
+                               <th><label for="yourName">YOUR NAME</label></th>
+                               <th><label for="yourNumber">YOUR MOBILE</label></th> 
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="yourName" id="yourName" placeholder="Write your name"></td>
+                                <td><input type="text" name="yourNumber" id="yourNumber" placeholder="Write your mobile"></td>
+                            </tr>
+                            <tr>
+                                <th colspan="2">
+                                    <label for="message">MESSAGE</label>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Write your message"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="2">
+                                    <input type="reset" value="CANCLE">
+                                    <input type="submit" value="SEND">
+                                </th>
+                            </tr>
+                        </table>
+                    </article>
+                </div>
+            </div>
         </div>
     </section>
     <footer id="footer_sub">
