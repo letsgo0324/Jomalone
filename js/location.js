@@ -10,7 +10,7 @@ var markerOptions = [
     {
         title : "OFFICE", 
         latlng : new kakao.maps.LatLng(37.49707613625719, 127.02871798930177), 
-        imgSrc : "../img/marker_img.png", 
+        imgSrc : "img/marker_img.png", 
         imgSize : new kakao.maps.Size(50,50), 
         imgPos : {offset : new kakao.maps.Point(25,25)}, 
         content : `
@@ -23,7 +23,7 @@ var markerOptions = [
     {
         title : "SEOUL", 
         latlng : new kakao.maps.LatLng(37.52842775291810, 127.04013376228899), 
-        imgSrc : "../img/marker_img.png", 
+        imgSrc : "img/marker_img.png", 
         imgSize : new kakao.maps.Size(50,50), 
         imgPos : {offset : new kakao.maps.Point(25,25)}, 
         content : `
@@ -36,7 +36,7 @@ var markerOptions = [
     {
         title : "GYEONGGI", 
         latlng : new kakao.maps.LatLng(37.39278593076433, 127.11203338020852), 
-        imgSrc : "../img/marker_img.png", 
+        imgSrc : "img/marker_img.png", 
         imgSize : new kakao.maps.Size(50,50), 
         imgPos : {offset : new kakao.maps.Point(25,25)}, 
         content : `
@@ -49,7 +49,7 @@ var markerOptions = [
     {
         title : "INCHEON", 
         latlng : new kakao.maps.LatLng(37.44240780756811, 126.70150605188941), 
-        imgSrc : "../img/marker_img.png", 
+        imgSrc : "img/marker_img.png", 
         imgSize : new kakao.maps.Size(50,50), 
         imgPos : {offset : new kakao.maps.Point(25,25)}, 
         content : `
@@ -62,7 +62,7 @@ var markerOptions = [
     {
         title : "BUSAN", 
         latlng : new kakao.maps.LatLng(35.16864668129417, 129.12904327861486), 
-        imgSrc : "../img/marker_img.png", 
+        imgSrc : "img/marker_img.png", 
         imgSize : new kakao.maps.Size(50,50), 
         imgPos : {offset : new kakao.maps.Point(25,25)}, 
         content : `

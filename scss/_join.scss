@@ -61,7 +61,7 @@
 					width: 220px;
 					margin-right: 20px;
 					height: 1244px;
-					background: #f6f6f6;
+					background: #ddd;
 					float: left;
 					position: relative;
 
@@ -92,6 +92,7 @@
 						object-fit: cover;
 						object-position: left top;
 						opacity: 0.1;
+						filter: grayscale(1);
 					}
 				}
 				fieldset {
@@ -111,7 +112,7 @@
 						padding: 10px;
 						font: 13px/1.3 "Rajdhani";
 						color: #888;
-						background: #ddd;
+						background: #eee;
 						border: 1px solid #ddd;
 						resize: none;
 					}
