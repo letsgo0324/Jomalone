@@ -7,9 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JoMalone</title>
     <script src="https://kit.fontawesome.com/b9f8ab812c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
-    <script defer src="js/anime.js"></script>
-    <script defer src="js/common.js"></script>
+    <script src="js/anime.js"></script>
+    <script defer src="js/common_main.js"></script>
     <script defer src="js/main.js"></script>
 </head>
 
@@ -71,111 +73,92 @@
     </header>
 
     <section id="visual">
-        <div class="visual_wrap">
-
-            <div class="visual_slider1_wrap">
-                <div class="visual_sliders1">
-                    <aritcle class="visual_slide1" data-index="1">
-                        <div class="visual_img"></div>
-                    </aritcle>
-                    <aritcle class="visual_slide1" data-index="2">
-                        <div class="visual_img"></div>
-                    </aritcle>
-                    <aritcle class="visual_slide1" data-index="3">
-                        <div class="visual_img"></div>
-                    </aritcle>
-                    <aritcle class="visual_slide1" data-index="4">
-                        <div class="visual_img"></div>
-                    </aritcle>
-                    <aritcle class="visual_slide1" data-index="5">
-                        <div class="visual_img"></div>
-                    </aritcle>
-                </div>
-            </div>
-
-            <div class="visual_slider2_wrap">
-                <div class="visual_sliders2">
-                    <article class="visual_slide2" data-index="1">
+        <div class="swiper mainSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box1">
+                    <div class="visual_txt_inner">
                         <div class="visual_txt">
                             <h1>Diffusers</h1>
                             <h2>No Place Like Home</h2>
-                            <h3>Introducing Townhouse Diffusers</h3>
-                            <p>When the time came to create a new collection of candles specially for the home, we
-                                didn’t have to look much further than our headquarters, a Georgian townhouse in the
-                                heart of Marylebone.</p>
+                            <p>When the time came to create a new collection of candles specially for the home, we didn’t have to look much further than our headquarters, a Georgian townhouse in the heart of Marylebone.</p>
                             <a href="#">VIEW MORE<span></span></a>
                         </div>
-                    </article>
-                    <article class="visual_slide2" data-index="2">
+                    </div>
+                    <div class="visual_img">
+                            <img src="img/visual_img1.jpg" alt="visual image">
+                    </div>
+                </div>
+                <div class="swiper-slide box2">
+                    <div class="visual_txt_inner">
                         <div class="visual_txt">
                             <h1>Notes on a Rose</h1>
                             <h2>The Floral Queen</h2>
-                            <h3>Through loves and losses, triumphs and disasters, the rose remains at the heart of it
-                                all.</h3>
                             <p>A rose by any other name would smell as sweet,’ the love-sick Juliet once ruminated and
                                 she was quite right. This sumptuous flower has reigned supreme over the hearts and minds
                                 of poets, writers and artists since time immemorial.</p>
                             <a href="#">VIEW MORE<span></span></a>
                         </div>
-
-                    </article>
-                    <article class="visual_slide2" data-index="3">
+                    </div>
+                    <div class="visual_img">
+                            <img src="img/visual_img2.jpg" alt="visual image">
+                    </div>
+                </div>
+                <div class="swiper-slide box3">
+                    <div class="visual_txt_inner">
                         <div class="visual_txt">
                             <h1>JUST ARRIVED</h1>
                             <h2>Silk Blossom Cologne</h2>
-                            <h3>Nature’s blooms at their most tempting.</h3>
                             <p>The joyful scent of silk tree blossom, irresistible to hummingbirds and butterflies.
                                 Apricot-fresh with a touch of spice. Intensified by clouds of powdery soft heliotrope,
                                 nestling on a bed of moss.</p>
                             <a href="#">VIEW MORE<span></span></a>
                         </div>
-
-                    </article>
-                    <article class="visual_slide2" data-index="4">
+                    </div>
+                    <div class="visual_img">
+                            <img src="img/visual_img3.jpg" alt="visual image">
+                    </div>
+                </div>
+                <div class="swiper-slide box4">
+                    <div class="visual_txt_inner">
                         <div class="visual_txt">
                             <h1>Pear of Mystery</h1>
                             <h2>The myths and legends</h2>
-                            <h3>‘Rather romantically, pears are actually a member of the rose family’</h3>
                             <p>Sweet, succulent and hanging heavy on the bough, pears are ready to harvest towards the
                                 end of summer and into autumn, when they have burgeoned in the late heat of the
                                 afternoon. Unlike most fruit, pears ripen best off the tree.</p>
                             <a href="#">VIEW MORE<span></span></a>
 
                         </div>
-                    </article>
-                    <article class="visual_slide2" data-index="5">
+                    </div>
+                    <div class="visual_img">
+                            <img src="img/visual_img4.jpg" alt="visual image">
+                    </div>
+                </div>
+                <div class="swiper-slide box5">
+                    <div class="visual_txt_inner">
                         <div class="visual_txt">
                             <h1>Love isn’t cancelled</h1>
                             <h2>Scents to say I do</h2>
-                            <h3>The big day, while no longer ‘big’ remains a special one, with memories to last a
-                                lifetime.</h3>
                             <p>While almost every aspect of life has been turned upside down by lockdown, fortunately,
                                 there’s one thing that hasn’t changed: love has not been cancelled.</p>
                             <a href="#">VIEW MORE<span></span></a>
                         </div>
-
-                    </article>
-
+                    </div>
+                    <div class="visual_img">
+                            <img src="img/visual_img5.jpg" alt="visual image">
+                    </div>
                 </div>
-            </div>
-
-            
+            </div>  
+        
+            <div class="swiper_btn_wrap">
+                <div class="swiper_btn">
+                    <div class="swiper-pagination"></div>
+                    
+                     <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>    
+                </div> 
+            </div>    
         </div>
-        <div class="pagenation_main">
-            <div class="inner">
-                <div class="wrap">
-                    <ul class="btnCircle">
-                        <li class="prevBtn on">
-                            <a href="#"><i class="fas fa-arrow-left"></i></a>
-                        </li>
-                        <li class="nextBtn">
-                            <a href="#"><i class="fas fa-arrow-right"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
     </section>
 
     <div id="main_search">
@@ -512,12 +495,12 @@
     </div>
 
     <ul id="scrollBtn">
-        <li class="on"></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li class="on">01</li>
+        <li>02</li>
+        <li>03</li>
+        <li>04</li>
+        <li>05</li>
+        <li>06</li>
     </ul>
 
     <aside id="popup">
@@ -591,6 +574,25 @@
             <p>Copyright &copy; 2022 Jo Malone London ALL Right Reserved</p>
         </div>
     </footer>
+
+    <script>
+        var swiper = new Swiper(".mainSwiper", {
+            direction: "horizontal",
+            slidesPerView: "auto",
+            centeredSlides: true,
+            loop: true,
+            speed: 3000,
+            grabCursor: true,
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },             
+        });
+    </script>
 </body>
 
 </html>

@@ -3,8 +3,7 @@ const btnCallWeb = document.querySelector(".btnCall_wrap.Web .btnCall");
 const btnCallMo = document.querySelector(".btnCall_wrap.Mo .btnCall"); 
 const menuWeb = document.querySelector(".menuWeb_wrap"); 
 const menuMo = document.querySelector(".menuMo_wrap"); 
-
-openHd();
+const menuWebLi = menuWeb.querySelector("#gnbWeb");
 
 btnCallWeb.onclick = function(e){
     e.preventDefault(); 
@@ -17,10 +16,4 @@ btnCallMo.onclick = function(e){
 
     btnCallMo.classList.toggle("on"); 
     menuMo.classList.toggle("on"); 
-}
-
-function openHd(){
-    btnCallWeb.classList.add("on");
-    menuWeb.classList.add("on");
-    menuMo.classList.remove("on");
 }
