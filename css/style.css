@@ -3860,7 +3860,7 @@ aside .btnClose:hover {
 /* txt_box ----------------------------------------------------------- */
 #txt_box {
   width: 100%;
-  padding: 200px 0;
+  padding: 200px 0 100px 0;
 }
 #txt_box .inner {
   width: 1180px;
@@ -3923,6 +3923,138 @@ aside .btnClose:hover {
 }
 #txt_box .inner .wrap article:nth-of-type(5) p:last-child {
   margin-bottom: 0;
+}
+
+/* rolling ----------------------------------------------------------- */
+#rolling {
+  width: 100%;
+  padding: 100px 0 200px 0;
+  overflow: hidden;
+  border-top: 1px solid #eee;
+}
+#rolling .inner {
+  width: 1180px;
+  margin: 0 auto;
+}
+#rolling .inner h1 {
+  font: bold 26px/1.4 "Noto Serif Display";
+  color: #444;
+  margin-bottom: 30px;
+}
+#rolling .inner .wrap {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+#rolling .inner .wrap #rolling_list {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#rolling .inner .wrap #rolling_list li {
+  width: 280px;
+  height: 100%;
+  float: left;
+  border-right: 1px solid #eee;
+  font-size: 0;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+#rolling .inner .wrap #rolling_list li h2 {
+  width: 100%;
+  font: bold 20px/1.3 "Noto Serif Display";
+  color: #666;
+  text-align: center;
+  transition: 0.5s;
+}
+#rolling .inner .wrap #rolling_list li a {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto;
+  display: block;
+}
+#rolling .inner .wrap #rolling_list li a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  filter: grayscale(1);
+  transition: 0.5s;
+}
+#rolling .inner .wrap #rolling_list li p {
+  font: 14px/1.2 "Rajdhani";
+  color: #bbb;
+  text-align: center;
+}
+#rolling .inner .wrap #rolling_list li span {
+  display: block;
+  width: 80px;
+  height: 30px;
+  border: 1px solid #bbb;
+  font: 14px/30px "Rajdhani";
+  color: #888;
+  text-align: center;
+  cursor: pointer;
+}
+#rolling .inner .wrap #rolling_list li:hover {
+  background: #eee;
+}
+#rolling .inner .wrap #rolling_list li:hover a img {
+  filter: grayscale(0);
+}
+#rolling .inner .wrap #rolling_list li:hover span {
+  color: #eee;
+  border: 1px solid #444;
+  background: #444;
+}
+#rolling .inner .wrap .rolling_prev {
+  position: absolute;
+  left: -80px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: 0.5s;
+  width: 30px;
+  height: 50px;
+  font-size: 25px;
+  line-height: 50px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #eee;
+  border-left: 0;
+  color: #888;
+}
+#rolling .inner .wrap .rolling_next {
+  position: absolute;
+  right: -80px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: 0.5s;
+  width: 30px;
+  height: 50px;
+  font-size: 25px;
+  line-height: 50px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #eee;
+  border-right: 0;
+  color: #888;
+}
+#rolling .inner .wrap:hover .rolling_prev {
+  left: 0;
+  opacity: 1;
+}
+#rolling .inner .wrap:hover .rolling_next {
+  right: 0;
+  opacity: 1;
 }
 
 /* banner ----------------------------------------------------------- */
@@ -4072,7 +4204,7 @@ aside .btnClose:hover {
 #icons {
   width: 100%;
   padding: 100px 0;
-  border-bottom: 1px solid #bbb;
+  border-bottom: 1px solid #eee;
 }
 #icons .inner {
   width: 1180px;
@@ -4707,6 +4839,18 @@ aside .btnClose:hover {
     display: none;
   }
 
+  /* rolling ----------------------------------------------------------- */
+  #rolling {
+    padding: 100px 30px;
+  }
+  #rolling .inner {
+    width: 100%;
+  }
+  #rolling .inner h1 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
   /* banner ----------------------------------------------------------- */
   #banner {
     padding: 100px 30px;
@@ -4737,6 +4881,10 @@ aside .btnClose:hover {
   }
   #icons .inner {
     width: 100%;
+  }
+  #icons .inner h1 {
+    text-align: center;
+    margin-bottom: 40px;
   }
   #icons .inner .wrap article {
     width: 50%;

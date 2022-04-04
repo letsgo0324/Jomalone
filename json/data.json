@@ -1,0 +1,40 @@
+{
+    "imgSrc": [
+        {
+            "pic": "img/rolling_pic1.png",
+            "thumb": "img/rolling_s1.jpg",
+            "title": "Citrus",
+            "detail": "Refreshing, energising and enlivening. The crisp, zesty character of a citrus scent has an instantly uplifting."
+        },
+        {
+            "pic": "img/rolling_pic2.png",
+            "thumb": "img/rolling_s2.jpg",
+            "title": "Fruity",
+            "detail": "Juicy, luscious and enticing. Fruity fragrances burst with a mouth-watering juiciness and delectable."
+        },
+        {
+            "pic": "img/rolling_pic3.png",
+            "thumb": "img/rolling_s3.jpg",
+            "title": "Light Floral",
+            "detail": "Delicate, diaphanous and exquisite. Gathering together armfuls of the world’s most enchanting flowers."
+        },
+        {
+            "pic": "img/rolling_pic4.png",
+            "thumb": "img/rolling_s4.jpg",
+            "title": "Floral",
+            "detail": "Heady, exotic and intoxicating. Rich, full-bodied florals are the essence of femininity."
+        },
+        {
+            "pic": "img/rolling_pic5.png",
+            "thumb": "img/rolling_s5.jpg",
+            "title": "Spicy",
+            "detail": "Aromatic and fresh. From warm and sensual spices, to cool and vibrant. Spicy fragrances draw you in."
+        },
+        {
+            "pic": "img/rolling_pic6.png",
+            "thumb": "img/rolling_s6.jpg",
+            "title": "Woody",
+            "detail": "Earthy, aromatic and grounding. Woody scents have intriguing, individualistic characters."
+        }
+    ]
+}

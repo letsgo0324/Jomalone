@@ -1,3 +1,133 @@
+// 롤링배너 --------------------------------------------------------------//
+const rolling = document.querySelector("#rolling");
+const rollingList = rolling.querySelector("#rolling_list");
+const rollingPrev = rolling.querySelector(".rolling_prev");
+const rollingNext = rolling.querySelector(".rolling_next");
+let num = 0;
+let wid = 0;
+let timer = null;
+let rollingEnableClick = true;
+
+createList("json/data.json");
+
+timer = setInterval(move, 20);
+
+rollingList.addEventListener("mouseenter", ()=>{
+    clearInterval(timer);
+})
+rollingList.addEventListener("mouseleave", ()=>{
+    timer = setInterval(move, 20);
+})
+
+rollingPrev.addEventListener("click",e=>{
+	e.preventDefault();
+
+    if(rollingEnableClick){
+	    rollingPrevEl();
+        rollingEnableClick = false;
+    }
+})
+rollingNext.addEventListener("click",(e)=>{
+	e.preventDefault();
+
+    if(rollingEnableClick){
+        rollingNextEl();
+        rollingEnableClick = false;
+    }
+})
+
+rollingPrev.addEventListener("mouseenter",()=>{
+    clearInterval(timer);
+})
+rollingPrev.addEventListener("mouseleave", ()=>{
+    timer = setInterval(move, 20);
+})
+rollingNext.addEventListener("mouseenter",()=>{
+    clearInterval(timer);
+})
+rollingNext.addEventListener("mouseleave", ()=>{
+    timer = setInterval(move, 20);
+})
+
+function createList(url){
+    fetch(url)
+    .then(data=>{
+        return data.json();
+    })
+    .catch(err=>{
+        console.log("데이터 호출에 실패하였습니다");
+    })
+    .then(item=>{
+        let imgSrc = item.imgSrc;
+        let tags = "";
+
+        imgSrc.forEach(item=>{
+            tags += `
+                    <li>
+                        <h2>${item.title}</h2>
+                        <a href="#">
+                            <img src="${item.thumb}">
+                        </a>
+                        <p>${item.detail}</p>
+                        <span href="#">MORE</span>
+                    </li>
+            `;
+        })
+
+        rollingList.innerHTML = tags;
+        initList();
+    })
+}
+
+function initList(){
+    const list_li = rollingList.querySelectorAll("li");
+    const len = list_li.length;
+    wid = parseInt(getComputedStyle(list_li[0]).width);
+
+    rollingList.style.width = len * wid + "px";
+    rollingList.style.marginLeft = -wid + "px";
+    rollingList.prepend(rollingList.lastElementChild);
+}
+
+function move(){
+    if(num < -wid * 2){
+        rollingList.append(rollingList.firstElementChild);
+        num = -wid;
+    }else{
+        num -= 2;
+    }
+    
+    rollingList.style.marginLeft = num + "px";
+}
+
+function rollingPrevEl(){
+    new Anim(rollingList, {
+        prop: "margin-left",
+        value: 0,
+        duration: 500,
+        callback: ()=>{
+            rollingList.prepend(rollingList.lastElementChild);
+            rollingList.style.marginLeft = -wid + "px";
+            num = -wid;
+            rollingEnableClick = true;
+        }
+    })
+}
+function rollingNextEl(){
+    new Anim(rollingList, {
+        prop: "margin-left",
+        value: -wid *2,
+        duration: 500,
+        callback: ()=>{
+            rollingList.append(rollingList.firstElementChild);
+            rollingList.style.marginLeft = -wid + "px";
+            num = -wid;
+            rollingEnableClick = true;
+        }
+    })
+}
+
+
 //탭 메뉴 ---------------------------------------------------------------//
 const tab = document.querySelector("#tab");
 const dts = tab.querySelectorAll("dt");
