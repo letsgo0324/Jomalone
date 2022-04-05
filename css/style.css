@@ -33,6 +33,23 @@ fieldset {
   clear: both;
 }
 
+/* skipNavi ----------------------------------------------------------- */
+#skipNavi li a {
+  display: block;
+  width: 200px;
+  height: 60px;
+  position: fixed;
+  top: -60px;
+  right: 0;
+  font: bold 16px/60px "Rajdhani";
+  color: #fff;
+  text-align: center;
+  background: #444;
+}
+#skipNavi li a.on {
+  top: 0;
+}
+
 /* header_sub ----------------------------------------------------------- */
 #header_sub {
   width: 100%;
@@ -133,68 +150,87 @@ fieldset {
   transform: translateX(100%);
   opacity: 0;
 }
+#header_sub > .inner .menuWeb_wrap.on .menuWeb {
+  opacity: 1;
+  width: 36%;
+  height: 300px;
+}
 #header_sub > .inner .menuWeb_wrap.on .menuWeb #gnbWeb li {
   opacity: 1;
-  transform: translateY(0);
+  width: 100%;
+}
+#header_sub > .inner .menuWeb_wrap.on .menuWeb #gnbWeb li .gnbWebSub {
+  opacity: 1;
+  border-left: 1px solid #666;
 }
 #header_sub > .inner .menuWeb_wrap .menuWeb {
-  width: 50%;
-  height: 100%;
+  width: 0;
+  height: 0;
+  padding: 30px;
   position: absolute;
-  top: 0;
-  left: 220px;
+  top: 60px;
+  left: 0;
+  background: #444;
   z-index: 8;
+  opacity: 0;
+  transition: 0.5s;
 }
 #header_sub > .inner .menuWeb_wrap .menuWeb #gnbWeb {
-  position: absolute;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  position: relative;
 }
 #header_sub > .inner .menuWeb_wrap .menuWeb #gnbWeb li {
+  width: 100%;
   transition-duration: 0.5s;
   opacity: 0;
-  transform: translateY(5px);
-}
-#header_sub > .inner .menuWeb_wrap .menuWeb #gnbWeb li:nth-of-type(1) {
-  transition-delay: 0.04s;
-}
-#header_sub > .inner .menuWeb_wrap .menuWeb #gnbWeb li:nth-of-type(2) {
-  transition-delay: 0.08s;
-}
-#header_sub > .inner .menuWeb_wrap .menuWeb #gnbWeb li:nth-of-type(3) {
-  transition-delay: 0.12s;
-}
-#header_sub > .inner .menuWeb_wrap .menuWeb #gnbWeb li:nth-of-type(4) {
-  transition-delay: 0.16s;
-}
-#header_sub > .inner .menuWeb_wrap .menuWeb #gnbWeb li:nth-of-type(5) {
-  transition-delay: 0.2s;
-}
-#header_sub > .inner .menuWeb_wrap .menuWeb #gnbWeb li:nth-of-type(6) {
-  transition-delay: 0.24s;
-}
-#header_sub > .inner .menuWeb_wrap .menuWeb #gnbWeb li:nth-of-type(7) {
-  transition-delay: 0.28s;
 }
 #header_sub > .inner .menuWeb_wrap .menuWeb #gnbWeb li a {
   display: block;
-  width: 100%;
-  font: bold 15px/60px "Rajdhani";
-  color: #444;
+  width: 50%;
+  height: 30px;
+  font: bold 15px/30px "Rajdhani";
+  color: #fff;
   letter-spacing: 1.5px;
   transition: all 0.4s;
 }
 #header_sub > .inner .menuWeb_wrap .menuWeb #gnbWeb li a:hover {
-  color: #ddd;
+  color: #bbb;
+}
+#header_sub > .inner .menuWeb_wrap .menuWeb #gnbWeb li .gnbWebSub {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  display: none;
+  opacity: 0;
+  transition: 0.5s;
+  border-left: 1px solid transparent;
+}
+#header_sub > .inner .menuWeb_wrap .menuWeb #gnbWeb li .gnbWebSub ul {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#header_sub > .inner .menuWeb_wrap .menuWeb #gnbWeb li .gnbWebSub ul li a {
+  font: normal 14px/30px "Rajdhani";
+  width: 100%;
+  text-align: left;
+  padding-left: 20px;
 }
 #header_sub > .inner .menuMo_wrap {
   display: none;
 }
 #header_sub > .inner .menuMo_wrap.on .menuMo {
   left: 0;
+}
+#header_sub > .inner .menuMo_wrap.on .menuMo #gnbMo li .gnbMoSub {
+  opacity: 1;
 }
 #header_sub > .inner .menuMo_wrap .menuMo {
   width: 100%;
@@ -210,12 +246,13 @@ fieldset {
 #header_sub > .inner .menuMo_wrap .menuMo h1 {
   margin-top: 30px;
   margin-bottom: 30px;
+  text-align: center;
 }
 #header_sub > .inner .menuMo_wrap .menuMo h1 a img {
   max-width: 200px;
   height: auto;
 }
-#header_sub > .inner .menuMo_wrap .menuMo #gnbMo li a {
+#header_sub > .inner .menuMo_wrap .menuMo #gnbMo > li > a {
   display: block;
   width: 100%;
   padding: 20px 0;
@@ -223,8 +260,55 @@ fieldset {
   color: #eee;
   letter-spacing: 1.5px;
   transition: all 0.4s;
+  text-align: center;
 }
-#header_sub > .inner .menuMo_wrap .menuMo #gnbMo li a:hover {
+#header_sub > .inner .menuMo_wrap .menuMo #gnbMo > li > a:hover {
+  color: #888;
+}
+#header_sub > .inner .menuMo_wrap .menuMo #gnbMo > li:nth-of-type(1) .gnbMoSub ul li, #header_sub > .inner .menuMo_wrap .menuMo #gnbMo > li:nth-of-type(3) .gnbMoSub ul li, #header_sub > .inner .menuMo_wrap .menuMo #gnbMo > li:nth-of-type(4) .gnbMoSub ul li {
+  width: 50%;
+  border-right: 1px solid #555;
+}
+#header_sub > .inner .menuMo_wrap .menuMo #gnbMo > li:nth-of-type(1) .gnbMoSub ul li:nth-of-type(2), #header_sub > .inner .menuMo_wrap .menuMo #gnbMo > li:nth-of-type(1) .gnbMoSub ul li:nth-of-type(4), #header_sub > .inner .menuMo_wrap .menuMo #gnbMo > li:nth-of-type(3) .gnbMoSub ul li:nth-of-type(2), #header_sub > .inner .menuMo_wrap .menuMo #gnbMo > li:nth-of-type(4) .gnbMoSub ul li:nth-of-type(2) {
+  border-right: 0;
+}
+#header_sub > .inner .menuMo_wrap .menuMo #gnbMo > li .gnbMoSub {
+  width: 100%;
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #555;
+  padding: 5px;
+  opacity: 0;
+  display: none;
+}
+#header_sub > .inner .menuMo_wrap .menuMo #gnbMo > li .gnbMoSub ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#header_sub > .inner .menuMo_wrap .menuMo #gnbMo > li .gnbMoSub ul li a {
+  font: normal 14px/30px "Rajdhani";
+  padding: 0;
+  text-align: center;
+  display: block;
+  width: 100%;
+  color: #eee;
+  letter-spacing: 1.5px;
+  transition: all 0.4s;
+  position: relative;
+}
+#header_sub > .inner .menuMo_wrap .menuMo #gnbMo > li .gnbMoSub ul li a::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 10px;
+  background: transparent;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  line-height: 30px;
+}
+#header_sub > .inner .menuMo_wrap .menuMo #gnbMo > li .gnbMoSub ul li a:hover {
   color: #888;
 }
 
@@ -492,14 +576,6 @@ fieldset {
   }
   #footer_sub .inner > p {
     text-align: left;
-  }
-}
-@media screen and (max-width: 769px) {
-  .gallery {
-    width: 100%;
-  }
-  .gallery .sub_content .inner .wrap .gallery_wrap .item {
-    width: 50%;
   }
 }
 @media screen and (max-width: 539px) {
@@ -3146,6 +3222,23 @@ aside .btnClose:hover {
     width: 100%;
   }
 }
+/* skipNavi ----------------------------------------------------------- */
+#skipNavi li a {
+  display: block;
+  width: 200px;
+  height: 60px;
+  position: fixed;
+  top: -60px;
+  right: 0;
+  font: bold 16px/60px "Rajdhani";
+  color: #fff;
+  text-align: center;
+  background: #444;
+}
+#skipNavi li a.on {
+  top: 0;
+}
+
 /* header ----------------------------------------------------------- */
 #header {
   width: 100%;
@@ -3246,68 +3339,87 @@ aside .btnClose:hover {
   transform: translateX(100%);
   opacity: 0;
 }
+#header > .inner .menuWeb_wrap.on .menuWeb {
+  opacity: 1;
+  width: 36%;
+  height: 300px;
+}
 #header > .inner .menuWeb_wrap.on .menuWeb #gnbWeb li {
   opacity: 1;
-  transform: translateY(0);
+  width: 100%;
+}
+#header > .inner .menuWeb_wrap.on .menuWeb #gnbWeb li .gnbWebSub {
+  opacity: 1;
+  border-left: 1px solid #666;
 }
 #header > .inner .menuWeb_wrap .menuWeb {
-  width: 50%;
-  height: 100%;
+  width: 0;
+  height: 0;
+  padding: 30px;
   position: absolute;
-  top: 0;
-  left: 220px;
+  top: 60px;
+  left: 0;
+  background: #444;
   z-index: 8;
+  opacity: 0;
+  transition: 0.5s;
 }
 #header > .inner .menuWeb_wrap .menuWeb #gnbWeb {
-  position: absolute;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  position: relative;
 }
 #header > .inner .menuWeb_wrap .menuWeb #gnbWeb li {
+  width: 100%;
   transition-duration: 0.5s;
   opacity: 0;
-  transform: translateY(5px);
-}
-#header > .inner .menuWeb_wrap .menuWeb #gnbWeb li:nth-of-type(1) {
-  transition-delay: 0.04s;
-}
-#header > .inner .menuWeb_wrap .menuWeb #gnbWeb li:nth-of-type(2) {
-  transition-delay: 0.08s;
-}
-#header > .inner .menuWeb_wrap .menuWeb #gnbWeb li:nth-of-type(3) {
-  transition-delay: 0.12s;
-}
-#header > .inner .menuWeb_wrap .menuWeb #gnbWeb li:nth-of-type(4) {
-  transition-delay: 0.16s;
-}
-#header > .inner .menuWeb_wrap .menuWeb #gnbWeb li:nth-of-type(5) {
-  transition-delay: 0.2s;
-}
-#header > .inner .menuWeb_wrap .menuWeb #gnbWeb li:nth-of-type(6) {
-  transition-delay: 0.24s;
-}
-#header > .inner .menuWeb_wrap .menuWeb #gnbWeb li:nth-of-type(7) {
-  transition-delay: 0.28s;
 }
 #header > .inner .menuWeb_wrap .menuWeb #gnbWeb li a {
   display: block;
-  width: 100%;
-  font: bold 15px/60px "Rajdhani";
-  color: #444;
+  width: 50%;
+  height: 30px;
+  font: bold 15px/30px "Rajdhani";
+  color: #fff;
   letter-spacing: 1.5px;
   transition: all 0.4s;
 }
 #header > .inner .menuWeb_wrap .menuWeb #gnbWeb li a:hover {
-  color: #ddd;
+  color: #bbb;
+}
+#header > .inner .menuWeb_wrap .menuWeb #gnbWeb li .gnbWebSub {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  display: none;
+  opacity: 0;
+  transition: 0.5s;
+  border-left: 1px solid transparent;
+}
+#header > .inner .menuWeb_wrap .menuWeb #gnbWeb li .gnbWebSub ul {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#header > .inner .menuWeb_wrap .menuWeb #gnbWeb li .gnbWebSub ul li a {
+  font: normal 14px/30px "Rajdhani";
+  width: 100%;
+  text-align: left;
+  padding-left: 20px;
 }
 #header > .inner .menuMo_wrap {
   display: none;
 }
 #header > .inner .menuMo_wrap.on .menuMo {
   left: 0;
+}
+#header > .inner .menuMo_wrap.on .menuMo #gnbMo li .gnbMoSub {
+  opacity: 1;
 }
 #header > .inner .menuMo_wrap .menuMo {
   width: 100%;
@@ -3323,12 +3435,13 @@ aside .btnClose:hover {
 #header > .inner .menuMo_wrap .menuMo h1 {
   margin-top: 30px;
   margin-bottom: 30px;
+  text-align: center;
 }
 #header > .inner .menuMo_wrap .menuMo h1 a img {
   max-width: 200px;
   height: auto;
 }
-#header > .inner .menuMo_wrap .menuMo #gnbMo li a {
+#header > .inner .menuMo_wrap .menuMo #gnbMo > li > a {
   display: block;
   width: 100%;
   padding: 20px 0;
@@ -3336,8 +3449,55 @@ aside .btnClose:hover {
   color: #eee;
   letter-spacing: 1.5px;
   transition: all 0.4s;
+  text-align: center;
 }
-#header > .inner .menuMo_wrap .menuMo #gnbMo li a:hover {
+#header > .inner .menuMo_wrap .menuMo #gnbMo > li > a:hover {
+  color: #888;
+}
+#header > .inner .menuMo_wrap .menuMo #gnbMo > li:nth-of-type(1) .gnbMoSub ul li, #header > .inner .menuMo_wrap .menuMo #gnbMo > li:nth-of-type(3) .gnbMoSub ul li, #header > .inner .menuMo_wrap .menuMo #gnbMo > li:nth-of-type(4) .gnbMoSub ul li {
+  width: 50%;
+  border-right: 1px solid #555;
+}
+#header > .inner .menuMo_wrap .menuMo #gnbMo > li:nth-of-type(1) .gnbMoSub ul li:nth-of-type(2), #header > .inner .menuMo_wrap .menuMo #gnbMo > li:nth-of-type(1) .gnbMoSub ul li:nth-of-type(4), #header > .inner .menuMo_wrap .menuMo #gnbMo > li:nth-of-type(3) .gnbMoSub ul li:nth-of-type(2), #header > .inner .menuMo_wrap .menuMo #gnbMo > li:nth-of-type(4) .gnbMoSub ul li:nth-of-type(2) {
+  border-right: 0;
+}
+#header > .inner .menuMo_wrap .menuMo #gnbMo > li .gnbMoSub {
+  width: 100%;
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #555;
+  padding: 5px;
+  opacity: 0;
+  display: none;
+}
+#header > .inner .menuMo_wrap .menuMo #gnbMo > li .gnbMoSub ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#header > .inner .menuMo_wrap .menuMo #gnbMo > li .gnbMoSub ul li a {
+  font: normal 14px/30px "Rajdhani";
+  padding: 0;
+  text-align: center;
+  display: block;
+  width: 100%;
+  color: #eee;
+  letter-spacing: 1.5px;
+  transition: all 0.4s;
+  position: relative;
+}
+#header > .inner .menuMo_wrap .menuMo #gnbMo > li .gnbMoSub ul li a::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 10px;
+  background: transparent;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  line-height: 30px;
+}
+#header > .inner .menuMo_wrap .menuMo #gnbMo > li .gnbMoSub ul li a:hover {
   color: #888;
 }
 
@@ -3409,7 +3569,7 @@ aside .btnClose:hover {
   width: 35%;
   font: 14px/1.3 "Rajdhani";
   color: #888;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
   transition-duration: 1s;
   transition-delay: 2s;
   transition-timing-function: ease-in-out;

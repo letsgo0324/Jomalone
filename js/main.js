@@ -128,6 +128,30 @@ function rollingNextEl(){
 }
 
 
+//아이콘 카운터 ---------------------------------------------------------------//
+counter(".icon_num1", 77, 3000);
+counter(".icon_num2", 27, 3000);
+counter(".icon_num3", 400, 3000);
+counter(".icon_num4", 16, 3000); 
+
+function counter(el, target, time){
+    const item = document.querySelector(el);
+    let current_num = parseInt(item.innerText);
+    let count_num = target - current_num;
+    let interval = time / count_num;   
+
+        let timer = setInterval(function(){
+            if(current_num === target){
+                clearInterval(timer);
+                return;
+            } 
+    
+            current_num++;
+            item.innerText = current_num;
+        }, interval);  
+}
+
+
 //탭 메뉴 ---------------------------------------------------------------//
 const tab = document.querySelector("#tab");
 const dts = tab.querySelectorAll("dt");
@@ -162,6 +186,7 @@ function activation(index, items){
     }
     items[index].classList.add("on");    
 }
+
 
 //스크롤 ---------------------------------------------------------------//
 const sections = document.querySelectorAll("section", "header");
@@ -248,6 +273,7 @@ function activationScroll(){
         }
     })
 }
+
 
 //팝업 ---------------------------------------------------------------//
 const popup = document.querySelector("#popup");
